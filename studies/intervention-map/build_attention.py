@@ -1,6 +1,5 @@
-"""Render the research update and its interval plot for offline reading."""
+"""Build an offline visual summary with the detailed analysis available on demand."""
 
-import html
 import json
 import math
 from pathlib import Path
@@ -8,64 +7,93 @@ from pathlib import Path
 import markdown
 
 ROOT = Path(__file__).resolve().parent
+FRAMES = [
+    ("general_ai", "General AI"),
+    ("explicit", "Explicit alignment"),
+    ("core", "Broader alignment"),
+]
+
+
+def read_result(filename):
+    return json.loads((ROOT / "results" / filename).read_text())
 
 
 def interval_chart():
-    data = json.loads((ROOT / "results/attention.json").read_text())
-
-    def x(ratio):
-        return 158 + 500 * math.log(ratio / 0.5) / math.log(16)
-
-    svg = [
-        '<svg viewBox="0 0 690 164" role="img" aria-labelledby="plot-title plot-desc">',
-        '<title id="plot-title">Weight papers per external-mechanism paper</title>',
-        '<desc id="plot-desc">Design-weighted point estimates and 95 percent sampling intervals on a logarithmic scale. Numerical results follow in the table.</desc>',
-    ]
-    for tick in (0.5, 1, 2, 4, 8):
-        xpos = x(tick)
-        color = "#183c37" if tick == 1 else "#d6dcd8"
-        svg += [
-            f'<path d="M{xpos} 8 V134" stroke="{color}" stroke-dasharray="3 3"/>',
-            f'<text x="{xpos}" y="151" text-anchor="middle">{tick:g}</text>',
-        ]
-    for i, (key, label) in enumerate(
-        [
-            ("general_ai", "General AI"),
-            ("explicit", "Explicit alignment"),
-            ("core", "Broader alignment"),
-        ]
-    ):
-        est = data[key]["full"]["W_either"]
-        y = 31 + i * 40
-        lo, hi = map(x, est["ci95"])
-        svg += [
-            f'<text x="0" y="{y+5}">{label}</text>',
-            f'<path d="M{lo} {y} H{hi} M{lo} {y-5} v10 M{hi} {y-5} v10" fill="none" stroke="#14756a" stroke-width="2.5"/>',
-            f'<circle cx="{x(est["ratio"])}" cy="{y}" r="6" fill="#103f39"/>',
-        ]
+    rubric = read_result("attention.json")
+    jev = read_result("jev_validation.json")["mechanisms"]
+    chart = []
+    for key, label in FRAMES:
+        est = rubric[key]["full"]
+        marks = []
+        for name, result in [
+            ("Rubric", est["W_either"]),
+            ("Jev", jev[key]["weight_to_external"]["0.5"]),
+        ]:
+            lo, hi = result["ci95"]
+            ratio = result["ratio"]
+            # The horizontal axis spans 0.5 to 8 on a log scale.
+            left, point, right = [25 * math.log2(n / 0.5) for n in (lo, ratio, hi)]
+            marks.append(
+                f'<div class="estimate {name.lower()}"><span class="method">{name}</span>'
+                f'<div class="track" aria-hidden="true"><i style="left:{left:.3f}%;width:{right-left:.3f}%"></i>'
+                f'<b style="left:{point:.3f}%"></b></div>'
+                f'<span class="value"><strong>{ratio:.2f}</strong> <small>({lo:.2f}–{hi:.2f})</small></span></div>'
+            )
+        chart.append(
+            f'<div class="group"><h3>{label} <small>n = {est["domain_review_n"]}</small></h3>{"".join(marks)}</div>'
+        )
     return (
-        "<figure><figcaption>Weight papers per external-mechanism paper · 95% intervals</figcaption>"
-        + "".join(svg)
-        + "</svg></figure>"
+        "<figure><figcaption>Weight papers per paper on a control or harness</figcaption>"
+        "<p>1 = equal counts. Lines show 95% sampling intervals. Jev cutoff 0.50.</p>"
+        + "".join(chart)
+        + '<div class="estimate axis" aria-hidden="true"><span></span><div class="ticks">'
+        "<span>0.5</span><span>1</span><span>2</span><span>4</span><span>8</span></div><span></span></div>"
+        '<p class="note">The 72 papers using alignment language are included in the 215 broader alignment papers. Each paper can study both approaches.</p></figure>'
+    )
+
+
+def render(source):
+    return (
+        markdown.markdown(source, extensions=["tables", "toc"])
+        .replace("<table>", '<div class="scroll"><table>')
+        .replace("</table>", "</table></div>")
     )
 
 
 def main():
-    md = markdown.Markdown(extensions=["tables", "toc"])
-    article = md.convert((ROOT / "ATTENTION.md").read_text())
-    pos = article.index("<table>")
-    article = article[:pos] + interval_chart() + article[pos:]
-    article = article.replace("<table>", '<div class="table-scroll"><table>').replace(
-        "</table>", "</table></div>"
+    source = (ROOT / "ATTENTION.md").read_text()
+    lead, *sections = source.split("\n## ")
+    hypotheses, detail = sections[0], sections[1:]
+    cards = []
+    for section in detail:
+        heading, body = section.split("\n", 1)
+        cards.append(f"<details><summary>{heading}</summary>{render(body)}</details>")
+    styles = """
+:root{color-scheme:light;--ink:#172e2c;--muted:#415e5a;--rule:#cbd4ce;--paper:#faf9f4;--a:#08685e;--b:#9a452a}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 Inter,system-ui,sans-serif}
+main{max-width:920px;margin:auto;padding:36px 38px 72px}h1,h2,figcaption{font-family:Georgia,serif;font-weight:500;letter-spacing:-.035em;line-height:1.13}
+h1{font-size:clamp(36px,6vw,64px);margin:0}h2,figcaption{font-size:clamp(23px,3.2vw,32px)}h2{margin:28px 0 14px}
+header p{font-size:19px;max-width:76ch}header strong{color:var(--a)}p{margin:10px 0}a{color:var(--a);text-underline-offset:3px}
+figure{margin:22px 0;padding:20px 24px;border:1px solid var(--rule);background:#f0f3ec;border-radius:5px}figure p,.note{color:var(--muted);font-size:13px}
+.group{padding:8px 0;border-top:1px solid var(--rule)}h3{font-size:16px;margin:0 0 3px}h3 small{font-size:12px;font-weight:400;color:var(--muted);margin-left:4px}
+.estimate{display:grid;grid-template-columns:56px minmax(72px,1fr) 148px;gap:14px;align-items:center;line-height:1.45;font-variant-numeric:tabular-nums}
+.method{font-size:13px;font-weight:650}.rubric{color:var(--a)}.jev{color:var(--b)}.value{text-align:right}.value small{color:var(--muted);font-size:12px}
+.track{height:21px;position:relative;background:linear-gradient(to right,transparent calc(25% - .75px),#788881 calc(25% - .75px),#788881 calc(25% + .75px),transparent calc(25% + .75px))}
+.track i,.track b{display:block;position:absolute;background:currentColor;top:50%;transform:translateY(-50%)}
+.track i{height:3px}.track b{width:9px;height:9px;transform:translate(-50%,-50%);border-radius:50%}.jev .track b{border-radius:0}
+.ticks{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);border-top:1px solid var(--rule)}
+.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}td,th{text-align:left;vertical-align:top;padding:11px 9px;border-bottom:1px solid var(--rule)}th{color:var(--muted);background:#eeefe8}
+.hypotheses td:first-child{width:39%}.hypotheses>p{font-size:13px;color:var(--muted)}details{border-top:1px solid var(--rule);padding:10px 0}summary{cursor:pointer;font-weight:620;color:var(--a)}a:focus-visible,summary:focus-visible{outline:3px solid var(--b)}
+@media(max-width:560px){main{padding:22px 15px 50px}figure{padding:14px 12px}.estimate{grid-template-columns:43px minmax(60px,1fr) 114px;gap:7px}.value{font-size:14px}.value small{font-size:10px}header p{font-size:16px}td,th{padding:8px 5px}.hypotheses table{font-size:13px}}
+@media print{body,figure{background:white}main{padding:0}figure,tr{break-inside:avoid}}
+"""
+    html = (
+        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+        f"<title>Where does AI research put its effort?</title><style>{styles}</style></head><body><main>"
+        f'<header>{render(lead)}</header>{interval_chart()}<section class="hypotheses">{render("## " + hypotheses)}</section>'
+        f'<h2>Evidence and methods</h2>{"".join(cards)}</main></body></html>'
     )
-    nav = " ".join(
-        f'<a href="#{h["id"]}">{html.escape(h["name"])}</a>'
-        for h in md.toc_tokens[0]["children"]
-    )
-    css = """
-:root{color-scheme:light;--ink:#1e302d;--green:#125c52}*{box-sizing:border-box}body{margin:0;background:#f9f8f4;color:var(--ink);font:17px/1.65 Inter,system-ui,sans-serif}main{max-width:940px;margin:auto;padding:48px 42px 90px}h1,h2{font-family:Georgia,serif;line-height:1.14;font-weight:500;letter-spacing:-.035em}h1{font-size:clamp(42px,7vw,80px);max-width:780px;margin:.55em 0 .25em}h1+p{color:var(--green);font-size:14px;letter-spacing:.015em}h2{font-size:clamp(29px,4vw,42px);margin:1.55em 0 .45em;border-top:1px solid #c4d0ca;padding-top:24px}p{margin:1em 0}strong{font-weight:650}a{color:var(--green);text-decoration-thickness:1px;text-underline-offset:3px}details{border-bottom:1px solid #c4d0ca;padding-bottom:10px}summary{cursor:pointer;font-weight:650;color:var(--green)}nav{display:grid;gap:3px;margin-top:9px}.table-scroll{overflow:auto}table{width:100%;border-collapse:collapse;margin:.5em 0;font-size:14px;line-height:1.48}th,td{padding:12px 10px;text-align:left;vertical-align:top;border-bottom:1px solid #d4ddd6}th{background:#e9eee8;color:#18433c;border-top:2px solid #467568}figure{margin:24px 0;padding:18px 20px;background:#edf2ec;border-radius:5px}figcaption{font-weight:650;font-size:15px}svg{width:100%;max-height:190px;display:block;margin:8px 0 0}svg text{fill:#233c37;font:14px system-ui,sans-serif}a:focus-visible,summary:focus-visible{outline:3px solid #a54b20}@media(max-width:600px){main{padding:20px 17px 45px}body{font-size:16px}figure{padding:9px}th,td{min-width:88px;padding:8px 6px}}@media print{body{background:white;font-size:11pt}main{max-width:none;padding:0}details{display:none}h2,figure,tr{break-inside:avoid}h2{break-after:avoid}}"""
-    page = f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Where does AI research put its effort?</title><style>{css}</style></head><body><main><details><summary>Contents</summary><nav>{nav}</nav></details><article>{article}</article></main></body></html>'
-    (ROOT / "attention-overview.html").write_text(page + "\n")
+    (ROOT / "attention-overview.html").write_text(html + "\n")
 
 
 if __name__ == "__main__":

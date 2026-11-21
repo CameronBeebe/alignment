@@ -1,10 +1,18 @@
 # Where does AI research put its effort?
 
-**November 2021 through October 2026 · Publication mix, research communities and evidence from deployment**
+**TL;DR** The original test found less than a twofold tilt toward model weights in the retrieved alignment literature. General AI leans toward weights under both reviewers. Whether an extra dollar would do more good on harnesses remains open.
 
-For roughly every paper on an external control or execution framework, the seven-category arXiv sample contains **3.29 papers on model weights**. The estimate is **3.67** among papers that explicitly discuss alignment and **1.07** across the broader set of papers addressing alignment problems. Those are the rubric-based review estimates. An independent Jev classification of the same papers puts the three ratios at **4.60, 1.74 and 0.89**, respectively. The general-AI weight tilt and the proximity of broader alignment to parity survive the change of reviewer. The size of the explicit alignment tilt is especially sensitive. Authors who work on oversight, unsafe actions and related problems without using alignment language change the picture substantially.
+## Hypotheses and results
 
-The difference matters for a practical reason. Someone browsing alignment-titled papers could reasonably come away thinking nearly everyone works on weights. Someone deploying an agent encounters a different set of choices about permissions, intervention, recovery and human review. Publication mix measures one kind of attention. Establishing where the next research dollar would do the most good requires evidence about the costs and effects of both approaches.
+| Hypothesis | What the data say |
+|---|---|
+| **1. Broader alignment produces at least two weight papers per external-control paper.** | **Evidence against.** Original primary estimate **1.36** (95% interval **0.98–1.90**). The interval includes equal counts and excludes 2. The earlier **7.20** applied only to papers using explicit alignment language. |
+| **2. General AI produces more weight papers than papers on controls or harnesses.** | **Supported in seven arXiv categories.** Rubric **3.29** (2.21–4.91). Jev **4.60** (3.08–6.88). |
+| **3. Explicitly alignment-framed papers favor weights more than general AI does.** | **Fails across reviewers.** Dividing the explicit ratio by the general-AI ratio gives **1.11** (0.53–2.37) with the rubric and **0.38** (0.21–0.68) with Jev. The prediction requires a value above 1. |
+| **4. Research on feedback and dynamics clusters outside the alignment shortlist.** | **Partial support.** The shortlist missed all **235** papers in one optimization/control cluster. **10 of 15** audited there used feedback or dynamics. The cluster boundaries were weak, and many papers addressed physical systems. |
+| **5. Shifting money or labor from weights to harnesses would improve safety.** | **Unresolved.** Testing this requires comparing safety gains at equal cost and comparable task performance. The study has no such comparison. |
+
+Only the original primary comparison and its equality and twofold thresholds were fixed before the main audit. The later tests are exploratory. Both reviewers were AI systems using abstracts. The intervals cover sampling uncertainty within the retrieved populations. [Original protocol](protocol.md) · [Direct comparison data](results/frame_contrast.json)
 
 ## Which papers count?
 

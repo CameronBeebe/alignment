@@ -90,9 +90,12 @@ python cybernetics_map.py
 python attention.py
 python semantic_checks.py /tmp/attention-e5.npz
 python jev_results.py
+python compare_frames.py
 python build_attention.py
 ```
 
 The Jev measurements are frozen. Reading or recomputing their statistics requires no API access. To request additional scores from TypeSafe deliberately, set `TYPESAFE_API_KEY` locally and run `python jev_check.py --sample control --limit 90` or `python jev_check.py --sample mechanisms --limit 395`. Requests send public titles and abstracts only and may incur charges. A result hash identifies the submitted prompt and text. Specify a new `--output` to collect a fresh replicate separately. Model aliases may change. The raw records include the returned version.
 
 To regenerate the draws from the original full SQLite metadata catalog, run `baseline.py --draw-from PATH`, `control_sample.py PATH`, `match_papers.py PATH` and `vocabulary.py PATH` with Python. The frozen samples preserve public metadata, matched IDs and review decisions. Recollecting the source catalog at a different date can change records.
+
+The exploratory explicit-alignment versus general-AI contrast divides their weights-to-external ratios. It uses independent draw variances for the difference of the two log ratios, stratum weights and a Satterthwaite interval. This unadjusted comparison describes different publication mixes. [Contrast code](compare_frames.py) · [Estimates](results/frame_contrast.json)
