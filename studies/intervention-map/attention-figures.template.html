@@ -33,7 +33,7 @@
     get('trend').innerHTML='<svg viewBox="0 0 590 158" role="img" aria-label="'+label+' share by year. Exact counts are available in the table.">'+ticks+'<path d="'+pts+'" stroke="#216458" stroke-width="2" fill="none"/>'+marks+'</svg>';
   }
   function update(){
-    const frame=frames[get('frame').value], mode=get('group').value, cut=get('cut').value;
+    const frame=frames[get('frame').value][get('scope').value], mode=get('group').value, cut=get('cut').value;
     const groups=frame.cuts[cut][mode], names=mode==='topic'?frame.names:mode==='year'?years:roles;
     const counts=get('counts').checked;
     get('metric-label').hidden=get('trend').hidden=mode!=='year';
@@ -57,13 +57,14 @@
     const rule=mode==='overlap'?'Each row contains papers positive on the row dimension. Each column shows how often the same papers also qualify on that dimension.':mode==='year'?'Percentages use each year’s paper count. 2021 starts in November and 2026 ends in October.':'Percentages use the number of papers in each topic.';
     get('explain').textContent=frame.n.toLocaleString('en-US')+' papers in this selection. '+rule+' Color always represents percentage. These descriptive Jev counts use the ten-question instrument.';
   }
-  ['frame','group','cut','metric','counts'].forEach(id=>get(id).addEventListener('change',update));update();
+  ['frame','scope','group','cut','metric','counts'].forEach(id=>get(id).addEventListener('change',update));update();
 })();
 </script>
 <!-- controls -->
 <h3>Where do research contributions appear?</h3>
 <div class="profile-controls">
 <label>Paper sample<select id="profile-frame"></select></label>
+<label>Model scope<select id="profile-scope"><option value="lm">Language models</option><option value="all">All model families</option></select></label>
 <label>Compare by<select id="profile-group"><option value="topic">Topic</option><option value="year">Publication year</option><option value="overlap">Overlap of labels</option></select></label>
 <label>Jev cutoff<select id="profile-cut"><option>0.3</option><option selected>0.5</option><option>0.7</option></select></label>
 <label id="profile-metric-label" hidden>Trend line<select id="profile-metric"></select></label>

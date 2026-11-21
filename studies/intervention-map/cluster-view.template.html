@@ -3,6 +3,7 @@
 <p class="atlas-note"><a href="results/paper_master.csv.gz" download>Download the paper-level master (CSV.gz)</a> · <a href="MASTER.md">Column definitions and validation</a></p>
 <div class="atlas-controls">
 <label>Paper sample <select id="atlas-frame"><option>Alignment shortlist</option><option>General AI</option><option>AI, systems and control</option></select></label>
+<label>Model scope <select id="atlas-scope"><option value="lm">Language models</option><option value="all">All model families</option></select></label>
 <label>Year <select id="atlas-year"></select></label>
 <label>Find a paper <input type="search" id="atlas-query" placeholder="Title, ID or listed author"></label>
 </div>
@@ -14,7 +15,7 @@
 <p class="atlas-note">Each point is one paper. Color comes from clustering the embeddings. The two-dimensional t-SNE projection approximates local similarity. Axes have no units. Each map has its own coordinates.</p>
 <noscript>Enable JavaScript for the point map. The topic counts and analysis below are available without it.</noscript>
 <h2>What does each alignment topic study?</h2>
-<p class="atlas-note">All 7,735 shortlist papers. Each percentage is the share of a topic with a Jev score of at least 0.50. Hover for counts. A paper can qualify in several columns.</p>
+<p class="atlas-note"><span id="atlas-heat-sample">All 7,735 shortlist papers.</span> Each percentage is the share of a topic with a Jev score of at least 0.50. Hover for counts. A paper can qualify in several columns.</p>
 <div class="scroll"><table class="heat"><thead><tr><th>Topic</th><th>Papers</th><th>Weights</th><th>Control or harness</th><th>Feedback or dynamics</th><th>Neither weights nor external</th></tr></thead><tbody>{{HEATMAP}}</tbody></table></div>
 <p class="atlas-note">At this cutoff, Jev recovered 96% of rubric-coded weight papers and 52% of rubric-coded harness papers in the broader alignment audit (sampling-weighted).</p>
 <p class="atlas-note">Papers linked by at least two shared author names fell in the same topic <strong>{{SAME}}</strong> of the time ({{EDGES}} links). Shuffling topic labels within years gave <strong>{{NULL}}</strong> on average.</p>
@@ -51,9 +52,25 @@
     bounds = ['x','ypos'].map(k => [Math.min(...frame.papers.map(p=>p[k])),Math.max(...frame.papers.map(p=>p[k]))]);
     refresh();
   }
+  function inScope(p){return byId('scope').value==='all'||p.lm>=.5;}
+  function heatScope(){
+    const shortlist=frames[0].papers.filter(inScope), labels={{JEV_KEYS}};
+    const groups=frames[0].labels.map(()=>[0,0,0,0,0]);
+    const weights=labels.indexOf('weights'),supervision=labels.indexOf('supervision'),harness=labels.indexOf('scaffolding'),feedback=labels.indexOf('feedback'),dynamics=labels.indexOf('dynamics');
+    for(const p of shortlist){
+      const g=groups[p.c],w=p.jev[weights]>=.5,e=Math.max(p.jev[supervision],p.jev[harness])>=.5;
+      g[0]++;g[1]+=w;g[2]+=e;g[3]+=Math.max(p.jev[feedback],p.jev[dynamics])>=.5;g[4]+=!w&&!e;
+    }
+    const rows=document.querySelectorAll('#paper-map .heat tbody tr');
+    groups.forEach(([n,...counts],i)=>{
+      rows[i].cells[1].textContent=numbers(n);
+      counts.forEach((count,j)=>{const c=rows[i].cells[j+2];c.title=count+' of '+n;c.textContent=n?Math.round(count/n*100)+'%':'—';c.style.setProperty('--fill',n?count/n:0);});
+    });
+    byId('heat-sample').textContent=numbers(shortlist.length)+(byId('scope').value==='all'?' shortlist papers across all model families.':' language-model papers in the alignment shortlist.');
+  }
   function refresh() {
     const year = Number(byId('year').value), query = byId('query').value.trim().toLowerCase();
-    const pool = frame.papers.filter(p=>(!year || p.y===year) && (team===null || p.team===team) && (!query || [p.t,p.id,p.a||'',p.category||''].join(' ').toLowerCase().includes(query)));
+    const pool = frame.papers.filter(p=>inScope(p) && (!year || p.y===year) && (team===null || p.team===team) && (!query || [p.t,p.id,p.a||'',p.category||''].join(' ').toLowerCase().includes(query)));
     const counts = Array(frame.labels.length).fill(0); pool.forEach(p=>counts[p.c]++);
     const legend = byId('legend'); legend.replaceChildren();
     ['All topics',...frame.labels].forEach((name,i)=>{
@@ -100,7 +117,7 @@
     if(p.a||p.category)box.append(node('p',p.a||p.category));
     if(p.team != null){const b=node('button','Browse coauthor group '+p.team);b.onclick=()=>{team=p.team;group=-1;byId('query').value='';byId('year').value='';refresh();};box.append(b);}
     if(p.review)box.append(node('p','Rubric review · '+p.review));
-    box.append(node('strong','Jev scores'));
+    box.append(node('p','Language-model focus · '+p.lm.toFixed(2)),node('strong','Jev scores'));
     const grid=node('dl','');grid.className='atlas-scores';
     {{JEV_KEYS}}.forEach((k,i)=>{grid.append(node('dt',k.replaceAll('_',' ')),node('dd',p.jev[i].toFixed(2)));});box.append(grid);
     const near=node('a',p.near_title);near.href=p.near_url;near.target='_blank';near.rel='noopener';
@@ -109,14 +126,15 @@
     if(p.score_basis==='title_only')box.append(node('p','Scores use the title because the abstract is missing.'));
     box.append(node('strong','Nearest abstracts in embedding space'));
     for(const idx of p.nn){const q=frame.papers[idx], row=node('p',''), b=node('button',q.t);
-      b.onclick=()=>{group=-1;team=null;byId('year').value='';byId('query').value='';selected=q;refresh();};row.append(b);box.append(row);}
+      b.onclick=()=>{group=-1;team=null;byId('year').value='';byId('query').value='';if(!inScope(q)){byId('scope').value='all';heatScope();}selected=q;refresh();};row.append(b);box.append(row);}
   }
   byId('more').onclick=()=>{limit+=80;paperList();};
   byId('papers').onchange=e=>select(visible.find(p=>p.id===e.target.value));
   byId('frame').onchange=chooseFrame;
+  byId('scope').onchange=()=>{group=-1;team=null;limit=80;refresh();heatScope();};
   byId('query').oninput=byId('year').onchange=()=>{limit=80;refresh();};
   canvas.onmousemove=e=>{const p=closest(e);byId('hover').textContent=p?p.y+' · '+p.t:'Select a point to inspect a paper.';};
   canvas.onclick=e=>{const p=closest(e);if(p)select(p);};
-  chooseFrame();new ResizeObserver(draw).observe(canvas);
+  chooseFrame();heatScope();new ResizeObserver(draw).observe(canvas);
 })().catch(()=>{document.getElementById('atlas-frame-note').textContent='The interactive map requires a current browser with gzip decompression. The topic table and data links below remain available.';});
 </script>

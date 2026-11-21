@@ -100,6 +100,7 @@ def section():
                 "near_id": row["nearest_paper_id"],
                 "topic_margin": float(row["topic_distance_margin"]),
                 "score_basis": row["evidence_basis"],
+                "lm": float(row["jev_language_model_focus"]),
             }
     for measurement in measurements.values():
         measurement["near_title"], measurement["near_url"] = sources[

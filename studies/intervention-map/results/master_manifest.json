@@ -1,6 +1,6 @@
 {
   "rows": 26697,
-  "columns": 88,
+  "columns": 91,
   "cohort_and_evidence_counts": {
     "candidate": 25329,
     "title_abstract": 26691,
@@ -24,6 +24,7 @@
     "data_resources": "Does the paper introduce or substantively study a dataset, data collection, annotation or curation method as a research contribution? Merely consuming an existing dataset is insufficient.",
     "governance": "Does the paper substantively analyze institutional governance, policy, accountability, societal impacts or normative frameworks concerning AI systems? A passing mention of ethical implications is insufficient."
   },
+  "language_model_scope_file": "results/language_model_scores.csv.gz",
   "positive_counts_050_all_works": {
     "weights": 12435,
     "data_resources": 6579,
@@ -94,8 +95,8 @@
       "neither": 9
     }
   },
-  "sha256": "42cd0ff9fc5f374c494d8e37b94535f22cdd3e61d2828971ca0f4635de998c78",
-  "file_bytes": 6408871,
+  "sha256": "dd9aaa0e64e7e0dbb468b68acab7024e9144a24067d45d57161e2fb10e847031",
+  "file_bytes": 6471469,
   "input_tokens": 26292988,
   "output_tokens": 4778763
 }

@@ -67,7 +67,7 @@ def bar(frac, label=None, color=COLORS[0]):
     return f'<span class="bar-cell"><i aria-hidden="true" style="width:{frac * 100:.3f}%;background:{color}"></i><span>{label}</span></span>'
 
 
-def portfolio(attention):
+def portfolio(attention, caption=None):
     keys = ["weights_only", "external_only", "both", "neither"]
     labels = ["Weights only", "Control or harness only", "Both", "Neither"]
     legend = "".join(
@@ -92,7 +92,8 @@ def portfolio(attention):
         + "</p>"
         + "".join(plots)
         + note(
-            "Sampling-weighted rubric estimates. Each strip totals 100%. The 72 explicitly framed papers are included in the 215 broader alignment papers. External mechanisms include supervision and runtime harnesses."
+            caption
+            or "Sampling-weighted rubric estimates. Each strip totals 100%. The 72 explicitly framed papers are included in the 215 broader alignment papers. External mechanisms include supervision and runtime harnesses."
         )
     )
 
@@ -490,6 +491,29 @@ def people():
     )
 
 
+def profile_counts(sub, topic, names):
+    years = sub.year.to_numpy(int)
+    topics = sub[topic].to_numpy(int)
+    scores = sub[["jev_" + k for k in ROLES]].to_numpy(float)
+    dims = {}
+    for cut in (0.3, 0.5, 0.7):
+        hits = (scores >= cut).astype(int)
+
+        def groups(v, keys):
+            counts = []
+            for k in keys:
+                mask = v == k
+                counts.append([int(mask.sum()), *hits[mask].sum(axis=0).tolist()])
+            return counts
+
+        dims[str(cut)] = {
+            "topic": groups(topics, range(len(names))),
+            "year": groups(years, range(2021, 2027)),
+            "overlap": np.column_stack((hits.sum(axis=0), hits.T @ hits)).tolist(),
+        }
+    return {"names": names, "n": len(sub), "cuts": dims}
+
+
 def explorer_data():
     papers = pd.read_csv(ROOT / "results/paper_master.csv.gz", keep_default_na=False)
     memberships = papers.cohorts.str.split("|", regex=False)
@@ -516,27 +540,162 @@ def explorer_data():
         ),
     ]:
         sub = papers[memberships.map(lambda g: role in g)]
-        years = sub.year.to_numpy(int)
-        topics = sub[topic].to_numpy(int)
-        scores = sub[["jev_" + k for k in ROLES]].to_numpy(float)
-        dims = {}
-        for cut in (0.3, 0.5, 0.7):
-            hits = (scores >= cut).astype(int)
-
-            def groups(v, keys):
-                counts = []
-                for k in keys:
-                    mask = v == k
-                    counts.append([int(mask.sum()), *hits[mask].sum(axis=0).tolist()])
-                return counts
-
-            dims[str(cut)] = {
-                "topic": groups(topics, range(len(names))),
-                "year": groups(years, range(2021, 2027)),
-                "overlap": np.column_stack((hits.sum(axis=0), hits.T @ hits)).tolist(),
-            }
-        profiles[frame] = {"names": names, "n": len(sub), "cuts": dims}
+        profiles[frame] = {
+            "all": profile_counts(sub, topic, names),
+            "lm": profile_counts(
+                sub[sub.jev_language_model_focus.ge(0.5)], topic, names
+            ),
+        }
     return {"roles": list(ROLES.values()), "frames": profiles}
+
+
+def language_panel():
+    result = read("language_comparison.json")
+    variants = [
+        ("semantic_050", "Language-model focus"),
+        ("literal_or_family", "LLM wording or model name"),
+        ("literal", "Literal LLM wording"),
+        ("semantic_030", "Scope cutoff 0.30"),
+        ("semantic_070", "Scope cutoff 0.70"),
+        ("all", "All model families"),
+    ]
+    choices = []
+    for selector, label in variants:
+        v = result[selector]
+        rows = []
+        points = []
+        for key, frame in [
+            ("explicit", "Explicit alignment"),
+            ("other_wording", "Other alignment wording"),
+            ("core", "Broader alignment (both groups)"),
+            ("general_ai", "General AI"),
+        ]:
+            r = v["frames"][key]
+
+            def estimate(method):
+                est = r[method]
+                lo, hi = est["ci95"]
+                return f'<b>{est["ratio"]:.2f}</b> ({lo:.2f}–{hi:.2f})'
+
+            rows.append(
+                [
+                    frame,
+                    f'{r["selected_n"]} / {r["frame_n"]}',
+                    f'{int(r["rubric"]["observed_W"])} / {int(r["rubric"]["observed_E"])}',
+                    estimate("rubric"),
+                    estimate("jev"),
+                ]
+            )
+            for method in ("rubric", "jev"):
+                est = r[method]
+                points.append(
+                    (
+                        frame + " · " + ("Rubric" if method == "rubric" else "Jev"),
+                        est["ratio"],
+                        est["ci95"],
+                    )
+                )
+        lo = min(math.floor(math.log2(min(p[2][0] for p in points))), -1)
+        hi = max(math.ceil(math.log2(max(p[2][1] for p in points))), 1)
+        body = table(
+            [
+                "Reviewed sample",
+                "Included / reviewed",
+                "Rubric papers W / external",
+                "Rubric ratio (95%)",
+                "Jev ratio (95%)",
+            ],
+            rows,
+        )
+        body += note(
+            f'{v["master_n"]:,} of 26,697 master paper IDs meet this selection. W counts changes to the acting model’s weights. External counts supervision or runtime harnesses. Ratios use sampling weights. Hybrids can enter both counts.'
+        )
+        body += (
+            "<details><summary>Plot the ratios and sampling intervals</summary>"
+            + forest(
+                points,
+                [2**i for i in range(lo, hi + 1)],
+                "Above 1 means more papers study weights than external supervision or harnesses. Intervals condition on the abstract classifications.",
+            )
+            + "</details>"
+        )
+        contrast = v["explicit_vs_other"]
+        descriptions = []
+        for method, title in [("rubric", "Rubric"), ("jev", "Jev")]:
+            comp = contrast[method]
+            low, high = comp["ci95"]
+            descriptions.append(
+                f'{title} {comp["ratio_of_ratios"]:.2f} ({low:.2f}–{high:.2f})'
+            )
+        body += note(
+            "Weight-to-external ratio in explicitly framed alignment divided by the ratio in other alignment papers, with 95% intervals. "
+            + " · ".join(descriptions)
+            + "."
+        )
+        mix = {
+            key: {
+                "paper_shares": row["rubric_shares"],
+                "full": {"domain_review_n": row["selected_n"]},
+            }
+            for key, row in v["frames"].items()
+        }
+        body += (
+            "<details><summary>See the publication mix, including both and neither</summary>"
+            + portfolio(
+                mix,
+                "Sampling-weighted shares within the selected sample. External includes supervision and runtime harnesses.",
+            )
+            + "</details>"
+        )
+        if "periods" in v:
+            period_rows = []
+            for key, title in [
+                ("explicit", "Explicit"),
+                ("other_wording", "Other wording"),
+            ]:
+                for era, entry in v["periods"][key].items():
+                    cells = []
+                    for method in ("rubric", "jev"):
+                        est = entry[method]
+                        low, high = est["ci95"]
+                        cells.append(f'{est["ratio"]:.2f} ({low:.2f}–{high:.2f})')
+                    period_rows.append([title, era, entry["reviewed"], *cells])
+            body += (
+                "<details><summary>Compare earlier and later publications</summary>"
+                + table(
+                    [
+                        "Alignment wording",
+                        "Period",
+                        "Reviewed",
+                        "Rubric ratio (95%)",
+                        "Jev ratio (95%)",
+                    ],
+                    period_rows,
+                )
+                + note(
+                    "Each estimate uses the original sampling weights for that period. Small counts widen the intervals."
+                )
+                + "</details>"
+            )
+        choices.append((label, body))
+    check = result["review_check"]
+    v = check["semantic_050"]
+    return (
+        '<h3 id="language-models">How weight-focused are language-model papers?</h3>'
+        + note(
+            "The default selects work substantively studying or using an LLM or language Transformer, including GPT, BERT and language-based multimodal agents. A vision-only Transformer or a passing LLM mention falls outside this definition. The selection uses a separate Jev score of at least 0.50 on the title and available abstract."
+        )
+        + note(
+            '<a href="results/language_model_papers.csv.gz" download>Download the language-model paper catalog</a> · <a href="results/paper_master.csv.gz" download>Download all papers</a>'
+        )
+        + tabs("lm", "Model-scope definition", choices)
+        + note(
+            "Explicit alignment means the paper uses one of the study’s alignment phrases. The comparison with other wording uses two disjoint groups. The broader alignment row combines them. The same model-scope selection is used for both mechanism reviewers."
+        )
+        + note(
+            f'In a separate AI check of 40 abstracts balanced by sample and wording, {check["unclear"]} had uncertain scope. Jev agreed on {v["tp"]+v["tn"]} of {v["tp"]+v["tn"]+v["fp"]+v["fn"]} determinate cases. <a href="results/language_comparison.json">Data</a> · <a href="data/language_scope_review.csv">Review decisions</a>'
+        )
+    )
 
 
 def section():
@@ -545,6 +704,7 @@ def section():
     layout, controls = template.split("<!-- controls -->")
     profile = json.dumps(explorer_data(), separators=(",", ":")).replace("<", "\\u003c")
     panels = [
+        ("Language models", language_panel()),
         (
             "Publication mix",
             portfolio(a)

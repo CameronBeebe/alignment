@@ -48,6 +48,10 @@ def main():
     p.add_argument("--semantics", type=Path, required=True)
     args = p.parse_args()
     records, roles = master_records()
+    scope = index("results/language_model_scores.csv.gz")
+    if set(scope) != set(records):
+        raise ValueError("Incomplete language-model scope measurements")
+    scope_cols = ["jev_language_model_focus", "literal_llm", "family_mention"]
     source = index("results/papers.csv")
     source_cols = list(next(iter(source.values())))
     bibliography = index("data/comparison_bibliography.csv")
@@ -98,6 +102,7 @@ def main():
     db = sqlite3.connect(args.cache.resolve().as_uri() + "?mode=ro", uri=True)
     cols = [
         *source_cols,
+        *scope_cols,
         "cohorts",
         "text_source",
         "evidence_basis",
@@ -262,6 +267,7 @@ def main():
                     or "none",
                 )
                 item.update({"jev_" + k: probs[k] for k in ITEMS})
+                item.update({k: scope[pid][k] for k in scope_cols})
                 writer.writerow(item)
                 counts.update(roles[pid])
                 counts[item["evidence_basis"]] += 1
@@ -286,6 +292,7 @@ def main():
         "cohort_and_evidence_counts": counts,
         "model": MODEL,
         "questions": ITEMS,
+        "language_model_scope_file": "results/language_model_scores.csv.gz",
         "positive_counts_050_all_works": label_counts,
         "shortlist_topic_counts": dict(by_topic),
         "sha256": hashlib.sha256(FILE.read_bytes()).hexdigest(),

@@ -1,6 +1,6 @@
 # Where does AI research put its effort?
 
-**November 2021–October 2026.** In the broader alignment sample, an estimated **30%** of papers study weight changes alone, **28%** external controls or harnesses alone, **3%** both, and **39%** neither. The topic maps show where these and other research questions appear.
+**November 2021–October 2026.** Among reviewed language-model papers, the rubric finds **3.39 weight papers per paper on supervision or a runtime harness** when authors explicitly frame the work as alignment. The estimate is **0.64** among other language-model alignment papers. Jev also finds a tilt in opposite directions (**1.85** and **0.69**). Publication counts measure research output and serve here as an indirect indicator of attention.
 
 ## Hypotheses and results
 
@@ -24,6 +24,12 @@ The study protocol specifies the twofold threshold and the comparison with parit
 | Research time | Engineer-hours by topic are unknown. | Job listings, paper counts and grants cannot recover time allocation on their own. |
 
 [Publication estimates](results/attention.json) · [Indicator populations, units and sources](data/attention_indicators.csv)
+
+## Which language-model papers count?
+
+The default view selects papers substantively about large language models or language Transformers from all 26,697 paper IDs. It includes systems built around named models such as GPT and language-based multimodal systems. A transformer for images or time series alone falls outside the definition. Each paper retains its original sample membership, model-scope score and separate intervention labels.
+
+In the broader alignment audit, **172 of 215** papers qualify. Of those, 60 use explicit alignment wording and 112 use other wording. The rubric counts **33 weight papers and 11 external papers** in the first group, and **31 and 46** in the second. Both numerator and denominator credit hybrids. Sampling-weighted ratios are **3.39 (1.78–6.46)** and **0.64 (0.43–0.96)**. Combining the two groups gives **1.12 (0.83–1.51)**. The inclusion rule describes how authors frame a paper and makes no claim about the authors’ personal views. [Language-model comparisons](results/language_comparison.json) · [Language-model catalog](results/language_model_papers.csv.gz) · [Model-scope definitions](MASTER.md#select-language-model-publications)
 
 ## Which papers count?
 

@@ -2,7 +2,17 @@
 
 [Download the master CSV](results/paper_master.csv.gz) · [Explore the paper map](attention-overview.html#paper-map) · [Questions, counts and file checksum](results/master_manifest.json)
 
-**26,697 paper IDs · 88 columns · 266,970 Jev scores.** Six IDs have title-only evidence. The 26,697 rows comprise all 25,329 search candidates and 1,368 additional comparison IDs. The alignment shortlist is a subset of the candidates. Publication volume measures one form of attention. Estimating hours, spending or safety gains requires other evidence.
+**26,697 paper IDs · 91 columns · 266,970 contribution and relevance ratings plus 26,697 language-model focus ratings.** Six IDs have title-only evidence. The 26,697 rows comprise all 25,329 search candidates and 1,368 additional comparison IDs. The alignment shortlist is a subset of the candidates. Publication volume measures one form of attention. Estimating hours, spending or safety gains requires other evidence.
+
+## Select language-model publications
+
+[Download the language-model catalog](results/language_model_papers.csv.gz) for a compact table of selected titles, IDs, cohort membership and intervention ratings. Join it to the master on `paper_id` for every column.
+
+Use `jev_language_model_focus >= 0.50` for the report’s default language-model subset. Jev 1.14.0 assessed whether a language model plays a substantive role from the public title and abstract, without access to the mechanism votes or alignment-framing tags. The definition includes GPT-style systems, encoder models such as BERT, and multimodal systems with a material language-model component. It does not establish proprietary architecture or a parameter count. The ten original ratings retain their own request hash and token counts. The language-model scope request, usage, model and score are archived separately for every paper ID. [Exact question and term patterns](language_scope.py) · [Scope scores and provenance](results/language_model_scores.csv.gz)
+
+`literal_llm` flags the acronym LLM or the phrase “large language model,” including plurals. `family_mention` flags one of a fixed set of model names, including GPT, ChatGPT, Llama, Claude, Gemini, DeepSeek, Qwen, BERT, RoBERTa, DeBERTa or T5. A family mention can be incidental. The default semantic subset, alternative cutoffs and both wording rules can be compared on the same frozen audit. The mechanism ratio divides the sampling-weighted total of weight papers by the weighted total of papers on supervision or harnesses. The explicit/other contrast uses disjoint parts of the same audit and estimates their covariance within strata. Intervals condition on the classifications. [Comparisons](results/language_comparison.json)
+
+Forty abstracts received a separate AI scope review with Jev scores hidden. A fixed hash draw selected ten papers in each of four cells crossing the 800-paper general-AI draw or the alignment shortlist with presence or absence of literal LLM wording or a recognized family name. This deliberately balances easy-to-find and potentially missed cases. Unclear cases are reported separately. The check describes those selected papers. [Review decisions](data/language_scope_review.csv)
 
 ## Choose a population
 
@@ -76,7 +86,9 @@ To rebuild from released scores, install the [dependencies](requirements-semanti
 ```bash
 python master_jev.py --cache /tmp/paper-jev.sqlite --limit 0
 python master_semantics.py --vectors /tmp/paper-e5.npz --output /tmp/paper-features.csv
+python language_scope.py --cache /tmp/language-jev.sqlite --limit 0 --freeze
 python master_export.py --cache /tmp/paper-jev.sqlite --semantics /tmp/paper-features.csv
+python language_comparison.py
 python master_validation.py
 python build_attention.py
 ```

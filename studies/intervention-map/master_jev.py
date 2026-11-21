@@ -25,12 +25,12 @@ ITEMS = {
 QUESTIONS_TYPED = {k: {"type": "noul", "instructions": v} for k, v in ITEMS.items()}
 
 
-def payload(title, abstract):
+def payload(title, abstract, questions=QUESTIONS_TYPED):
     return json.dumps(
         {
             "model": MODEL,
             "state": {"title": title, "abstract": abstract},
-            "questions": QUESTIONS_TYPED,
+            "questions": questions,
         },
         sort_keys=True,
     ).encode()
@@ -50,7 +50,7 @@ class Limiter:
             self.next_time = time.monotonic() + self.interval
 
 
-async def fetch(session, limiter, body):
+async def fetch(session, limiter, body, items=ITEMS):
     for attempt in range(6):
         await limiter.acquire()
         try:
@@ -74,7 +74,7 @@ async def fetch(session, limiter, body):
                 result = await reply.json()
                 if result["model"] != MODEL:
                     raise ValueError("Unexpected returned model version")
-                values = {k: float(result["answers"][k]["noul"]) for k in ITEMS}
+                values = {k: float(result["answers"][k]["noul"]) for k in items}
                 if not all(0 <= v <= 1 for v in values.values()):
                     raise ValueError("Invalid score")
                 return result["model"], values, result["usage"]
@@ -84,24 +84,24 @@ async def fetch(session, limiter, body):
             await asyncio.sleep(2**attempt)
 
 
-async def run(args):
+async def run(args, items=ITEMS, released=ROOT / "results/paper_master.csv.gz"):
+    questions = {k: {"type": "noul", "instructions": v} for k, v in items.items()}
     records, roles = master_records()
     db = sqlite3.connect(args.cache)
     db.execute(
         "CREATE TABLE IF NOT EXISTS measurements (paper_id TEXT, request_sha TEXT, model TEXT, scores TEXT, usage TEXT, PRIMARY KEY(paper_id,request_sha))"
     )
-    released = ROOT / "results/paper_master.csv.gz"
     if released.exists():
         for row in rows(released):
-            if row["jev_model"] != MODEL:
+            if row["jev_model"] != MODEL or not all("jev_" + k in row for k in items):
                 continue
             pid = row["paper_id"]
             if pid not in records:
                 continue
-            signature = hashlib.sha256(payload(*records[pid])).hexdigest()
+            signature = hashlib.sha256(payload(*records[pid], questions)).hexdigest()
             if signature != row["jev_request_sha256"]:
                 continue
-            scores = {key: float(row["jev_" + key]) for key in ITEMS}
+            scores = {key: float(row["jev_" + key]) for key in items}
             usage = {k: int(row["jev_" + k]) for k in ("input_tokens", "output_tokens")}
             db.execute(
                 "INSERT OR IGNORE INTO measurements VALUES (?,?,?,?,?)",
@@ -113,7 +113,7 @@ async def run(args):
     for pid in sorted(
         records, key=lambda p: ("alignment_shortlist" not in roles[p], p)
     ):
-        body = payload(*records[pid])
+        body = payload(*records[pid], questions)
         signature = hashlib.sha256(body).hexdigest()
         if (pid, signature) not in done:
             pending.append((pid, signature, body))
@@ -141,7 +141,7 @@ async def run(args):
         async def worker():
             nonlocal count
             for pid, signature, body in pending:
-                model, scores, usage = await fetch(session, limiter, body)
+                model, scores, usage = await fetch(session, limiter, body, items)
                 db.execute(
                     "INSERT INTO measurements VALUES (?,?,?,?,?)",
                     (pid, signature, model, json.dumps(scores), json.dumps(usage)),
