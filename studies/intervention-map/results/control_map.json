@@ -1,0 +1,108 @@
+{
+  "queries": {
+    "feedback": "Systems that observe their own or the environment's state and change subsequent actions to regulate error, maintain stability, or adapt behavior in a closed loop.",
+    "dynamics": "A mathematical study of how an interacting system evolves through time, its equilibria, trajectories, stability, observability or controllability.",
+    "scaffold": "A runtime architecture around an AI model that coordinates external tools, memory, retrieval, planning, verification or multiple agents for a task.",
+    "weight": "Learning new parameters of a predictive model or policy by training on data, fine tuning neural weights, or optimizing its training loss."
+  },
+  "silhouettes": {
+    "6": 0.04772132262587547,
+    "10": 0.036929789930582047,
+    "14": 0.04152153804898262,
+    "18": 0.03177279606461525
+  },
+  "k": 6,
+  "alternate_seed_ARI": 0.6463768465064439,
+  "groups": [
+    {
+      "id": 0,
+      "n": 194,
+      "general_ai": 192,
+      "cue": 3,
+      "mean_feedback_similarity": 0.758209228515625,
+      "mean_dynamics_similarity": 0.7543091177940369,
+      "titles": [
+        "A Systematic Evaluation of LLM Strategies for Mental Health Text Analysis: Fine-tuning vs. Prompt Engineering vs. RAG",
+        "To Repeat or Not To Repeat: Insights from Scaling LLM under Token-Crisis",
+        "Self-Correction Makes LLMs Better Parsers",
+        "Bias and Fairness in Large Language Models: A Survey",
+        "A Note on Statistically Accurate Tabular Data Generation Using Large Language Models"
+      ]
+    },
+    {
+      "id": 1,
+      "n": 181,
+      "general_ai": 132,
+      "cue": 40,
+      "mean_feedback_similarity": 0.7762579321861267,
+      "mean_dynamics_similarity": 0.760747492313385,
+      "titles": [
+        "Do Androids Dream of Electric Fences? Safety-Aware Reinforcement Learning with Latent Shielding",
+        "Drive Fast, Learn Faster: On-Board RL for High Performance Autonomous Racing",
+        "Exploiting Local Dynamics Regularity for Reusable Skills in Offline Hierarchical RL",
+        "Data-Driven Physics Embedded Dynamics with Predictive Control and Reinforcement Learning for Quadrupeds",
+        "Soft MPCritic: Value-Based Reinforcement Learning for Non-Differentiable Predictive Control"
+      ]
+    },
+    {
+      "id": 2,
+      "n": 116,
+      "general_ai": 6,
+      "cue": 19,
+      "mean_feedback_similarity": 0.7642464637756348,
+      "mean_dynamics_similarity": 0.7540003657341003,
+      "titles": [
+        "A Comparison of Baseline Models and a Transformer Network for SOC Prediction in Lithium-Ion Batteries",
+        "Adaptive Online Optimization for Microgrids with Renewable Energy Sources",
+        "A Bilevel Framework for Data Center-Grid Coordination with DLMPs in Unbalanced Three-Phase Distribution Systems",
+        "A Hierarchical Stochastic Model Predictive Control Framework for Integrated Request-aware Charge Scheduling and Service Allocation",
+        "Optimizing DER Aggregate Flexibility via Network Reconfiguration"
+      ]
+    },
+    {
+      "id": 3,
+      "n": 272,
+      "general_ai": 248,
+      "cue": 21,
+      "mean_feedback_similarity": 0.7598468065261841,
+      "mean_dynamics_similarity": 0.7543785572052002,
+      "titles": [
+        "Training Large-Vocabulary Neural Language Models by Private Federated Learning for Resource-Constrained Devices",
+        "A robust assessment for invariant representations",
+        "Overcoming the Stability Gap in Continual Learning",
+        "Embedding Empirical Distributions for Computing Optimal Transport Maps",
+        "Solving Recurrent MIPs with Semi-supervised Graph Neural Networks"
+      ]
+    },
+    {
+      "id": 4,
+      "n": 235,
+      "general_ai": 21,
+      "cue": 65,
+      "mean_feedback_similarity": 0.7677773237228394,
+      "mean_dynamics_similarity": 0.770521342754364,
+      "titles": [
+        "Uniform Sampling from the Reachable Set Using Optimal Transport",
+        "Exact sensitivity analysis of Markov reward processes via algebraic geometry",
+        "Online convex optimization for robust control of constrained dynamical systems",
+        "Convergence Analysis of EXTRA in Non-convex Distributed Optimization",
+        "Explicit Criteria for Finite-Time Identification in Sparse Primal--Dual Dynamics"
+      ]
+    },
+    {
+      "id": 5,
+      "n": 202,
+      "general_ai": 201,
+      "cue": 7,
+      "mean_feedback_similarity": 0.7566900253295898,
+      "mean_dynamics_similarity": 0.7449244260787964,
+      "titles": [
+        "Taming the Light: Illumination-Invariant Semantic 3DGS-SLAM",
+        "Leveraging Positional Encoding for Robust Multi-Reference-Based Object 6D Pose Estimation",
+        "Scene Aware Person Image Generation through Global Contextual Conditioning",
+        "ProxyTransformation: Preshaping Point Cloud Manifold With Proxy Attention For 3D Visual Grounding",
+        "Unified Discrete Diffusion for Simultaneous Vision-Language Generation"
+      ]
+    }
+  ]
+}

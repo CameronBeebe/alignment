@@ -1,0 +1,5 @@
+-r requirements.txt
+networkx==3.4.2
+transformers==4.52.3
+torch==2.7.0
+Markdown==3.8

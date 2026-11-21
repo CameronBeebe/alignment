@@ -1,5 +1,7 @@
 # Where does alignment research intervene?
 
+**Original alignment-only comparison.** The [expanded attention study](ATTENTION.md) tests the general-AI baseline and explicitly includes execution harnesses.
+
 **The five-year evidence supports a narrower version of the hypothesis.** In papers that explicitly use alignment terminology, studies of model-weight updates outnumber studies of external controls by an estimated **7.2 to 1**. Across the broader literature on preferences, safety, oversight and enforcement, the estimate falls to **1.36 to 1**. The broader result is consistent with parity and falls below the prespecified twofold threshold.
 
 | Comparison within retrieved research | Estimated weight-update papers per comparator paper | 95% interval |

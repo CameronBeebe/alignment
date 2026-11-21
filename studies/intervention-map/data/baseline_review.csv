@@ -1,0 +1,181 @@
+review_id,arxiv_id,title,url,codes,reason
+1,2411.04326,Rapid Quadrotor Navigation in Diverse Environments using an Onboard Depth Camera,https://arxiv.org/abs/2411.04326,EH,failsafe stop scheduled each planning round
+2,2608.26292,"On Scope Classification and Current Knowledge-Editing Benchmarks: A Negative Result, with INLAY as a Gradient-Free Case Study",https://arxiv.org/abs/2608.26292,H,external memory and query router
+3,2607.08086,GRE-Diff: Gaussian Room Embeddings for Structured Layout Diffusion,https://arxiv.org/abs/2607.08086,W,learned layout diffusion
+4,2509.23942,Efficient Identification of High Similarity Clusters in Polygon Datasets,https://arxiv.org/abs/2509.23942,WH,learned scheduling integrates verification into a search pipeline
+5,2606.19970,CrossFlow: One-Step Generation Across Latent and Pixel Spaces,https://arxiv.org/abs/2606.19970,W,one-step training objective
+6,2601.22885,Leveraging LLMs For Turkish Skill Extraction,https://arxiv.org/abs/2601.22885,none,dataset and evaluations
+7,2509.10401,"Abduct, Act, Predict: Scaffolding Causal Inference for Automated Failure Attribution in Multi-Agent Systems",https://arxiv.org/abs/2509.10401,none,single-pass reasoning prompt for offline attribution
+8,2606.28623,Improving Patient Subtyping on Longitudinal Data using Representations from Mamba-based Architecture,https://arxiv.org/abs/2606.28623,W,self-supervised representation
+9,2305.16291,Voyager: An Open-Ended Embodied Agent with Large Language Models,https://arxiv.org/abs/2305.16291,H,executable skills and iterative environment feedback
+10,2412.16542,FairDD: Enhancing Fairness with domain-incremental learning in dermatological disease diagnosis,https://arxiv.org/abs/2412.16542,W,diagnostic network training
+11,2510.02017,FairContrast: Enhancing Fairness through Contrastive learning and Customized Augmenting Methods on Tabular Data,https://arxiv.org/abs/2510.02017,W,contrastive training
+12,2307.10954,Soft-tissue Driven Craniomaxillofacial Surgical Planning,https://arxiv.org/abs/2307.10954,WEH,trained planner and simulator check proposed plans
+13,2506.12103,The Amazon Nova Family of Models: Technical Report and Model Card,https://arxiv.org/abs/2506.12103,W,new foundation models
+14,2409.14617,Protein-Mamba: Biological Mamba Models for Protein Function Prediction,https://arxiv.org/abs/2409.14617,W,pretraining and fine tuning
+15,2504.19448,An End-to-End Framework for Optimizing Foot Trajectory and Force in Dry Adhesion Legged Wall-Climbing Robots,https://arxiv.org/abs/2504.19448,none,trajectory optimization is acting policy
+16,2510.06038,From Learning to Mastery: Achieving Safe and Efficient Real-World Autonomous Driving with Human-In-The-Loop Reinforcement Learning,https://arxiv.org/abs/2510.06038,WE,active human intervention during driving-policy learning
+17,2203.10761,Harnessing Hard Mixed Samples with Decoupled Regularizer,https://arxiv.org/abs/2203.10761,W,mixup objective
+18,2406.16008,Found in the Middle: Calibrating Positional Attention Bias Improves Long Context Utilization,https://arxiv.org/abs/2406.16008,none,attention calibration at inference
+19,2512.05557,2K-Characters-10K-Stories: A Quality-Gated Stylized Narrative Dataset with Disentangled Control and Sequence Consistency,https://arxiv.org/abs/2512.05557,EH,gated narrative generation and revision pipeline
+20,2608.20809,TRACE: Training-time Report-guided and Clinically Ordered Concept Editing,https://arxiv.org/abs/2608.20809,W,edit distillation
+21,2603.13399,FlowAD: Ego-Scene Interactive Modeling for Autonomous Driving,https://arxiv.org/abs/2603.13399,W,learned motion features
+22,2504.19115,Towards Latency-Aware 3D Streaming Perception for Autonomous Driving,https://arxiv.org/abs/2504.19115,W,learned latency-aware detection architecture
+23,2212.12407,Text classification in shipping industry using unsupervised models and Transformer based supervised models,https://arxiv.org/abs/2212.12407,none,frozen embeddings and supervised comparators
+24,2309.15278,"Out of Sight, Still in Mind: Reasoning and Planning about Unobserved Objects with Video Tracking Enabled Memory Models",https://arxiv.org/abs/2309.15278,WH,learned memory plus tracking and planning pipeline
+25,2209.12441,Visual Anomaly Detection Via Partition Memory Bank Module and Error Estimation,https://arxiv.org/abs/2209.12441,W,learned anomaly representation
+26,2203.12719,What to Hide from Your Students: Attention-Guided Masked Image Modeling,https://arxiv.org/abs/2203.12719,W,masked modeling training
+27,2610.02292,Diffusion-Based Synthetic Data Pretraining for Enhancing Activity Recognition,https://arxiv.org/abs/2610.02292,W,synthetic pretraining
+28,2411.03619,Real-Time Safe Bipedal Robot Navigation using Linear Discrete Control Barrier Functions,https://arxiv.org/abs/2411.03619,E,barrier constraints govern gait choices
+29,2605.10318,Extending Confidence-Based Text2Cypher with Grammar and Schema Aware Filtering,https://arxiv.org/abs/2605.10318,EH,external validation filters generated queries
+30,2507.00761,A Probabilistic Approach to Wildfire Spread Prediction Using a Denoising Diffusion Surrogate Model,https://arxiv.org/abs/2507.00761,W,diffusion predictor
+31,2208.04378,Contrast-Phys: Unsupervised Video-based Remote Physiological Measurement via Spatiotemporal Contrast,https://arxiv.org/abs/2208.04378,W,contrastive video model
+32,2410.15970,Policy-driven Knowledge Selection and Response Generation for Document-grounded Dialogue,https://arxiv.org/abs/2410.15970,WH,learned dialogue policy with knowledge selection for generation
+33,2412.15050,Uni-Renderer: Unifying Rendering and Inverse Rendering Via Dual Stream Diffusion,https://arxiv.org/abs/2412.15050,W,diffusion architecture
+34,2505.03293,{\Psi}-Arena: Interactive Assessment and Optimization of LLM-based Psychological Counselors with Tripartite Feedback,https://arxiv.org/abs/2505.03293,H,feedback loop and orchestrated simulated interactions
+35,2601.22331,Scalable Batch Correction for Cell Painting via Batch-Dependent Kernels and Adaptive Sampling,https://arxiv.org/abs/2601.22331,none,kernel correction and subsampling
+36,2608.29965,Review Before Trust: Source-Grounded Integrity Gates for AI-Assisted Personal Health Records,https://arxiv.org/abs/2608.29965,EH,generated records require independent verification
+37,2610.15134,Lumen-bench: Cross-Lingual Safety Gaps and the Say-Do Problem in Tool-Calling Large Language Models,https://arxiv.org/abs/2610.15134,none,behavioral benchmark
+38,2511.17450,Planning with Sketch-Guided Verification for Physics-Aware Video Generation,https://arxiv.org/abs/2511.17450,H,verifier ranks candidates for iterative planning without a stated hard gate
+39,2210.02622,Training Diverse High-Dimensional Controllers by Scaling Covariance Matrix Adaptation MAP-Annealing,https://arxiv.org/abs/2210.02622,W,evolves neural controllers
+40,2506.10252,A Novel Feedforward Youla Parameterization Method for Avoiding Local Minima in Stereo Image Based Visual Servoing Control,https://arxiv.org/abs/2506.10252,none,combined feedback controller is the acting policy
+41,2211.06224,ALANNO: An Active Learning Annotation System for Mortals,https://arxiv.org/abs/2211.06224,none,annotation and training infrastructure
+42,2509.17808,Remote Sensing-Oriented World Model,https://arxiv.org/abs/2509.17808,W,fine-tuned world model
+43,2605.00938,Fusing Urban Structure and Semantics: A Conditional Diffusion Model for Cross-City OD Matrix Generation,https://arxiv.org/abs/2605.00938,W,learned OD diffusion
+44,2406.13805,WikiContradict: A Benchmark for Evaluating LLMs on Real-World Knowledge Conflicts from Wikipedia,https://arxiv.org/abs/2406.13805,none,RAG benchmark
+45,2309.02777,LightNeuS: Neural Surface Reconstruction in Endoscopy using Illumination Decline,https://arxiv.org/abs/2309.02777,W,trained implicit surface model
+46,2609.25541,A JEPA Recipe for Tabular Foundation Models,https://arxiv.org/abs/2609.25541,W,JEPA objective
+47,2511.13118,Extracting Events Like Code: A Multi-Agent Programming Framework for Zero-Shot Event Extraction,https://arxiv.org/abs/2511.13118,EH,coordinated agents with deterministic schema validation
+48,2610.02508,World Action Modeling with Progressive Visual Planning,https://arxiv.org/abs/2610.02508,W,learned world action policy
+49,2410.18433,Segmentation-aware Prior Assisted Joint Global Information Aggregated 3D Building Reconstruction,https://arxiv.org/abs/2410.18433,H,SAM plus geometric solver at inference
+50,2401.14349,Learning to navigate efficiently and precisely in real environments,https://arxiv.org/abs/2401.14349,W,end-to-end policy training
+51,2411.05980,FactLens: Benchmarking Fine-Grained Fact Verification,https://arxiv.org/abs/2411.05980,none,fact verification benchmark
+52,2510.11287,EEMS: Edge-Prompt Enhanced Medical Image Segmentation Based on Learnable Gating Mechanism,https://arxiv.org/abs/2510.11287,W,learnable segmentation architecture
+53,2404.10147,Eyes on the Streets: Leveraging Street-Level Imaging to Model Urban Crime Dynamics,https://arxiv.org/abs/2404.10147,none,application studying crime correlations
+54,2601.07155,Stable On-Policy Distillation through Adaptive Target Reformulation,https://arxiv.org/abs/2601.07155,W,distillation objective
+55,2405.14444,DuEDL: Dual-Branch Evidential Deep Learning for Scribble-Supervised Medical Image Segmentation,https://arxiv.org/abs/2405.14444,W,scribble-supervised segmentation
+56,2506.20574,Benchmarking Unsupervised Strategies for Anomaly Detection in Multivariate Time Series,https://arxiv.org/abs/2506.20574,W,substantive analysis of training objectives
+57,2603.23502,OccAny: Generalized Unconstrained Urban 3D Occupancy,https://arxiv.org/abs/2603.23502,WH,occupancy model and test-time view rendering pipeline
+58,2606.21271,Reward-free Pretraining for Reinforcement Learning via Occupancy Coverage Maximization,https://arxiv.org/abs/2606.21271,W,pretraining exploration policies
+59,2610.31945,Kolibri: A Sovereign European Model on the Pareto Frontier,https://arxiv.org/abs/2610.31945,W,trained foundation model
+60,2303.07139,Comparing statistical and machine learning methods for time series forecasting in data-driven logistics -- A simulation study,https://arxiv.org/abs/2303.07139,none,out-of-box forecasting comparison
+61,2603.28573,Learning Partial Action Replacement in Offline MARL,https://arxiv.org/abs/2603.28573,W,learned policy training method
+62,2607.16307,CoBind: Stage-Aware Compositional Binding for Training-Free Text-to-Image Generation,https://arxiv.org/abs/2607.16307,none,optimization of latents at inference
+63,2209.02341,EnergonAI: An Inference System for 10-100 Billion Parameter Transformer Models,https://arxiv.org/abs/2209.02341,H,external inference worker scheduling
+64,2606.06252,Can Test-Time Reconstruction Close the Loop on Latent Reasoning?,https://arxiv.org/abs/2606.06252,W,self-supervised test-time training
+65,2207.05340,Dual Contrastive Learning for Spatio-temporal Representation,https://arxiv.org/abs/2207.05340,W,contrastive representation learning
+66,2305.02937,"End-to-end spoken language understanding using joint CTC loss and self-supervised, pretrained acoustic encoders",https://arxiv.org/abs/2305.02937,W,encoder fine-tuning
+67,2608.20655,Nonlinear Model Predictive Control for Trajectory Tracking of Differentially Flat Fixed-Wing Aerial Systems,https://arxiv.org/abs/2608.20655,E,strictly enforced trajectory and control constraints
+68,2404.15743,SRAGAN: Saliency Regularized and Attended Generative Adversarial Network for Chinese Ink-wash Painting Style Transfer,https://arxiv.org/abs/2404.15743,W,saliency losses for GAN
+69,2211.15202,Revisiting Distance Metric Learning for Few-Shot Natural Language Classification,https://arxiv.org/abs/2211.15202,W,metric learning fine-tuning objectives
+70,2601.01651,DemoBot: Efficient Learning of Bimanual Manipulation with Dexterous Hands From Third-Person Human Videos,https://arxiv.org/abs/2601.01651,W,RL policy from video
+71,2303.08181,GaPT: Gaussian Process Toolkit for Online Regression with Application to Learning Quadrotor Dynamics,https://arxiv.org/abs/2303.08181,none,nonparametric GP inference reformulation
+72,2608.30877,Deploying DeepSeek 175B Locally on a Single Consumer-Grade RTX 4060 Laptop with 32GB RAM for 200k-Scale Protein-Ligand Virtual Screening,https://arxiv.org/abs/2608.30877,H,external deployment runtime for model-based screening
+73,2402.15477,Debiasing Machine Learning Models by Using Weakly Supervised Learning,https://arxiv.org/abs/2402.15477,W,weakly supervised debiasing
+74,2509.12742,Effective Gaussian Management for High-fidelity Scene Reconstruction,https://arxiv.org/abs/2509.12742,W,learnable scene parameter optimization
+75,2511.11079,ARCTraj: A Dataset and Benchmark of Human Reasoning Trajectories for Abstract Problem Solving,https://arxiv.org/abs/2511.11079,none,dataset and benchmark
+76,2502.17581,Intention Recognition in Real-Time Interactive Navigation Maps,https://arxiv.org/abs/2502.17581,H,integration of planners or LLM in interactive maps
+77,2404.01998,Specularity Factorization for Low-Light Enhancement,https://arxiv.org/abs/2404.01998,W,trained unrolled network
+78,2403.19078,MVEB: Self-Supervised Learning with Multi-View Entropy Bottleneck,https://arxiv.org/abs/2403.19078,W,representation learning objective
+79,2608.00817,Large language models improve physician accuracy but lead to false reliance,https://arxiv.org/abs/2608.00817,H,agentic retrieval pipeline
+80,2512.09310,Scene-agnostic Hierarchical Bimanual Task Planning via Visual Affordance Reasoning,https://arxiv.org/abs/2512.09310,EH,skill library and constrained action sequences
+81,2204.00686,Assimilation of Satellite Active Fires Data,https://arxiv.org/abs/2204.00686,none,physical simulation and data assimilation
+82,2205.00581,Using a novel fractional-order gradient method for CNN back-propagation,https://arxiv.org/abs/2205.00581,W,fractional backpropagation
+83,2610.11185,Predictive Multiplicity in Cell-Fate Assignment: Label-Free Rashomon Sets and the Limits of Per-Cell Certification,https://arxiv.org/abs/2610.11185,none,offline statistical certification
+84,2411.10479,Challenges in the Differential Classification of Individual Diagnoses from Co-Occurring Autism and ADHD Using Survey Data,https://arxiv.org/abs/2411.10479,W,trained diagnostic classifiers
+85,2509.25220,Cyclic Ablation: Testing Concept Localization against Functional Regeneration in AI,https://arxiv.org/abs/2509.25220,W,ablation and adversarial retraining
+86,2311.13668,MAIRA-1: A specialised large multimodal model for radiology report generation,https://arxiv.org/abs/2311.13668,W,fine-tuned multimodal generator
+87,2605.09157,Revisiting Mixture Policies in Entropy-Regularized Actor-Critic,https://arxiv.org/abs/2605.09157,W,policy gradient estimator
+88,2204.04597,"Private Sequential Hypothesis Testing for Statisticians: Privacy, Error Rates, and Sample Size",https://arxiv.org/abs/2204.04597,none,private sequential test
+89,2501.06680,Application of Vision-Language Model to Pedestrians Behavior and Scene Understanding in Autonomous Driving,https://arxiv.org/abs/2501.06680,W,knowledge distillation
+90,2301.01542,Federated Learning for Data Streams,https://arxiv.org/abs/2301.01542,W,federated empirical risk minimization
+91,2305.07666,Imitation versus Innovation: What children can do that large language and language-and-vision models cannot (yet)?,https://arxiv.org/abs/2305.07666,none,comparative evaluation
+92,2210.13388,Focused Concatenation for Context-Aware Neural Machine Translation,https://arxiv.org/abs/2210.13388,W,context-discounted translation loss
+93,2610.25957,Productive State-Space Exploration for Multi-turn RL in LLM Agents,https://arxiv.org/abs/2610.25957,W,RL exploration reward
+94,2604.23909,AMAVA: Adaptive Motion-Aware Video-to-Audio Framework for Visually-Impaired Assistance,https://arxiv.org/abs/2604.23909,EH,category-specific throttling of synthesized audio in a routed pipeline
+95,2406.06331,MedExQA: Medical Question Answering Benchmark with Multiple Explanations,https://arxiv.org/abs/2406.06331,none,evaluation benchmark
+96,2606.22146,Meta-Reinforcement Learning via Evolution for Multi-Objective Combinatorial Supply Chain Optimisation,https://arxiv.org/abs/2606.22146,W,meta-RL training
+97,2602.17881,Understanding Unreliability of Steering Vectors in Language Models: Geometric Predictors and the Limits of Linear Approximations,https://arxiv.org/abs/2602.17881,none,inference time activation steering
+98,2309.05192,Towards Viewpoint Robustness in Bird's Eye View Segmentation,https://arxiv.org/abs/2309.05192,W,synthetic viewpoint training
+99,2605.15300,Deep Pre-Alignment for VLMs,https://arxiv.org/abs/2605.15300,W,new multimodal model architecture
+100,2404.09610,LoRA Dropout as a Sparsity Regularizer for Overfitting Control,https://arxiv.org/abs/2404.09610,W,adapter regularization
+101,2605.05206,Taming Outlier Tokens in Diffusion Transformers,https://arxiv.org/abs/2605.05206,W,learned registers
+102,2206.13222,ML-Based Approach for NFL Defensive Pass Interference Prediction Using GPS Tracking Data,https://arxiv.org/abs/2206.13222,W,trained sports predictor
+103,2207.03679,Getting BART to Ride the Idiomatic Train: Learning to Represent Idiomatic Expressions,https://arxiv.org/abs/2207.03679,W,trained adapter
+104,2505.23206,HyperPointFormer: Multimodal Fusion in 3D Space with Dual-Branch Cross-Attention Transformers,https://arxiv.org/abs/2505.23206,W,learned multimodal architecture
+105,2206.11612,Constructing Cross-lingual Consumer Health Vocabulary with Word-Embedding from Comparable User Generated Content,https://arxiv.org/abs/2206.11612,W,skip-gram vectors trained on each corpus
+106,2606.27380,"A Survey of Automated Presentation Coaching: Systems, Methods, and Open Challenges",https://arxiv.org/abs/2606.27380,none,survey
+107,2406.10099,Know the Unknown: An Uncertainty-Sensitive Method for LLM Instruction Tuning,https://arxiv.org/abs/2406.10099,W,instruction tuning
+108,2404.13940,A User-Centric Multi-Intent Benchmark for Evaluating Large Language Models,https://arxiv.org/abs/2404.13940,none,benchmark
+109,2504.15251,On Learning Parallel Pancakes with Mostly Uniform Weights,https://arxiv.org/abs/2504.15251,none,distribution learning complexity
+110,2501.18199,HKAN: Hierarchical Kolmogorov-Arnold Network without Backpropagation,https://arxiv.org/abs/2501.18199,W,learns aggregation parameters
+111,2605.05652,Information-Preserving Domain Transfer with Unlabeled Data in Misspecified Simulation-Based Inference,https://arxiv.org/abs/2605.05652,W,domain transfer training
+112,2205.02698,Do Different Deep Metric Learning Losses Lead to Similar Learned Features?,https://arxiv.org/abs/2205.02698,W,substantive analysis of metric learning loss functions
+113,2503.14637,KINESIS: Motion Imitation for Human Musculoskeletal Locomotion,https://arxiv.org/abs/2503.14637,W,learned imitation policy
+114,2202.08221,Evolutionary Construction of Perfectly Balanced Boolean Functions,https://arxiv.org/abs/2202.08221,none,combinatorial function search
+115,2609.32165,FOCUS: Fixed-Confidence Online Causal Learning Using Sequential Adaptive Interventions,https://arxiv.org/abs/2609.32165,none,causal graph discovery
+116,2202.13482,Causal Domain Adaptation with Copula Entropy based Conditional Independence Test,https://arxiv.org/abs/2202.13482,none,nonparametric conditional independence test
+117,2502.06798,Prompt-Aware Scheduling for Efficient Text-to-Image Inferencing System,https://arxiv.org/abs/2502.06798,H,runtime routing and scheduling
+118,2608.28399,RetailAgent: Structured Adverse Timing in Self-Conditioned Multimodal LLM Trading Agents,https://arxiv.org/abs/2608.28399,H,structured agent execution with self-authored memory intervention
+119,2205.09809,Calibration Matters: Tackling Maximization Bias in Large-scale Advertising Recommendation Systems,https://arxiv.org/abs/2205.09809,none,calibration algorithm; model parameter change unspecified
+120,2411.07126,Edify Image: High-Quality Image Generation with Pixel Space Laplacian Diffusion Models,https://arxiv.org/abs/2411.07126,W,trained diffusion models
+121,2302.01813,Leveraging weak complementary labels to improve semantic segmentation of hepatocellular carcinoma and cholangiocarcinoma in H&E-stained slides,https://arxiv.org/abs/2302.01813,W,weak labels for segmentation training
+122,2308.01246,Tirtha -- An Automated Platform to Crowdsource Images and Create 3D Models of Heritage Sites,https://arxiv.org/abs/2308.01246,none,conventional photogrammetry platform
+123,2503.10714,ZSMerge: Zero-Shot KV Cache Compression for Memory-Efficient Long-Context LLMs,https://arxiv.org/abs/2503.10714,none,changes internal attention cache
+124,2402.08859,Large Language Model with Graph Convolution for Recommendation,https://arxiv.org/abs/2402.08859,H,LLM calls compose graph aggregation
+125,2507.13194,Relation-Aware Slicing in Cross-Domain Alignment,https://arxiv.org/abs/2507.13194,none,statistical distance construction
+126,2211.13447,On the Complexity of Counterfactual Reasoning,https://arxiv.org/abs/2211.13447,none,computational complexity
+127,2407.02503,Optimizing Deep Reinforcement Learning for Adaptive Robotic Arm Control,https://arxiv.org/abs/2407.02503,W,policy training optimization
+128,2605.05745,Best Arm Identification in Generalized Linear Bandits via Hybrid Feedback,https://arxiv.org/abs/2605.05745,none,adaptive sampling algorithm
+129,2504.18884,A Simple Ensemble Strategy for LLM Inference: Towards More Stable Text Classification,https://arxiv.org/abs/2504.18884,H,ensemble of repeated model calls
+130,2506.21832,TaleForge: Interactive Multimodal System for Personalized Story Creation,https://arxiv.org/abs/2506.21832,H,orchestrates text and image models
+131,2605.16911,VGGT-Occ: Geometry-Grounded and Density-Aware Gated Fusion for 3D Occupancy Prediction,https://arxiv.org/abs/2605.16911,W,new learned occupancy representation
+132,2210.07543,Watermarking Pre-trained Language Models with Backdooring,https://arxiv.org/abs/2210.07543,W,multitask model training
+133,2605.09355,FLAME: Adaptive Mixture-of-Experts for Continual Multimodal Multi-Task Learning,https://arxiv.org/abs/2605.09355,W,continual learning and MoE pretraining
+134,2603.04881,Differential Privacy in Two-Layer Networks: How DP-SGD Harms Fairness and Robustness,https://arxiv.org/abs/2603.04881,W,theory of DP-SGD training
+135,2211.02918,A Filtering-based General Approach to Learning Rational Constraints of Epistemic Graphs,https://arxiv.org/abs/2211.02918,none,symbolic rule induction
+136,2501.00230,Federated Deep Subspace Clustering,https://arxiv.org/abs/2501.00230,W,trains federated subspace encoder
+137,2602.06440,TrailBlazer: History-Guided Reinforcement Learning for Black-Box LLM Jailbreaking,https://arxiv.org/abs/2602.06440,W,trains history-aware policy
+138,2510.24240,Temporal Knowledge Graph Hyperedge Forecasting: Exploring Entity-to-Category Link Prediction,https://arxiv.org/abs/2510.24240,H,combines LLM category generation with rule-based prediction
+139,2303.16078,Practical solutions to the relative pose of three calibrated cameras,https://arxiv.org/abs/2303.16078,none,geometric pose solver
+140,2512.03024,TokenPowerBench: Benchmarking the Power Consumption of LLM Inference,https://arxiv.org/abs/2512.03024,none,power benchmark
+141,2506.14470,AST-Enhanced or AST-Overloaded? The Surprising Impact of Hybrid Graph Representations on Code Clone Detection,https://arxiv.org/abs/2506.14470,none,empirical comparison of input representations
+142,2402.14843,Text Diffusion with Reinforced Conditioning,https://arxiv.org/abs/2402.14843,W,reinforced conditioning in diffusion training
+143,2405.19779,Automatic Graph Topology-Aware Transformer,https://arxiv.org/abs/2405.19779,W,search for trained graph architectures
+144,2211.14302,Neural DAEs: Constrained neural networks,https://arxiv.org/abs/2211.14302,W,constrained residual network design
+145,2507.23784,SUB: Benchmarking CBM Generalization via Synthetic Attribute Substitutions,https://arxiv.org/abs/2507.23784,H,two coupled denoising processes for data generation
+146,2510.25976,Brain-IT: Image Reconstruction from fMRI via Brain-Interaction Transformer,https://arxiv.org/abs/2510.25976,W,brain-interaction transformer training
+147,2312.17404,Parameter Optimization with Conscious Allocation (POCA),https://arxiv.org/abs/2312.17404,W,hyperparameter optimization for model training
+148,2511.04120,RIDE: Difficulty Evolving Perturbation with Item Response Theory for Mathematical Reasoning,https://arxiv.org/abs/2511.04120,W,RL training of question-rewriting model
+149,2211.12677,Word-Level Representation From Bytes For Language Modeling,https://arxiv.org/abs/2211.12677,W,neural language modeling architecture
+150,2505.20380,GRAPE: Optimize Data Mixture for Group Robust Multi-target Adaptive Pretraining,https://arxiv.org/abs/2505.20380,W,adaptive pretraining mixture
+151,2209.01152,A Novel Approach for Pill-Prescription Matching with GNN Assistance and Contrastive Learning,https://arxiv.org/abs/2209.01152,W,contrastive GNN training
+152,2210.03884,Don't Lose Yourself! Empathetic Response Generation via Explicit Self-Other Awareness,https://arxiv.org/abs/2210.03884,W,new empathetic response generator architecture
+153,2406.06976,Discrete Dictionary-based Decomposition Layer for Structured Representation Learning,https://arxiv.org/abs/2406.06976,W,learned dictionaries
+154,2412.00684,Paint Outside the Box: Synthesizing and Selecting Training Data for Visual Grounding,https://arxiv.org/abs/2412.00684,W,data synthesis and selection for training
+155,2505.14080,Gender Trouble in Language Models: An Empirical Audit Guided by Gender Performativity Theory,https://arxiv.org/abs/2505.14080,none,audit
+156,2301.12457,EvoX: A Distributed GPU-accelerated Framework for Scalable Evolutionary Computation,https://arxiv.org/abs/2301.12457,none,optimization infrastructure
+157,2405.11914,PT43D: A Probabilistic Transformer for Generating 3D Shapes from Single Highly-Ambiguous RGB Images,https://arxiv.org/abs/2405.11914,W,fine-tunes shape generator
+158,2604.01305,UQ-SHRED: uncertainty quantification of shallow recurrent decoder networks for sparse sensing via engression,https://arxiv.org/abs/2604.01305,W,distributional regression objective
+159,2410.18697,"How Good Are LLMs for Literary Translation, Really? Literary Translation Evaluation with Humans and LLMs",https://arxiv.org/abs/2410.18697,none,evaluation corpus
+160,2412.16219,Adaptive Calibration: A Unified Conversion Framework of Spiking Neural Network,https://arxiv.org/abs/2412.16219,none,training-free network conversion
+161,2610.20582,Latent Compaction with Test-Time Training,https://arxiv.org/abs/2610.20582,none,cache optimization with frozen weights
+162,2303.13375,Capabilities of GPT-4 on Medical Challenge Problems,https://arxiv.org/abs/2303.13375,none,benchmark
+163,2404.15390,Remedying uncertainty representations in visual inference through Explaining-Away Variational Autoencoders,https://arxiv.org/abs/2404.15390,W,learned generative architecture
+164,2605.07453,Data Contamination in Neural Hieroglyphic Translation: A Reproducibility Study,https://arxiv.org/abs/2605.07453,none,test-set contamination audit
+165,2309.14176,Federated Learning Under Restricted User Availability,https://arxiv.org/abs/2309.14176,W,federated training under limited participation
+166,2312.01991,Shapley-Based Data Valuation with Mutual Information: A Key to Modified K-Nearest Neighbors,https://arxiv.org/abs/2312.01991,none,nonparametric neighbor scoring
+167,2512.20431,Skin Lesion Classification Using a Soft Voting Ensemble of Convolutional Neural Networks,https://arxiv.org/abs/2512.20431,WH,transfer learning and soft voting across classifiers
+168,2209.15536,Spike-based local synaptic plasticity: A survey of computational models and neuromorphic circuits,https://arxiv.org/abs/2209.15536,none,historical survey
+169,2303.12697,Visual motion analysis of the player's finger,https://arxiv.org/abs/2303.12697,none,motion extraction without a qualifying mechanism
+170,2503.16655,Accelerating Antibiotic Discovery with Large Language Models and Knowledge Graphs,https://arxiv.org/abs/2503.16655,H,knowledge graph and LLM evidence pipeline
+171,2202.03377,Benchmarking and Analyzing Point Cloud Classification under Corruptions,https://arxiv.org/abs/2202.03377,none,benchmark; improvement mechanism unspecified
+172,2304.07460,Communication and Energy Efficient Wireless Federated Learning with Intrinsic Privacy,https://arxiv.org/abs/2304.07460,W,federated training algorithm
+173,2509.09001,Fast attention mechanisms: a tale of parallelism,https://arxiv.org/abs/2509.09001,none,complexity of attention computation
+174,2609.35953,"Right Words, Wrong Moment: A Clinician-Grounded Analysis of Distress in 19,930 Conversations between Young People and ChatGPT",https://arxiv.org/abs/2609.35953,none,clinician review and design recommendations
+175,2505.24613,When Harry Meets Superman: The Role of The Interlocutor in Persona-Based Dialogue Generation,https://arxiv.org/abs/2505.24613,W,study of additional persona fine-tuning
+176,2606.04846,Large Language Models in K-12 Education: Alignment with State Curriculum Standards and Student Personas,https://arxiv.org/abs/2606.04846,none,evaluation pipeline for curriculum alignment
+177,2410.03941,AutoLoRA: AutoGuidance Meets Low-Rank Adaptation for Diffusion Models,https://arxiv.org/abs/2410.03941,H,combines fine-tuned and base model outputs during sampling
+178,2606.10533,Audio-Visual Exchange-Aware Token Pruning for Efficient Audio-Visual Captioning,https://arxiv.org/abs/2606.10533,W,RL-based learned pruning policy
+179,2601.13126,A Streamlined Attention-Based Network for Descriptor Extraction,https://arxiv.org/abs/2601.13126,W,triplet-loss descriptor training
+180,2405.04025,A Unified Post-Processing Framework for Group Fairness in Classification,https://arxiv.org/abs/2405.04025,E,external fairness postprocessor
