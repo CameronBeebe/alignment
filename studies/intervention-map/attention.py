@@ -82,6 +82,19 @@ def main():
     for name, d in [("core", a), ("explicit", a), ("general_ai", b)]:
         keep = d.core & (d.named if name == "explicit" else True)
         group = results[name] = {"full": estimates(d, keep)}
+        inside = d.loc[keep]
+        weights = inside.N_h / inside.n_h
+        w = inside.common_codes.str.contains("W")
+        e = inside.common_codes.str.contains("E|H")
+        group["paper_shares"] = {
+            label: float(weights[mask].sum() / weights.sum())
+            for label, mask in [
+                ("weights_only", w & ~e),
+                ("external_only", e & ~w),
+                ("both", w & e),
+                ("neither", ~(w | e)),
+            ]
+        }
         for era, years in [("2021_24", d.year < 2025), ("2025_26", d.year >= 2025)]:
             group[era] = estimates(d, keep & years)
             group["cs_CL_" + era] = estimates(

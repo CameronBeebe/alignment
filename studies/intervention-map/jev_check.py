@@ -83,14 +83,18 @@ def main():
     parser.add_argument("--workers", type=int, choices=range(1, 9), default=1)
     parser.add_argument("--model", default="jev-latest")
     parser.add_argument(
-        "--sample", choices=["control", "mechanisms"], default="control"
+        "--sample", choices=["control", "mechanisms", "clusters"], default="control"
     )
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     if not os.environ.get("TYPESAFE_API_KEY"):
         raise SystemExit("Set TYPESAFE_API_KEY in the calling environment.")
     output = args.output or ROOT / "results" / (
-        "jev_checks.jsonl" if args.sample == "control" else "jev_mechanisms.jsonl"
+        {
+            "control": "jev_checks.jsonl",
+            "mechanisms": "jev_mechanisms.jsonl",
+            "clusters": "jev_cluster_audit.jsonl",
+        }[args.sample]
     )
     if args.sample == "control":
         with gzip.open(ROOT / "data/control_sample.csv.gz", "rt") as f:
@@ -99,6 +103,11 @@ def main():
             }
         with (ROOT / "data/control_validation.csv").open() as f:
             ids = {r["paper_id"] for r in csv.DictReader(f)}
+    elif args.sample == "clusters":
+        from cluster_audit import draw
+
+        ids = {pid for group in draw().values() for pid in group}
+        papers = records()
     else:
         from attention import paper_tables
 

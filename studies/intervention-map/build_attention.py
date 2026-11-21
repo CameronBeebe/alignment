@@ -6,6 +6,8 @@ from pathlib import Path
 
 import markdown
 
+from build_cluster_view import section as cluster_section
+
 ROOT = Path(__file__).resolve().parent
 FRAMES = [
     ("general_ai", "General AI"),
@@ -64,6 +66,8 @@ def main():
     source = (ROOT / "ATTENTION.md").read_text()
     lead, *sections = source.split("\n## ")
     hypotheses, detail = sections[0], sections[1:]
+    measures = detail.pop(0)
+    assert measures.startswith("What measures research attention?")
     cards = []
     for section in detail:
         heading, body = section.split("\n", 1)
@@ -90,7 +94,7 @@ figure{margin:22px 0;padding:20px 24px;border:1px solid var(--rule);background:#
     html = (
         f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
         f"<title>Where does AI research put its effort?</title><style>{styles}</style></head><body><main>"
-        f'<header>{render(lead)}</header>{interval_chart()}<section class="hypotheses">{render("## " + hypotheses)}</section>'
+        f'<header>{render(lead)}</header>{cluster_section()}{render("## " + measures)}{interval_chart()}<section class="hypotheses">{render("## " + hypotheses)}</section>'
         f'<h2>Evidence and methods</h2>{"".join(cards)}</main></body></html>'
     )
     (ROOT / "attention-overview.html").write_text(html + "\n")

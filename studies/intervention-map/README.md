@@ -91,6 +91,9 @@ python attention.py
 python semantic_checks.py /tmp/attention-e5.npz
 python jev_results.py
 python compare_frames.py
+python cluster_audit.py
+python cluster_geometry.py --vectors /tmp/attention-e5.npz
+python general_topics.py
 python build_attention.py
 ```
 
@@ -99,3 +102,5 @@ The Jev measurements are frozen. Reading or recomputing their statistics require
 To regenerate the draws from the original full SQLite metadata catalog, run `baseline.py --draw-from PATH`, `control_sample.py PATH`, `match_papers.py PATH` and `vocabulary.py PATH` with Python. The frozen samples preserve public metadata, matched IDs and review decisions. Recollecting the source catalog at a different date can change records.
 
 The exploratory explicit-alignment versus general-AI contrast divides their weights-to-external ratios. It uses independent draw variances for the difference of the two log ratios, stratum weights and a Satterthwaite interval. This unadjusted comparison describes different publication mixes. [Contrast code](compare_frames.py) · [Estimates](results/frame_contrast.json)
+
+The HTML embeds all three maps for offline use with a modern browser. A point can be selected by mouse or from the searchable paper list. The 800 independent general-AI papers are also part of the 1,200-paper systems comparison. The 7,735-paper discovery shortlist includes model-selected records. To reproduce the 256-paper stratified Jev collection, use `python jev_check.py --sample clusters --limit 256 --workers 4`. Rebuilding the page from shipped tables requires no paid calls.
