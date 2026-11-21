@@ -4,6 +4,8 @@
 
 [Open the offline HTML report and searchable paper explorer](alignment-overview.html), [read the one-page report](REPORT.md) or [browse the alignment dataset](results/alignment_papers.csv). The study compares changes to the acting model’s parameters with external supervision and enforcement. Soft inference steering, task-specific safety engineering, and studies without a proposed intervention are identifiable separately.
 
+[Download the master dataset](results/paper_master.csv.gz) · [Column definitions, validation and reproduction](MASTER.md). The table joins ten Jev ratings, semantic distances, topic assignments, and available review and coauthor data on each paper ID.
+
 ## Use the frozen study
 
 Run these commands from this directory with Python 3.12. The CSV tables open directly. The candidate archive ships in two binary parts. Analysis restores it automatically and verifies its SHA-256 against the original review design. To restore it separately with the Python standard library, run `python snapshot.py`. Installing dependencies once requires internet access. Subsequent analyses work offline.

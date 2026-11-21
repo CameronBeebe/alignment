@@ -1,0 +1,178 @@
+{
+  "model": "intfloat/e5-small-v2",
+  "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+  "k": 6,
+  "silhouettes": {
+    "6": 0.043797798454761505,
+    "10": 0.03237518295645714,
+    "16": 0.03280528262257576,
+    "24": 0.029430247843265533
+  },
+  "candidate_fit_n": 25329,
+  "assigned_n": 26697,
+  "seed_ari": 0.9990581472494078,
+  "queries": {
+    "feedback": "Systems that observe their own or the environment's state and change subsequent actions to regulate error, maintain stability, or adapt behavior in a closed loop.",
+    "dynamics": "A mathematical study of how an interacting system evolves through time, its equilibria, trajectories, stability, observability or controllability.",
+    "scaffold": "A runtime architecture around an AI model that coordinates external tools, memory, retrieval, planning, verification or multiple agents for a task.",
+    "weight": "Learning new parameters of a predictive model or policy by training on data, fine tuning neural weights, or optimizing its training loss."
+  },
+  "topics": [
+    {
+      "id": 0,
+      "candidate_members": 2878,
+      "central_papers": [
+        {
+          "paper_id": "arxiv:2605.14174",
+          "title": "Safety-Constrained Reinforcement Learning with Post-Training Reachability Verification for Robot Navigation"
+        },
+        {
+          "paper_id": "arxiv:2211.17250",
+          "title": "Safe and Efficient Reinforcement Learning Using Disturbance-Observer-Based Control Barrier Functions"
+        },
+        {
+          "paper_id": "arxiv:2607.14488",
+          "title": "Safe Execution of RL Policies Via Acceleration-Based CBF-QP Constraint Enforcement for Real-World Robotic Deployments"
+        },
+        {
+          "paper_id": "arxiv:2607.07252",
+          "title": "Safe Reinforcement Learning using Ideas from Model Predictive Control"
+        },
+        {
+          "paper_id": "arxiv:2610.17799",
+          "title": "Beyond Safe Execution: Safe Online Reinforcement Learning for Autonomous Driving with Value Calibration and Adaptive Guidance"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "candidate_members": 6172,
+      "central_papers": [
+        {
+          "paper_id": "arxiv:2404.04392",
+          "title": "Fine-Tuning, Quantization, and LLMs: Navigating Unintended Outcomes"
+        },
+        {
+          "paper_id": "arxiv:2404.10552",
+          "title": "Unveiling the Misuse Potential of Base Large Language Models via In-Context Learning"
+        },
+        {
+          "paper_id": "arxiv:2405.13816",
+          "title": "Getting More from Less: Large Language Models are Good Spontaneous Multilingual Learners"
+        },
+        {
+          "paper_id": "arxiv:2307.12966",
+          "title": "Aligning Large Language Models with Human: A Survey"
+        },
+        {
+          "paper_id": "arxiv:2404.00245",
+          "title": "Aligning Large Language Models with Recommendation Knowledge"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "candidate_members": 5811,
+      "central_papers": [
+        {
+          "paper_id": "arxiv:2610.07018",
+          "title": "When to Rethink: Learning Multi-Perspective Self-Verification for Vision-Language Models"
+        },
+        {
+          "paper_id": "arxiv:2510.04217",
+          "title": "MLLMEraser: Achieving Test-Time Unlearning in Multimodal Large Language Models through Activation Steering"
+        },
+        {
+          "paper_id": "arxiv:2610.14976",
+          "title": "Metric-Driven Reinforcement Learning for Object Hallucination Reduction in LVLM-Based Image Captioning"
+        },
+        {
+          "paper_id": "arxiv:2405.10292",
+          "title": "Fine-Tuning Large Vision-Language Models as Decision-Making Agents via Reinforcement Learning"
+        },
+        {
+          "paper_id": "arxiv:2603.06600",
+          "title": "FuzzingRL: Reinforcement Fuzz-Testing for Revealing VLM Failures"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "candidate_members": 4028,
+      "central_papers": [
+        {
+          "paper_id": "arxiv:2405.18166",
+          "title": "Defending Large Language Models Against Jailbreak Attacks via Layer-specific Editing"
+        },
+        {
+          "paper_id": "arxiv:2401.06824",
+          "title": "Revisiting Jailbreaking for Large Language Models: A Representation Engineering Perspective"
+        },
+        {
+          "paper_id": "arxiv:2601.10543",
+          "title": "Defending Large Language Models Against Jailbreak Attacks via In-Decoding Safety-Awareness Probing"
+        },
+        {
+          "paper_id": "arxiv:2406.00240",
+          "title": "Exploring Vulnerabilities and Protections in Large Language Models: A Survey"
+        },
+        {
+          "paper_id": "arxiv:2406.06622",
+          "title": "Adversarial Tuning: Defending Against Jailbreak Attacks for LLMs"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "candidate_members": 2904,
+      "central_papers": [
+        {
+          "paper_id": "arxiv:2407.16216",
+          "title": "Reinforcement Learning for LLM Post-Training: A Survey"
+        },
+        {
+          "paper_id": "arxiv:2410.10148",
+          "title": "AlphaDPO: Adaptive Reward Margin for Direct Preference Optimization"
+        },
+        {
+          "paper_id": "arxiv:2409.17791",
+          "title": "Self-supervised Preference Optimization: Enhance Your Language Model with Preference Degree Awareness"
+        },
+        {
+          "paper_id": "arxiv:2403.19443",
+          "title": "Mixed Preference Optimization: Reinforcement Learning with Data Selection and Better Reference Model"
+        },
+        {
+          "paper_id": "arxiv:2410.06293",
+          "title": "Accelerated Preference Optimization for Large Language Model Alignment"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "candidate_members": 3536,
+      "central_papers": [
+        {
+          "paper_id": "arxiv:2409.03793",
+          "title": "Safeguarding AI Agents: Developing and Analyzing Safety Architectures"
+        },
+        {
+          "paper_id": "arxiv:2506.06286",
+          "title": "Disentangling AI Alignment: A Structured Taxonomy Beyond Safety and Ethics"
+        },
+        {
+          "paper_id": "arxiv:2405.09794",
+          "title": "Human-AI Safety: A Descendant of Generative AI and Control Systems Safety"
+        },
+        {
+          "paper_id": "arxiv:2408.12935",
+          "title": "AI Safety Landscape for Large Language Models: Taxonomy, State-of-the-art, and Future Directions"
+        },
+        {
+          "paper_id": "arxiv:2504.16110",
+          "title": "Security-First AI: Foundations for Robust and Trustworthy Systems"
+        }
+      ]
+    }
+  ]
+}

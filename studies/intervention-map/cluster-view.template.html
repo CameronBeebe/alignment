@@ -1,5 +1,6 @@
 <section class="atlas" id="paper-map" aria-labelledby="map-title">
 <h2 id="map-title">Explore the research clusters</h2>
+<p class="atlas-note"><a href="results/paper_master.csv.gz" download>Download the paper-level master (CSV.gz)</a> · <a href="MASTER.md">Column definitions and validation</a></p>
 <div class="atlas-controls">
 <label>Paper sample <select id="atlas-frame"><option>Alignment shortlist</option><option>General AI</option><option>AI, systems and control</option></select></label>
 <label>Year <select id="atlas-year"></select></label>
@@ -13,12 +14,13 @@
 <p class="atlas-note">Each point is one paper. Color comes from clustering the embeddings. The two-dimensional t-SNE projection approximates local similarity. Axes have no units. Each map has its own coordinates.</p>
 <noscript>Enable JavaScript for the point map. The topic counts and analysis below are available without it.</noscript>
 <h2>What does each alignment topic study?</h2>
-<p class="atlas-note">32 randomly sampled abstracts per topic, 256 total. Cells count Jev scores of at least 0.50. A paper may qualify in several columns.</p>
-<div class="scroll"><table class="heat"><thead><tr><th>Topic</th><th>Weights</th><th>Control or harness</th><th>Feedback or dynamics</th><th>Neither weights nor external</th></tr></thead><tbody>{{HEATMAP}}</tbody></table></div>
+<p class="atlas-note">All 7,735 shortlist papers. Each percentage is the share of a topic with a Jev score of at least 0.50. Hover for counts. A paper can qualify in several columns.</p>
+<div class="scroll"><table class="heat"><thead><tr><th>Topic</th><th>Papers</th><th>Weights</th><th>Control or harness</th><th>Feedback or dynamics</th><th>Neither weights nor external</th></tr></thead><tbody>{{HEATMAP}}</tbody></table></div>
+<p class="atlas-note">At this cutoff, Jev recovered 96% of rubric-coded weight papers and 52% of rubric-coded harness papers in the broader alignment audit (sampling-weighted).</p>
 <p class="atlas-note">Papers linked by at least two shared author names fell in the same topic <strong>{{SAME}}</strong> of the time ({{EDGES}} links). Shuffling topic labels within years gave <strong>{{NULL}}</strong> on average.</p>
 </section>
 <style>
-.atlas{color:#1b312e}.atlas h2{margin-top:24px}.atlas-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end}.atlas label{display:block;font-size:13px;font-weight:650}.atlas label small{font-weight:400}
+.atlas-scores{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 8px;margin:4px 0 7px}.atlas-scores dt,.atlas-scores dd{margin:0;border-bottom:1px solid #e1e7e2}.atlas-scores dd{font-variant-numeric:tabular-nums}.atlas{color:#1b312e}.atlas h2{margin-top:24px}.atlas-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end}.atlas label{display:block;font-size:13px;font-weight:650}.atlas label small{font-weight:400}
 .atlas select,.atlas input,.atlas button{font:inherit;color:inherit}.atlas input,.atlas select{display:block;max-width:100%;border:1px solid #a3b6ad;background:#fffefb;border-radius:4px;padding:5px}.atlas select,.atlas input{font-size:14px}.atlas-note{font-size:13px;color:#425953;margin:8px 0}
 .map-grid,.browse-grid{display:grid;gap:12px;grid-template-columns:minmax(0,1.55fr) minmax(185px,1fr)}.map-grid{border-block:1px solid #cbd4ce;padding:12px 0}
 #atlas-canvas{width:100%;height:335px;background:#f1f2ec;border-radius:5px;display:block;cursor:crosshair}#atlas-hover{min-height:2.5em;line-height:1.2}
@@ -96,9 +98,15 @@
     const p=selected, link=node('a',p.t);link.href=p.url||('https://arxiv.org/abs/'+p.id.slice(6));link.target='_blank';link.rel='noopener';
     box.append(link,node('p',p.y+' · '+frame.labels[p.c]));
     if(p.a||p.category)box.append(node('p',p.a||p.category));
-    if(p.team){const b=node('button','Browse coauthor group '+p.team);b.onclick=()=>{team=p.team;group=-1;byId('query').value='';byId('year').value='';refresh();};box.append(b);}
+    if(p.team != null){const b=node('button','Browse coauthor group '+p.team);b.onclick=()=>{team=p.team;group=-1;byId('query').value='';byId('year').value='';refresh();};box.append(b);}
     if(p.review)box.append(node('p','Rubric review · '+p.review));
-    box.append(node('p',p.jev?'Jev scores · '+['weights','supervision','scaffold','feedback','dynamics'].map((k,i)=>k+' '+p.jev[i].toFixed(2)).join(' · '):'Jev scores unavailable for this paper.'));
+    box.append(node('strong','Jev scores'));
+    const grid=node('dl','');grid.className='atlas-scores';
+    {{JEV_KEYS}}.forEach((k,i)=>{grid.append(node('dt',k.replaceAll('_',' ')),node('dd',p.jev[i].toFixed(2)));});box.append(grid);
+    const near=node('a',p.near_title);near.href=p.near_url;near.target='_blank';near.rel='noopener';
+    const nearest=node('p','Closest across the full dataset · ');nearest.append(near,document.createTextNode(' · cosine '+p.near_cos.toFixed(3)));box.append(nearest);
+    box.append(node('p','Distance gap between the two closest candidate topics · '+p.topic_margin.toFixed(3)));
+    if(p.score_basis==='title_only')box.append(node('p','Scores use the title because the abstract is missing.'));
     box.append(node('strong','Nearest abstracts in embedding space'));
     for(const idx of p.nn){const q=frame.papers[idx], row=node('p',''), b=node('button',q.t);
       b.onclick=()=>{group=-1;team=null;byId('year').value='';byId('query').value='';selected=q;refresh();};row.append(b);box.append(row);}

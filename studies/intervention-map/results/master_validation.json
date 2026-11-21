@@ -1,0 +1,193 @@
+{
+  "alignment_scope": {
+    "n": 360,
+    "positive_reference": 215,
+    "tn": 93,
+    "fp": 52,
+    "fn": 47,
+    "tp": 168,
+    "precision_050": 0.7795380652850472,
+    "recall_050": 0.7840744773574949,
+    "specificity_050": 0.634136670349328,
+    "average_precision": 0.8659654207811529
+  },
+  "core": {
+    "weights": {
+      "n": 215,
+      "positive_reference": 73,
+      "tn": 125,
+      "fp": 17,
+      "fn": 4,
+      "tp": 69,
+      "precision_050": 0.7982072637482805,
+      "recall_050": 0.9586641370848673,
+      "specificity_050": 0.8813920646000164,
+      "average_precision": 0.9525087400091611
+    },
+    "supervision": {
+      "n": 215,
+      "positive_reference": 46,
+      "tn": 122,
+      "fp": 47,
+      "fn": 3,
+      "tp": 43,
+      "precision_050": 0.48472709424517996,
+      "recall_050": 0.9272063981627583,
+      "specificity_050": 0.7287837793235501,
+      "average_precision": 0.8032519270525285
+    },
+    "scaffolding": {
+      "n": 215,
+      "positive_reference": 53,
+      "tn": 156,
+      "fp": 6,
+      "fn": 26,
+      "tp": 27,
+      "precision_050": 0.8211641117172174,
+      "recall_050": 0.5217722346777054,
+      "specificity_050": 0.9610489565114763,
+      "average_precision": 0.8030589632069185
+    }
+  },
+  "general_ai_audit": {
+    "weights": {
+      "n": 180,
+      "positive_reference": 100,
+      "tn": 65,
+      "fp": 15,
+      "fn": 8,
+      "tp": 92,
+      "precision_050": 0.85787874492014,
+      "recall_050": 0.9075685746951639,
+      "specificity_050": 0.8193936933685552,
+      "average_precision": 0.9570873916223603
+    },
+    "supervision": {
+      "n": 180,
+      "positive_reference": 12,
+      "tn": 157,
+      "fp": 11,
+      "fn": 3,
+      "tp": 9,
+      "precision_050": 0.43310430596507543,
+      "recall_050": 0.710409217767516,
+      "specificity_050": 0.9524189011006661,
+      "average_precision": 0.6517575649144449
+    },
+    "scaffolding": {
+      "n": 180,
+      "positive_reference": 31,
+      "tn": 146,
+      "fp": 3,
+      "fn": 21,
+      "tp": 10,
+      "precision_050": 0.7480324943193456,
+      "recall_050": 0.2823196855262577,
+      "specificity_050": 0.9834495755578729,
+      "average_precision": 0.6498097373129413
+    }
+  },
+  "control_review": {
+    "feedback": {
+      "n": 90,
+      "positive_reference": 26,
+      "tn": 48,
+      "fp": 16,
+      "fn": 2,
+      "tp": 24,
+      "precision_050": 0.601525027671873,
+      "recall_050": 0.9330408241129338,
+      "specificity_050": 0.7460416993259129,
+      "average_precision": 0.8535428469314763
+    },
+    "dynamics": {
+      "n": 90,
+      "positive_reference": 24,
+      "tn": 65,
+      "fp": 1,
+      "fn": 10,
+      "tp": 14,
+      "precision_050": 0.9135135135135135,
+      "recall_050": 0.6178494623655914,
+      "specificity_050": 0.9796254681647941,
+      "average_precision": 0.9660871575348071
+    }
+  },
+  "descriptive_roles_32": {
+    "evaluation": {
+      "n": 32,
+      "positive_reference": 8,
+      "tn": 24,
+      "fp": 0,
+      "fn": 1,
+      "tp": 7,
+      "precision_050": 1.0,
+      "recall_050": 0.875,
+      "specificity_050": 1.0,
+      "average_precision": 0.9861111111111112
+    },
+    "theory": {
+      "n": 32,
+      "positive_reference": 3,
+      "tn": 29,
+      "fp": 0,
+      "fn": 0,
+      "tp": 3,
+      "precision_050": 1.0,
+      "recall_050": 1.0,
+      "specificity_050": 1.0,
+      "average_precision": 1.0
+    },
+    "data_resources": {
+      "n": 32,
+      "positive_reference": 9,
+      "tn": 22,
+      "fp": 1,
+      "fn": 2,
+      "tp": 7,
+      "precision_050": 0.875,
+      "recall_050": 0.7777777777777778,
+      "specificity_050": 0.9565217391304348,
+      "average_precision": 0.8817340067340069
+    },
+    "governance": {
+      "n": 32,
+      "positive_reference": 8,
+      "tn": 24,
+      "fp": 0,
+      "fn": 3,
+      "tp": 5,
+      "precision_050": 1.0,
+      "recall_050": 0.625,
+      "specificity_050": 1.0,
+      "average_precision": 1.0
+    }
+  },
+  "five_vs_ten_question_instruments": {
+    "weights": {
+      "n": 733,
+      "mean_absolute_change": 0.01294679399727149,
+      "threshold_flips": 6
+    },
+    "supervision": {
+      "n": 733,
+      "mean_absolute_change": 0.010995907230559345,
+      "threshold_flips": 11
+    },
+    "scaffolding": {
+      "n": 733,
+      "mean_absolute_change": 0.0069440654843110515,
+      "threshold_flips": 5
+    },
+    "feedback": {
+      "n": 733,
+      "mean_absolute_change": 0.011446111869031378,
+      "threshold_flips": 12
+    },
+    "dynamics": {
+      "n": 733,
+      "mean_absolute_change": 0.004979536152796726,
+      "threshold_flips": 3
+    }
+  }
+}

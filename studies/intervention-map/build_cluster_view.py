@@ -38,17 +38,6 @@ def csv_index(path):
         return {r["paper_id"]: r for r in csv.DictReader(f)}
 
 
-def judgments(path):
-    rows = [json.loads(s) for s in (ROOT / "results" / path).read_text().splitlines()]
-    return {
-        r["paper_id"]: [
-            r["scores"][k]
-            for k in ("weights", "supervision", "scaffolding", "feedback", "dynamics")
-        ]
-        for r in rows
-    }
-
-
 def pack_frame(
     geometry,
     meta,
@@ -57,7 +46,7 @@ def pack_frame(
     *,
     shortlist=False,
     paper_reviews=None,
-    jev=None,
+    measurements,
     authors=None,
 ):
     geo = csv_index("results/" + geometry)
@@ -86,17 +75,28 @@ def pack_frame(
             paper["category"] = r["category"]
         if paper_reviews and pid in paper_reviews:
             paper["review"] = paper_reviews[pid]
-        if jev and pid in jev:
-            paper["jev"] = jev[pid]
+        paper.update(measurements[pid])
         papers.append(paper)
     return {"labels": labels, "papers": papers}
 
 
 def section():
-    audit = load("cluster_audit.json")
-    mechanism = judgments("jev_mechanisms.jsonl")
-    cluster = judgments("jev_cluster_audit.jsonl")
-    control_jev = judgments("jev_checks.jsonl")
+    manifest = load("master_manifest.json")
+    keys = list(manifest["questions"])
+    measurements = {}
+    sources = {}
+    with gzip.open(ROOT / "results/paper_master.csv.gz", "rt") as f:
+        for row in csv.DictReader(f):
+            sources[row["paper_id"]] = (row["title"], row["url"])
+            measurements[row["paper_id"]] = {
+                "jev": [float(row["jev_" + k]) for k in keys],
+                "near_cos": float(row["nearest_cosine"]),
+                "near_id": row["nearest_paper_id"],
+                "topic_margin": float(row["topic_distance_margin"]),
+                "score_basis": row["evidence_basis"],
+            }
+    for measurement in measurements.values():
+        measurement["near_title"], measurement["near_url"] = sources[measurement["near_id"]]
     shortlist = csv_index("results/alignment_papers.csv")
     control = csv_index("results/control_map.csv")
     original = {
@@ -109,7 +109,7 @@ def section():
         or "neither"
         for pid, r in csv_index("data/control_validation.csv").items()
     }
-    common_args = dict(paper_reviews=control_reviews, jev=control_jev)
+    common_args = dict(paper_reviews=control_reviews, measurements=measurements)
     general_names = [
         "Learning methods and optimization",
         "Computer vision and generation",
@@ -125,7 +125,7 @@ def section():
             shortlist=True,
             authors=csv_index("results/author_clusters.csv"),
             paper_reviews=original,
-            jev={**mechanism, **cluster},
+            measurements=measurements,
         ),
         pack_frame(
             "general_geometry.csv",
@@ -148,30 +148,25 @@ def section():
         "description"
     ] = "The same 800 AI papers plus 400 from systems, control and optimization. The extra sample makes control research easier to see and changes the topic mix."
     agreement = load("coauthor_topic_test.json")
-    stats = audit["thresholds"]["0.5"]
-    counts = stats["counts"]
-    neither = [0] * 8
-    extra = csv_index("results/semantic_clusters.csv")
-    for pid, score in cluster.items():
-        if max(score[:3]) < 0.5:
-            neither[int(extra[pid]["semantic_cluster"])] += 1
     table = []
     for i, name in enumerate(ALIGN_NAMES):
-        table.append(
-            "<tr><th scope='row'>"
-            + html.escape(name)
-            + "</th>"
-            + "".join(
-                f"<td style='--fill:{n/32:.3f}'>{n}</td>"
-                for n in [*counts[i], neither[i]]
+        group = manifest["shortlist_topic_counts"][str(i)]
+        n = group["papers"]
+        cells = []
+        for metric in ("weights", "external", "feedback_or_dynamics", "neither"):
+            count = group[metric]
+            cells.append(
+                f"<td style='--fill:{count/n:.3f}' title='{count} of {n}'>{count/n:.0%}</td>"
             )
-            + "</tr>"
+        table.append(
+            f"<tr><th scope='row'>{html.escape(name)}</th><td>{n:,}</td>{''.join(cells)}</tr>"
         )
     section = (ROOT / "cluster-view.template.html").read_text()
     payload = json.dumps(frames, separators=(",", ":"), ensure_ascii=False).encode()
     packed = base64.b64encode(gzip.compress(payload, compresslevel=9, mtime=0)).decode()
     return (
         section.replace("{{PAYLOAD}}", packed)
+        .replace("{{JEV_KEYS}}", json.dumps(keys))
         .replace("{{HEATMAP}}", "".join(table))
         .replace("{{EDGES}}", f'{agreement["edges"]:,}')
         .replace("{{SAME}}", f'{agreement["observed_share"]:.1%}')

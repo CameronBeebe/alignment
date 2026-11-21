@@ -1,0 +1,101 @@
+{
+  "rows": 26697,
+  "columns": 88,
+  "cohort_and_evidence_counts": {
+    "candidate": 25329,
+    "title_abstract": 26691,
+    "alignment_shortlist": 7735,
+    "title_only": 6,
+    "control_and_optimization": 400,
+    "general_ai": 800,
+    "general_ai_audit": 180,
+    "matched_comparison": 49
+  },
+  "model": "jev-1.14.0",
+  "questions": {
+    "weights": "Does a substantive contribution train, update or study changing the parameters of the principal predictor or acting policy?",
+    "supervision": "Does a substantive contribution govern an AI system's outputs or actions using a separate monitor, verifier, approval step or enforced constraint?",
+    "scaffolding": "Does the paper develop or study an external execution system coordinating models, tools, memory, verifiers, or people as the task runs? Include historical equivalents without requiring any particular term. Exclude training alone, passing mentions and benchmark setups without a substantive execution method.",
+    "feedback": "Is the subsequent action or intervention adjusted using observations of the system, performance error, or sensed state as a substantive mechanism? A one-time check and ordinary model fitting alone are insufficient.",
+    "dynamics": "Does the paper substantively reason about controlled state evolution, equilibria, stability, observability, or trajectories through a dynamical system? Mere use of 'dynamic' or references in background are insufficient.",
+    "alignment_relevance": "Does this paper substantively study whether an AI system's behavior meets human intentions, preferences, norms, safety requirements or authorization rules? Exclude generic predictive accuracy and mere feature, image, text or geometric alignment.",
+    "evaluation": "Does the paper make a substantive contribution to measuring, benchmarking, auditing or evaluating the behavior or performance of AI systems? Experiments used only to demonstrate another method are insufficient.",
+    "theory": "Does the paper contribute a formal analysis, theorem, proof, bound or explicitly mathematical characterization of a learning, decision or control problem? Writing down a training loss alone is insufficient.",
+    "data_resources": "Does the paper introduce or substantively study a dataset, data collection, annotation or curation method as a research contribution? Merely consuming an existing dataset is insufficient.",
+    "governance": "Does the paper substantively analyze institutional governance, policy, accountability, societal impacts or normative frameworks concerning AI systems? A passing mention of ethical implications is insufficient."
+  },
+  "positive_counts_050_all_works": {
+    "weights": 12435,
+    "data_resources": 6579,
+    "evaluation": 9417,
+    "alignment_relevance": 15134,
+    "supervision": 9549,
+    "feedback": 13805,
+    "scaffolding": 3554,
+    "dynamics": 2396,
+    "theory": 4154,
+    "governance": 1061
+  },
+  "shortlist_topic_counts": {
+    "0": {
+      "papers": 1006,
+      "weights": 556,
+      "external": 384,
+      "feedback_or_dynamics": 538,
+      "neither": 273
+    },
+    "7": {
+      "papers": 1822,
+      "weights": 801,
+      "external": 391,
+      "feedback_or_dynamics": 639,
+      "neither": 805
+    },
+    "6": {
+      "papers": 803,
+      "weights": 659,
+      "external": 323,
+      "feedback_or_dynamics": 624,
+      "neither": 79
+    },
+    "3": {
+      "papers": 815,
+      "weights": 159,
+      "external": 477,
+      "feedback_or_dynamics": 353,
+      "neither": 256
+    },
+    "4": {
+      "papers": 649,
+      "weights": 162,
+      "external": 200,
+      "feedback_or_dynamics": 302,
+      "neither": 332
+    },
+    "2": {
+      "papers": 1170,
+      "weights": 130,
+      "external": 417,
+      "feedback_or_dynamics": 346,
+      "neither": 673
+    },
+    "5": {
+      "papers": 936,
+      "weights": 500,
+      "external": 332,
+      "feedback_or_dynamics": 396,
+      "neither": 273
+    },
+    "1": {
+      "papers": 534,
+      "weights": 514,
+      "external": 74,
+      "feedback_or_dynamics": 346,
+      "neither": 9
+    }
+  },
+  "sha256": "42cd0ff9fc5f374c494d8e37b94535f22cdd3e61d2828971ca0f4635de998c78",
+  "file_bytes": 6408871,
+  "input_tokens": 26292988,
+  "output_tokens": 4778763
+}
