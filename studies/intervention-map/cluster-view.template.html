@@ -114,6 +114,11 @@
     if(!selected){box.append(node('p',visible.length?'Choose a paper for its source, scores and nearest neighbors.':'No papers match these filters.'));return;}
     const p=selected, link=node('a',p.t);link.href=p.url||('https://arxiv.org/abs/'+p.id.slice(6));link.target='_blank';link.rel='noopener';
     box.append(link,node('p',p.y+' · '+frame.labels[p.c]));
+    if(p.id.startsWith('arxiv:')){
+      const alpha=node('a','Read on alphaXiv');
+      alpha.href='https://www.alphaxiv.org/abs/'+encodeURIComponent(p.id.slice(6));
+      alpha.target='_blank';alpha.rel='noopener';box.append(alpha);
+    }
     if(p.a||p.category)box.append(node('p',p.a||p.category));
     if(p.team != null){const b=node('button','Browse coauthor group '+p.team);b.onclick=()=>{team=p.team;group=-1;byId('query').value='';byId('year').value='';refresh();};box.append(b);}
     if(p.review)box.append(node('p','Rubric review · '+p.review));

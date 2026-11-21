@@ -1,0 +1,129 @@
+source,external_key,title,url,labels
+company,circuits updates may 2023,Circuits Updates — May 2023,https://www.anthropic.com/research/circuits-updates-may-2023,Mechanistic interpretability
+company,atp efficient and scalable methods for localizing llm behaviour to components,AtP*: Efficient and scalable methods for localizing LLM behaviour to components,https://deepmind.google/research/publications/68553/,Mechanistic interpretability
+company,studying large language model generalization with influence functions,Studying Large Language Model Generalization with Influence Functions,https://www.anthropic.com/research/studying-large-language-model-generalization-with-influence-functions,Mechanistic interpretability
+company,hindering adversarial attacks with implicit neural representations,Hindering Adversarial Attacks with Implicit Neural Representations,https://proceedings.mlr.press/v162/rusu22a/rusu22a,Robustness
+company,a hazard analysis framework for code synthesis large language models,A hazard analysis framework for code synthesis large language models,https://openai.com/research/a-hazard-analysis-framework-for-code-synthesis-large-language-models,Safety evaluations
+company,honesty is the best policy defining and mitigating ai deception,Honesty Is the Best Policy: Defining and Mitigating AI Deception,https://arxiv.org/pdf/2312.01350v1,Honest AI
+company,distributed representations composition superposition,Distributed Representations: Composition & Superposition,https://www.anthropic.com/research/distributed-representations-composition-superposition,Mechanistic interpretability
+company,challenges with unsupervised llm knowledge discovery,Challenges with unsupervised LLM knowledge discovery,https://deepmind.google/research/publications/66937/,Honest AI
+company,weak to strong generalization,Weak-to-strong generalization,https://openai.com/research/weak-to-strong-generalization,Enhancing human feedback
+company,ai written critiques help humans notice flaws,AI-written critiques help humans notice flaws,https://openai.com/research/critiques,Enhancing human feedback
+company,aligning language models to follow instructions,Aligning language models to follow instructions,https://openai.com/research/instruction-following,Enhancing human feedback
+company,sociotechnical safety evaluation of generative ai systems,Sociotechnical Safety Evaluation of Generative AI Systems,https://arxiv.org/pdf/2310.11986v2,Safety evaluations
+company,ununlearning unlearning is not sufficient for content regulation in advanced generative ai,UnUnlearning: Unlearning is not sufficient for content regulation in  advanced generative AI,https://arxiv.org/pdf/2407.00106v1,Unlearning
+company,model evaluation for extreme risks,Model evaluation for extreme risks,https://arxiv.org/pdf/2305.15324v2,Safety evaluations
+company,improving model safety behavior with rule based rewards,Improving Model Safety Behavior with Rule-Based Rewards,https://openai.com/index/improving-model-safety-behavior-with-rule-based-rewards/,Enhancing human feedback
+company,red teaming language models with language models,Red Teaming Language Models with Language Models,https://deepmind.google/discover/blog/red-teaming-language-models-with-language-models/,Safety evaluations
+company,does circuit analysis interpretability scale evidence from multiple choice capabilities in chinchil,Does Circuit Analysis Interpretability Scale? Evidence from Multiple Choice Capabilities in Chinchil,https://arxiv.org/abs/2307.09458,Mechanistic interpretability
+company,robust agents learn causal world models,Robust agents learn causal world models,https://deepmind.google/research/publications/49666/,Robustness
+company,evaluating frontier models for dangerous capabilities,Evaluating Frontier Models for Dangerous Capabilities,https://arxiv.org/abs/2403.13793,Safety evaluations
+company,doing the right thing for the right reason evaluating artificial moral cognition by probing cost insensitivity,Doing the right thing for the right reason: Evaluating artificial moral  cognition by probing cost insensitivity,https://arxiv.org/pdf/2305.18269v1,Safety evaluations
+controlarena,prompt optimization can enable ai control research,Prompt optimization can enable AI control research,https://www.lesswrong.com/posts/bALBxf3yGGx4bvvem/prompt-optimization-can-enable-ai-control-research,ControlArena bibliography
+controlarena,enhancing monitoring in ai control through trusted debate,Enhancing Monitoring in AI Control through Trusted Debate,https://openreview.net/forum?id=v2vZmV9kHm,ControlArena bibliography
+controlarena,misalignment classifiers why they re hard to evaluate adversarially and why we re studying them anyway,"Misalignment classifiers: Why they’re hard to evaluate adversarially, and why we’re studying them anyway",https://www.alignmentforum.org/posts/jzHhJJq2cFmisRKB2/misalignment-classifiers-why-they-re-hard-to-evaluate,ControlArena bibliography
+controlarena,building black box scheming monitors,Building Black-box Scheming Monitors,https://www.lesswrong.com/posts/sb8WmKNgwzefa6oaJ/building-black-box-scheming-monitors,ControlArena bibliography
+controlarena,the sum of its parts composing ai control protocols,The Sum of its Parts: Composing AI Control Protocols,https://github.com/ZachParent/trusted-editor-deep-dive,ControlArena bibliography
+controlarena,anthropic s pilot sabotage risk report,Anthropic’s Pilot Sabotage Risk Report,https://alignment.anthropic.com/2025/sabotage-risk-report/2025_pilot_risk_report.pdf,ControlArena bibliography
+controlarena,ctrl alt deceit sabotage evaluations for automated ai r d,CTRL-ALT-DECEIT: Sabotage Evaluations for Automated AI R&D,https://neurips.cc/virtual/2025/poster/117536,ControlArena bibliography
+controlarena,adversarial behavior in research settings conducting control evaluations with re bench,Adversarial Behavior in Research Settings: Conducting Control Evaluations with RE-Bench,https://openreview.net/forum?id=uQSMUG55nq,ControlArena bibliography
+governance,knowman weakly supervised multinomial adversarial networks,KnowMAN: Weakly Supervised Multinomial Adversarial Networks,,not_ai_safety
+governance,offensivelang a community based implicit offensive language dataset,OffensiveLang: A Community Based Implicit Offensive Language Dataset,,ethics_and_bias
+governance,towards understanding asr error correction for medical conversations,Towards Understanding ASR Error Correction for Medical Conversations,,not_ai_safety
+governance,semi supervised training with pseudo labeling for end to end neural diarization,Semi-Supervised Training with Pseudo-Labeling for End-To-End Neural Diarization,,not_ai_safety
+governance,leveraging vision and language generative models to understand the visual cortex,Leveraging Vision and Language Generative Models to Understand the Visual Cortex,,not_ai_safety
+governance,displacement based design procedures for rigid block isolation,Displacementbased design procedures for rigid block isolation,,not_ai_safety
+governance,performance guarantees for spectral initialization in rotation averaging and pose graph slam,Performance Guarantees for Spectral Initialization in Rotation Averaging and Pose-Graph SLAM,,not_ai_safety
+governance,whodunnit inferring what happened from multimodal evidence,Whodunnit? Inferring what happened from multimodal evidence,,not_ai_safety
+governance,an integrative salt marsh conceptual framework for global comparisons,An integrative salt marsh conceptual framework for global comparisons,,not_ai_safety
+governance,a probabilistic autoencoder for type ia supernova spectral time series,A Probabilistic Autoencoder for Type Ia Supernova Spectral Time Series,,not_ai_safety
+governance,multilingual computational models reveal shared brain responses to 21 languages,Multilingual Computational Models Reveal Shared Brain Responses to 21 Languages,,not_ai_safety
+governance,learning human search behavior from egocentric visual inputs,Learning Human Search Behavior from Egocentric Visual Inputs,,not_ai_safety
+governance,probabilistic super resolution for mineral spectroscopy,Probabilistic Super Resolution for Mineral Spectroscopy,,not_ai_safety
+governance,llms and the future of chip design unveiling security risks and building trust,LLMs and the Future of Chip Design: Unveiling Security Risks and Building Trust,,privacy_and_security
+governance,unsupervised multimodal neural machine translation with pseudo visual pivoting,Unsupervised Multimodal Neural Machine Translation with Pseudo Visual Pivoting,,not_ai_safety
+governance,approximately optimal domain adaptation with fisher s linear discriminant,Approximately Optimal Domain Adaptation with Fishers Linear Discriminant,,not_ai_safety
+governance,challenges in evaluating ai systems,Challenges in evaluating AI systems,,testing_and_evaluation
+governance,interpretable click through rate prediction through hierarchical attention,Interpretable Click-Through Rate Prediction through Hierarchical Attention,,interpretability_and_transparency
+governance,evaluating and aggregating feature based model explanations,Evaluating and Aggregating Feature-based Model Explanations,,interpretability_and_transparency
+governance,audio diffusion with large language models,Audio Diffusion with Large Language Models,,not_ai_safety
+guardrail,2608.27380,D2C-Routing: Dimension-to-Composition Evidence Routing for Mixed-Origin AI-Generated Text Detection,arxiv:2608.27380,benchmarks|category:evaluations|category:governance|content-provenance|safety-evals
+guardrail,2610.21720,FIRM: Fisher-Informed Retention Merging for Federated LLM Unlearning,arxiv:2610.21720,benchmarks|category:alignment|category:evaluations|category:robustness|safety-evals|value-alignment
+guardrail,2604.18240,AJ-Bench: Benchmarking Agent-as-a-Judge for Environment-Aware Evaluation,arxiv:2604.18240,autonomous-agents|benchmarks|capability-evals|category:agents|category:evaluations|scalable-oversight|tool-use
+guardrail,2609.38705,SCALE: Synthetic Calibration via Agreement Labeling in Embedding Space,arxiv:2609.38705,benchmarks|capability-evals|category:evaluations|category:robustness|uncertainty-quantification
+guardrail,2512.21681,Exploring the Security Threats of Retriever Backdoors in Retrieval-Augmented Code Generation,arxiv:2512.21681,backdoors|category:evaluations|category:robustness|cybersecurity|data-poisoning|red-teaming|safety-evals
+guardrail,2605.30592,Learning Transferable Predictability Representations,arxiv:2605.30592,category:interpretability|features|probing
+guardrail,2609.17141,Continual Learning for Traversability Prediction with Uncertainty-Aware Adaptation,arxiv:2609.17141,autonomous-agents|category:agents|category:evaluations|category:robustness|deployment|safety-evals|uncertainty-quantification
+guardrail,2604.06552,To Lie or Not to Lie? Investigating The Biased Spread of Global Lies by LLMs,arxiv:2604.06552,benchmarks|bias-mitigation|category:evaluations|category:robustness|content-filtering|red-teaming|safety-evals
+guardrail,2609.27593,Hidden not Deleted: How Networks Suppress Entangled Features,arxiv:2609.27593,activation-engineering|category:interpretability|category:robustness|circuits|features
+guardrail,2604.08281,When to Trust Tools? Adaptive Tool Trust Calibration For Tool-Integrated Math Reasoning,arxiv:2604.08281,autonomous-agents|capability-evals|category:agents|tool-use|uncertainty-quantification
+guardrail,2610.01006,Beyond Answer Confidence: A Controlled Audit of Self-Knowledge in a Black-Box Decision Model,arxiv:2610.01006,benchmarks|category:evaluations|category:robustness|hallucinations|safety-evals|uncertainty-quantification
+guardrail,2609.24401,Artificial Structure Function Search: Preserving Artificial Functional Connectivity for Structured Pruning,arxiv:2609.24401,benchmarks|category:interpretability|circuits|features
+guardrail,2606.29374,L2D2-GS: Learning to Densify for Feedforward Dynamic Gaussian Scene Reconstruction,arxiv:2606.29374,benchmarks|capability-evals|category:alignment
+guardrail,2610.26250,Causal Robustness from Synthetic Environments,arxiv:2610.26250,adversarial-examples|benchmarks|category:evaluations|category:robustness
+guardrail,2602.00971,Unveiling the Cognitive Compass: Theory-of-Mind-Guided Multimodal Emotion Reasoning,arxiv:2602.00971,category:alignment
+guardrail,2607.23870,MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents,arxiv:2607.23870,autonomous-agents|benchmarks|category:agents|category:evaluations|category:robustness|multimodal-safety|planning|safety-evals
+guardrail,2602.10239,XSPLAIN: XAI-enabling Splat-based Prototype Learning for Attribute-aware INterpretability,arxiv:2602.10239,category:interpretability|features
+guardrail,2607.09993,Beyond Bayesian Nash: Learning Minimax-Regret Equilibria for Adversarial Team Games under Asymmetric Information,arxiv:2607.09993,category:agents|category:robustness|deception|multi-agent
+guardrail,2606.17384,Improving and Evaluating Hand-Object Interaction Detection,arxiv:2606.17384,benchmarks|capability-evals|category:evaluations
+guardrail,2607.29002,"MMShopBench: A Real-Log Benchmark for Multimodal, Multi-Turn Shopping Agents",arxiv:2607.29002,autonomous-agents|benchmarks|capability-evals|category:agents|category:evaluations|multimodal-safety|tool-use
+llm_survey,true re evaluating factual consistency evaluation,TRUE: Re-evaluating Factual Consistency Evaluation,https://arxiv.org/abs/2204.04991,Factuality Evaluation
+llm_survey,optimal policies tend to seek power,Optimal Policies Tend To Seek Power,https://proceedings.neurips.cc/paper_files/paper/2021/file/c26820b8a4c1b3c2aa868d6d57e14a79-Paper.pdf,Potential Risks Associated with Advanced LLMs
+llm_survey,leace perfect linear concept erasure in closed form,LEACE: Perfect linear concept erasure in closed form,https://arxiv.org/abs/2306.03819,Mechanistic Interpretability
+llm_survey,deal or no deal end to end learning for negotiation dialogues,Deal or No Deal? End-to-End Learning for Negotiation Dialogues,https://arxiv.org/abs/1706.05125,Malicious Uses
+llm_survey,an overview of 11 proposals for building safe advanced ai,An Overview of 11 Proposals for Building Safe Advanced AI,https://arxiv.org/abs/2012.07532,What is LLM Alignment?
+llm_survey,notions of explainability and evaluation approaches for explainable artificial intelligence,Notions of explainability and evaluation approaches for explainable artificial intelligence,https://www.sciencedirect.com/science/article/pii/S1566253521001093,Mechanistic Interpretability
+llm_survey,social bias frames reasoning about social and power implications of language,Social Bias Frames: Reasoning About Social and Power Implications of Language,https://arxiv.org/pdf/1911.03891,Task-specific Evaluation
+llm_survey,would you rather a new benchmark for learning machine alignment with cultural values and social preferences,Would You Rather? A New Benchmark for Learning Machine Alignment with Cultural Values and Social Preferences,https://aclanthology.org/2020.acl-main.477/,Ethics Evaluation
+llm_survey,core views on ai safety when why what and how,"Core Views on AI Safety: When, Why, What, and How",,What is LLM Alignment?
+llm_survey,concrete problems for autonomous vehicle safety advantages of bayesian deep learning,Concrete problems for autonomous vehicle safety: Advantages of Bayesian deep learning,https://dl.acm.org/doi/10.5555/3171837.3171951,Mechanistic Interpretability
+llm_survey,a survey of large language models,A Survey of Large Language Models,https://arxiv.org/abs/2303.18223,Related Surveys
+llm_survey,racial microaggressions in everyday life implications for clinical practice,Racial Microaggressions in Everyday Life: Implications for Clinical Practice,https://www.law.stanford.edu/wp-content/uploads/sites/default/files/event/263076/media/slspublic/Sue-RadicalMicroagressionsInEverydayLife.pdf,Hate Speech Detection
+llm_survey,qafacteval improved qa based factual consistency evaluation for summarization,QAFactEval: Improved QA-based Factual Consistency Evaluation for Summarization,https://arxiv.org/abs/2112.08542,Factuality Evaluation
+llm_survey,towards understanding gender bias in relation extraction,Towards Understanding Gender Bias in Relation Extraction,https://arxiv.org/pdf/1911.03642,Task-specific Evaluation
+llm_survey,honest measuring hurtful sentence completion in language models,HONEST: Measuring Hurtful Sentence Completion in Language Models,https://aclanthology.org/2021.naacl-main.191,Undesirable Content
+llm_survey,learning from the worst dynamically generated datasets to improve online hate detection,Learning from the Worst: Dynamically Generated Datasets to Improve Online Hate Detection,https://arxiv.org/pdf/2012.15761,Hate Speech Detection
+llm_survey,transformer feed forward layers build predictions by promoting concepts in the vocabulary space,Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space,https://arxiv.org/abs/2203.14680,Mechanistic Interpretability
+llm_survey,hateful symbols or hateful people predictive features for hate speech detection on twitter,Hateful Symbols or Hateful People? Predictive Features for Hate Speech Detection on Twitter,https://aclanthology.org/N16-2013.pdf,Task-specific Evaluation
+llm_survey,detecting offensive language in social media to protect adolescent online safety,Detecting Offensive Language in Social Media to Protect Adolescent Online Safety,http://www.cse.psu.edu/~sxz16/papers/SocialCom2012.pdf,Task-specific Evaluation
+llm_survey,a central ai alignment problem capabilities generalization and the sharp left turn,"A central AI alignment problem: capabilities generalization, and the sharp left turn",,Inner Alignment
+radar_october,arxiv:2610.27528,Judging the Justification: Decision Certificate Supervision for Generative Reward Models,https://arxiv.org/abs/2610.27528,alignment_training|scalable_oversight
+radar_october,arxiv:2610.05370,EnGRICH: Enhancing Generative Reward Modeling with Critiques from Humans,https://arxiv.org/abs/2610.05370,alignment_training|scalable_oversight
+radar_october,arxiv:2610.04316,"From Latent Space to Jacobian Space: Measuring, Evading, and Training Against Safety-Content Accessibility",https://arxiv.org/abs/2610.04316,control_monitoring|interpretability
+radar_october,arxiv:2610.02527,CriticHack: Evaluating Visual Rewards Under Robot Policy Optimization,https://arxiv.org/abs/2610.02527,alignment_training
+radar_october,arxiv:2610.09552,Constitution-Guided Watermarking,https://arxiv.org/abs/2610.09552,control_monitoring|gov_evals_standards|gov_lab_practice
+radar_october,arxiv:2610.00850,AuraForge: Scaling Security Supervision for Training Coding Agents,https://arxiv.org/abs/2610.00850,alignment_training
+radar_october,arxiv:2610.37070,Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation,https://arxiv.org/abs/2610.37070,control_monitoring
+radar_october,arxiv:2610.05163,Blocking at the Boundary: Auditing Long-Horizon Agents against Staged Prompt Injection,https://arxiv.org/abs/2610.05163,agent_safety|control_monitoring
+radar_october,arxiv:2610.27446,Decision Sufficiency of Learned Representation Interfaces for Safe Generative Control,https://arxiv.org/abs/2610.27446,control_monitoring|interpretability
+radar_october,arxiv:2610.31090,Poolwise: Evaluating Reward Models for Selection across Prompts,https://arxiv.org/abs/2610.31090,alignment_training|trustworthy_ai
+radar_october,arxiv:2610.41025,ReplayRCA: Measuring Post-hoc Diagnosis and Live Oversight of Agent Failures by Counterfactual Replay,https://arxiv.org/abs/2610.41025,control_monitoring|scalable_oversight
+radar_october,arxiv:2610.03124,The Fragility of Trigger-Tag Mechanisms for Misuse Detection in Open-Weight LLMs,https://arxiv.org/abs/2610.03124,control_monitoring|jailbreaks_adversarial
+radar_october,arxiv:2610.29178,Correlated Failures of AI Approval Monitors,https://arxiv.org/abs/2610.29178,agent_safety|control_monitoring
+radar_october,arxiv:2610.16145,Pollard: Governed Semantic Execution Trees for Framework-Independent AI Agent Control and Replay,https://arxiv.org/abs/2610.16145,agent_safety|control_monitoring
+radar_october,arxiv:2610.03458,A Near-Zero Monitor Readout Is Not Evidence of Behavioral Control,https://arxiv.org/abs/2610.03458,alignment_training|control_monitoring
+radar_october,arxiv:2610.12125,The learner who does not learn: when optimizing a pedagogical metric degrades LLM tutoring,https://arxiv.org/abs/2610.12125,alignment_training
+radar_october,arxiv:2610.20887,Do Emergent Misalignment Models Share a Circuit?,https://arxiv.org/abs/2610.20887,alignment_training|interpretability
+radar_october,arxiv:2610.27518,When Health Assistants Agree Too Readily: A Benchmark of Time-Critical Self-Diagnosis,https://arxiv.org/abs/2610.27518,alignment_training|evals_capabilities
+radar_october,arxiv:2610.23550,Reason-guided Human Reward Modeling for Preference-based Reinforcement Learning,https://arxiv.org/abs/2610.23550,alignment_training
+radar_october,arxiv:2610.20179,Cross-Model In-Context Neurofeedback Reveals (Limited) Activation Control in LLMs,https://arxiv.org/abs/2610.20179,control_monitoring|interpretability
+stampy,2202.05262,Locating and Editing Factual Associations in GPT,https://arxiv.org/abs/2202.05262,
+stampy,2211.14468,Similarity-based Cooperation.,https://arxiv.org/abs/2211.14468,
+stampy,2204.11464,Towards Evaluating Adaptivity of Model-Based Reinforcement Learning Methods,https://arxiv.org/abs/2204.11464,
+stampy,2111.14874,Weighing the Milky Way and Andromeda with Artificial Intelligence,https://arxiv.org/abs/2111.14874,
+stampy,2202.10153,Inferring Lexicographically-Ordered Rewards from Preferences,https://arxiv.org/abs/2202.10153,
+stampy,2202.05983,Uncalibrated Models Can Improve Human-AI Collaboration,https://arxiv.org/abs/2202.05983,
+stampy,2210.14721,Sim-to-Real via Sim-to-Seg: End-to-end Off-road Autonomous Driving Without Real Data.,https://arxiv.org/abs/2210.14721,
+stampy,2203.06760,CMKD: CNN/Transformer-Based Cross-Model Knowledge Distillation for Audio Classification,https://arxiv.org/abs/2203.06760,
+stampy,2308.14752,"AI Deception: A Survey of Examples, Risks, and Potential Solutions",https://arxiv.org/abs/2308.14752,
+stampy,2210.03230,NAS-Bench-Suite-Zero: Accelerating Research on Zero Cost Proxies,https://arxiv.org/abs/2210.03230,
+stampy,2207.10050,Discriminator-Weighted Offline Imitation Learning from Suboptimal Demonstrations,https://arxiv.org/abs/2207.10050,
+stampy,2208.02246,AdaCat: Adaptive Categorical Discretization for Autoregressive Models.,https://arxiv.org/abs/2208.02246,
+stampy,2210.04964,Generating Executable Action Plans with Environmentally-Aware Language Models,https://arxiv.org/abs/2210.04964,
+stampy,2202.13252,The Quest for a Common Model of the Intelligent Decision Maker,https://arxiv.org/abs/2202.13252,
+stampy,2111.11212,Finding Useful Predictions by Meta-gradient Descent to Improve Decision-making,https://arxiv.org/abs/2111.11212,
+stampy,2202.11960,All You Need Is Supervised Learning: From Imitation Learning to Meta-RL With Upside Down RL,https://arxiv.org/abs/2202.11960,
+stampy,2204.09852,The Risks of Machine Learning Systems,https://arxiv.org/abs/2204.09852,
+stampy,2205.13013,Learning Deterministic Finite Automata Decompositions from Examples and Demonstrations.,https://arxiv.org/abs/2205.13013,
+stampy,2212.03827,Discovering Latent Knowledge in Language Models Without Supervision,https://arxiv.org/abs/2212.03827,
+stampy,2303.16749,Improving Code Generation by Training with Natural Language Feedback,https://arxiv.org/abs/2303.16749,

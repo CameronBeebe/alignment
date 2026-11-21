@@ -549,6 +549,82 @@ def explorer_data():
     return {"roles": list(ROLES.values()), "frames": profiles}
 
 
+def external_panel():
+    report = read("external_radar_check.json")
+    collections = read("external_comparison.json")["sources"]
+    rows = []
+    for key, label, mechanism in [
+        ("alignment_training", "Alignment training", "weight"),
+        ("control_monitoring", "Control and monitoring", "external"),
+    ]:
+        g = report["topics"][key]
+        rows.append(
+            [
+                label,
+                g["all"],
+                bar(
+                    g["master"] / g["all"],
+                    f'{g["master"]} ({g["master"]/g["all"]:.0%})',
+                ),
+                g["shortlist"],
+                f'{g["absent"]["both_reviewers"][mechanism]} / {g["absent"]["n"]}',
+            ]
+        )
+    return (
+        '<h3 id="external-databases">Does the search find both kinds of paper equally often?</h3>'
+        + note(
+            "AI Safety Radar independently tags abstracts. This check covers its October 2026 arXiv listings under two topics, with October arXiv identifiers. Ten papers carry both tags."
+        )
+        + table(
+            [
+                "Radar topic",
+                "Radar papers",
+                "In our master",
+                "On our shortlist",
+                "Both reviewers detect the corresponding mechanism among missing papers",
+            ],
+            rows,
+        )
+        + note(
+            "All 234 IDs were in the original source catalog. Jev and Qwen reread every abstract with Radar tags and previous votes hidden. The last column tests weight changes for the first row and supervision or harnesses for the second. Radar is a separate safety-selected frame. These coverage differences do not supply a field-wide correction factor."
+        )
+        + "<details><summary>Compare the seven external datasets</summary>"
+        + table(
+            [
+                "External collection",
+                "Eligible records used",
+                "Distinct papers matched",
+                "On shortlist",
+            ],
+            [
+                [
+                    name,
+                    f'{v["eligible_external_records"]:,}',
+                    f'{v["distinct_master_ids"]:,}',
+                    f'{v["shortlist"]:,}',
+                ]
+                for k, name in [
+                    ("guardrail", "The Guardrail · in-window arXiv IDs"),
+                    ("stampy", "Stampy · in-window arXiv IDs"),
+                    ("radar_october", "AI Safety Radar · two October topics"),
+                    ("company", "Frontier-lab review · downloadable coded sheet"),
+                    ("governance", "AI Disclosures Project · partial labeled file"),
+                    ("llm_survey", "LLM Alignment survey · numbered reading list"),
+                    ("controlarena", "ControlArena · papers and posts"),
+                ]
+                for v in [collections[k]]
+            ],
+        )
+        + note(
+            "The Guardrail assigns predefined semantic labels. Its 77,215 records include 21,229 tagged alignment. The six categories overlap. Coverage windows and publication types differ by source."
+        )
+        + "</details>"
+        + note(
+            '<a href="https://github.com/CameronBeebe/alignment/blob/study/alignment-interventions/studies/intervention-map/EXTERNAL.md">Sources, alphaXiv discovery and matching rules</a> · <a href="results/external_matches.csv.gz">Matched paper IDs and original labels</a> · <a href="results/external_radar_ratings.csv.gz">Independent-frame scores</a>'
+        )
+    )
+
+
 def fullpaper_panel():
     data = read("fulltext_summary.json")
     n = data["paired"]
@@ -795,6 +871,7 @@ def language_panel():
         )
         + tabs("lm", "Model-scope definition", choices)
         + fullpaper_panel()
+        + external_panel()
         + note(
             "Explicit alignment means the paper uses one of the study’s alignment phrases. The comparison with other wording uses two disjoint groups. The broader alignment row combines them. The same model-scope selection is used for both mechanism reviewers."
         )

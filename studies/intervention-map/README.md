@@ -4,6 +4,8 @@
 
 [Open the offline HTML report and searchable paper explorer](alignment-overview.html), [read the one-page report](REPORT.md) or [browse the alignment dataset](results/alignment_papers.csv). The study compares changes to the acting model’s parameters with external supervision and enforcement. Soft inference steering, task-specific safety engineering, and studies without a proposed intervention are identifiable separately.
 
+[Compare seven external safety-paper databases](EXTERNAL.md). Paper IDs and original topic labels can be joined to the master. A separate two-reviewer check covers an external publication sample including papers missed by the study search.
+
 [Compare what changes when reviewers read whole papers](attention-overview.html#full-paper-check). Jev scores 67 questions per text. Qwen independently checks the three headline mechanisms. The [paper-level measurements](results/fulltext_measures.csv) join to the master by paper ID. [Reproduction instructions](MASTER.md#join-the-full-paper-audit)
 
 [Open the language-model subset](attention-overview.html#language-models). The first comparison covers LLMs, GPT-family research and language Transformers. Model-scope controls in the topic explorer and paper map switch between language models and all model families. [Subset definitions and checks](MASTER.md#select-language-model-publications)

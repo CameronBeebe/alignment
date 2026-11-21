@@ -1,6 +1,6 @@
 # Where does AI research put its effort?
 
-**How often do explicitly alignment-worded language-model papers study model weights versus external supervision or runtime harnesses?** Across the same 60 full papers, the sampling-weighted ratio is **1.56 with Jev** (95% interval 1.09–2.22) and **2.84 with Qwen** (1.99–4.07). Jev’s ratio ranges from **1.02 to 2.64** as its decision cutoff moves from 0.30 to 0.70. The evidence supports a weight tilt at the default settings. Its size is sensitive to how a paper qualifies.
+**How often do explicitly alignment-worded language-model papers study model weights versus external supervision or runtime harnesses?** Across the same 60 full papers, the sampling-weighted ratio is **1.56 with Jev** (95% interval 1.09–2.22) and **2.84 with Qwen** (1.99–4.07). Jev’s ratio ranges from **1.02 to 2.64** as its decision cutoff moves from 0.30 to 0.70. The evidence supports a weight tilt at the default settings. Its size is sensitive to how a paper qualifies. Against an independent October 2026 index, our master captures **76% of alignment-training papers and 49% of control-and-monitoring papers**.
 
 The abstract rubric estimates **3.39** in this group and **0.64** among other language-model alignment papers. Full-paper results cover the explicitly worded group. Publication counts describe research attention over November 2021–October 2026.
 
@@ -26,6 +26,10 @@ The study protocol specifies the twofold threshold and the comparison with parit
 | Research time | Engineer-hours by topic are unknown. | Job listings, paper counts and grants cannot recover time allocation on their own. |
 
 [Publication estimates](results/attention.json) · [Indicator populations, units and sources](data/attention_indicators.csv)
+
+## How does the search compare with independent databases?
+
+Seven external collections match 8,249 distinct IDs in the master. In an independent October comparison, our master includes 122 of 161 Radar training-tagged papers and 41 of 83 control-tagged papers. Of the 42 missing control papers, Jev and Qwen both identify an external intervention in 17 abstracts. Search coverage limits claims about the field as a whole. [Sources and matching rules](EXTERNAL.md) · [All independent-frame ratings](results/external_radar_ratings.csv.gz)
 
 ## What changes when reviewers read the whole paper?
 

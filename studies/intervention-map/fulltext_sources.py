@@ -21,7 +21,12 @@ PDF_TITLES = {
 }
 
 
-def cohort():
+def cohort(selection="headline"):
+    if selection == "language-comparators":
+        return language_comparators()
+    if selection != "headline":
+        raise ValueError("Unknown cohort")
+
     a, _ = paper_tables()
     scope = (
         pd.read_csv(ROOT / "results/language_model_scores.csv.gz")
@@ -29,6 +34,19 @@ def cohort():
         .jev_language_model_focus
     )
     return a[a.core & a.named & a.paper_id.map(scope).ge(0.5)].sort_values("paper_id")
+
+
+def language_comparators():
+    """All remaining language-model core audit papers plus the language-model baseline."""
+    master = pd.read_csv(ROOT / "results/paper_master.csv.gz", keep_default_na=False)
+    selected = master.jev_language_model_focus.ge(0.5)
+    core = master.alignment_review_scope.eq("core")
+    general = master.cohorts.str.split("|", regex=False).map(
+        lambda tags: "general_ai_audit" in tags
+    )
+    completed = pd.read_csv(ROOT / "results/fulltext_measures.csv")
+    remaining = selected & (core | general) & ~master.paper_id.isin(completed.paper_id)
+    return master.loc[remaining, ["paper_id", "title"]].sort_values("paper_id")
 
 
 def digest(data):
@@ -39,7 +57,7 @@ def local_name(pid):
     return pid.replace(":", "_")
 
 
-def retrieve(folder, only=None):
+def retrieve(folder, only=None, selection="headline"):
     folder.mkdir(parents=True, exist_ok=True)
     release = ROOT / "results/fulltext_measures.csv"
     # This paper's current arXiv record is a withdrawal notice. The original
@@ -54,7 +72,7 @@ def retrieve(folder, only=None):
                     if r.get("versioned_pdf_url")
                 }
             )
-    for row in cohort().itertuples():
+    for row in cohort(selection).itertuples():
         pid = row.paper_id
         if only and pid != only:
             continue
@@ -120,5 +138,8 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("cache", type=Path)
     p.add_argument("--only")
+    p.add_argument(
+        "--cohort", choices=["headline", "language-comparators"], default="headline"
+    )
     args = p.parse_args()
-    retrieve(args.cache, args.only)
+    retrieve(args.cache, args.only, args.cohort)

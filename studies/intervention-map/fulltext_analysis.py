@@ -21,11 +21,19 @@ MEASURES = OUT / "fulltext_measures.csv"
 LEDGER = OUT / "fulltext_requests.csv"
 
 
-def export(sources, cache):
+def export(sources, cache, selection="headline"):
+    measure_file, ledger_file = (
+        (MEASURES, LEDGER)
+        if selection == "headline"
+        else (
+            OUT / "fulltext_comparator_measures.csv",
+            OUT / "fulltext_comparator_requests.csv",
+        )
+    )
     metadata = records()
     measures = []
     ledger = []
-    for row in cohort().itertuples():
+    for row in cohort(selection).itertuples():
         pid = row.paper_id
         title, abstract = metadata[pid]
         meta = json.loads((sources / (local_name(pid) + ".json")).read_text())
@@ -106,16 +114,23 @@ def export(sources, cache):
                 for key in keys:
                     record[f"{reviewer}_{basis}_{key}"] = float(rating["scores"][key])
         measures.append(record)
-    pd.DataFrame(measures).to_csv(MEASURES, index=False)
-    pd.DataFrame(ledger).to_csv(LEDGER, index=False)
+    pd.DataFrame(measures).to_csv(measure_file, index=False)
+    pd.DataFrame(ledger).to_csv(ledger_file, index=False)
 
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--export", nargs=2, type=Path, metavar=("SOURCES", "CACHE"))
+    p.add_argument(
+        "--cohort", choices=["headline", "language-comparators"], default="headline"
+    )
     args = p.parse_args()
+    if args.cohort != "headline" and not args.export:
+        p.error("The comparator cohort requires --export SOURCES CACHE")
     if args.export:
-        export(*args.export)
+        export(*args.export, selection=args.cohort)
+        if args.cohort != "headline":
+            return
     data = pd.read_csv(MEASURES).set_index("paper_id", verify_integrity=True)
     ledger = pd.read_csv(LEDGER)
     if set(cohort().paper_id) != set(data.index):

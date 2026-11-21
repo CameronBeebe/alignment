@@ -133,11 +133,27 @@ def main():
     p.add_argument("--basis", choices=["abstract", "paper", "both"], default="both")
     p.add_argument("--reviewer", choices=["jev", "qwen", "both"], default="both")
     p.add_argument("--limit", type=int)
+    p.add_argument(
+        "--cohort", choices=["headline", "language-comparators"], default="headline"
+    )
+    p.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Count paper IDs without collecting ratings or contacting either provider",
+    )
     args = p.parse_args()
+    selected = cohort(args.cohort)
+    if args.limit is not None:
+        if args.limit < 0:
+            p.error("--limit must be nonnegative")
+        selected = selected.head(args.limit)
+    if args.dry_run:
+        print(f"{len(selected)} selected IDs, cohort {args.cohort}.")
+        return
     args.cache.mkdir(parents=True, exist_ok=True)
     papers = records()
     tasks = []
-    for row in cohort().head(args.limit if args.limit is not None else 60).itertuples():
+    for row in selected.itertuples():
         pid = row.paper_id
         title, abstract = papers[pid]
         inputs = {"abstract": abstract}
