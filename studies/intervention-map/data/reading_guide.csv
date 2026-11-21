@@ -1,0 +1,8 @@
+paper_id,intervention,why_it_matters
+arxiv:2305.18290,Policy weights,DPO changes the acting policy using pairs of preferred and dispreferred responses.
+arxiv:2312.06942,Supervisory protocol,Trusted monitoring and editing can change which outputs are accepted while the acting model stays fixed.
+arxiv:2503.18813,Tool authorization,CaMeL separates trusted control flow from untrusted data and mediates tool access.
+arxiv:2503.18666,Runtime enforcement,AgentSpec expresses conditions and enforcement actions for an agent at runtime.
+arxiv:2608.09885,Adaptive harness,SHE revises prompts and tool policies after failures. The object being adapted is the harness.
+arxiv:2402.06147,Soft inference control,DeAL changes decoding to favor alignment objectives. A preference signal and an enforceable constraint do different jobs.
+arxiv:2402.05070,Specification,Pluralistic alignment asks which preferences an AI should represent. It informs both training and supervision.

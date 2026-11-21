@@ -1,0 +1,11 @@
+{
+  "cutoff": 0.8,
+  "heldout_n": 360,
+  "heldout_flagged": 104,
+  "heldout_correct_among_flagged": 96,
+  "weighted_heldout_precision": 0.9229554408366788,
+  "weighted_heldout_recall": 0.4611562876828482,
+  "weighted_heldout_auc": 0.8744958353327879,
+  "weighted_average_precision": 0.9068526781095945,
+  "selected_total": 7735
+}

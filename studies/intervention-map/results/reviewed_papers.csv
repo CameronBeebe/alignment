@@ -1,0 +1,361 @@
+review_id,paper_id,title,url,scope,mechanisms,stratum,N_h,n_h,auto_group
+1,arxiv:2409.17652,FactorSim: Generative Simulation via Factorized Representation,https://arxiv.org/abs/2409.17652,outside,none,inference|other|early,7,4,inference
+2,arxiv:2605.26497,Aligning Provenance with Authorization: A Dual-Graph Defense for LLM Agents,https://arxiv.org/abs/2605.26497,core,E,unresolved|gen|late,5450,66,unresolved
+3,acl:2025.naacl-long.302,Stronger Universal and Transferable Attacks by Suppressing Refusals,https://aclanthology.org/2025.naacl-long.302/,core,none,weights|gen|late,4341,53,weights
+4,arxiv:2605.19743,EngiAI: Capability-Based Evaluation of Tool-Connected LLM Agents for Engineering Design,https://arxiv.org/abs/2605.19743,outside,none,external|gen|late,3137,39,external
+5,arxiv:2606.01276,Worlds Within Words: Translating Culture in Ancient Chinese Texts with Multi-Agent Coordination,https://arxiv.org/abs/2606.01276,outside,none,inference|gen|late,795,13,inference
+6,acl:2024.blackboxnlp-1.30,Mechanistic?,https://aclanthology.org/2024.blackboxnlp-1.30/,outside,none,unresolved|gen|early,1552,21,unresolved
+7,arxiv:2412.14487,Token Preference Optimization with Self-Calibrated Visual-Anchored Rewards for Hallucination Mitigation,https://arxiv.org/abs/2412.14487,core,W,weights|gen|early,1814,24,weights
+8,arxiv:2610.19679,MCAIR: Monitoring and Correcting Agent Unfaithfulness via Internal Representations,https://arxiv.org/abs/2610.19679,core,E,external|gen|late,3137,39,external
+9,arxiv:2406.00222,Learning to Clarify: Multi-turn Conversations with Action-Based Contrastive Self-Training,https://arxiv.org/abs/2406.00222,core,W,mixed|gen|early,285,7,mixed
+10,arxiv:2111.00631,Learning Safety Filters for Unknown Discrete-Time Linear Systems,https://arxiv.org/abs/2111.00631,adjacent,E,external|other|early,811,13,external
+11,arxiv:2505.21907,Modeling and Optimizing User Preferences in AI Copilots: A Comprehensive Survey and Taxonomy,https://arxiv.org/abs/2505.21907,core,none,weights|gen|late,4341,53,weights
+12,acl:2021.emnlp-main.47,Text2Mol: Cross-Modal Molecule Retrieval with Natural Language Queries,https://aclanthology.org/2021.emnlp-main.47/,outside,none,inference|other|early,7,4,inference
+13,arxiv:2610.19971,Diagnose Before You Refine: Multi-Dimensional Judge Feedback for Query-Efficient Jailbreak Attacks,https://arxiv.org/abs/2610.19971,core,none,unresolved|gen|late,5450,66,unresolved
+14,arxiv:2609.04444,HarvestBench: Measuring Whether LLM Agents Will Pay to Avoid Killing Animals,https://arxiv.org/abs/2609.04444,core,none,inference|gen|late,795,13,inference
+15,arxiv:2306.10165,Data Selection for Fine-tuning Large Language Models Using Transferred Shapley Values,https://arxiv.org/abs/2306.10165,outside,none,weights|gen|early,1814,24,weights
+16,arxiv:2512.02987,Fine-Tuned Large Language Models for Logical Translation: Reducing Hallucinations with Lang2Logic,https://arxiv.org/abs/2512.02987,adjacent,W,mixed|gen|late,1195,17,mixed
+17,arxiv:2504.17432,Breaking the Modality Barrier: Universal Embedding Learning with Multimodal LLMs,https://arxiv.org/abs/2504.17432,outside,none,weights|gen|late,4341,53,weights
+18,arxiv:2506.01253,CoRE: Condition-based Reasoning for Identifying Outcome Variance in Complex Events,https://arxiv.org/abs/2506.01253,outside,none,unresolved|gen|late,5450,66,unresolved
+19,arxiv:2409.17458,RED QUEEN: Safeguarding Large Language Models against Concealed Multi-Turn Jailbreaking,https://arxiv.org/abs/2409.17458,core,W,unresolved|gen|early,1552,21,unresolved
+20,arxiv:2407.21174,AI Safety in Practice: Enhancing Adversarial Robustness in Multimodal Image Captioning,https://arxiv.org/abs/2407.21174,adjacent,W,weights|other|early,249,6,weights
+21,arxiv:2205.14697,Evaluating Automated Driving Planner Robustness against Adversarial Influence,https://arxiv.org/abs/2205.14697,adjacent,none,unresolved|other|early,1217,17,unresolved
+22,arxiv:2511.15351,Octopus: Agentic Multimodal Reasoning with Six-Capability Orchestration,https://arxiv.org/abs/2511.15351,outside,none,external|gen|late,3137,39,external
+23,arxiv:2410.22120,Vision Paper: Designing Graph Neural Networks in Compliance with the European Artificial Intelligence Act,https://arxiv.org/abs/2410.22120,core,none,unresolved|other|early,1217,17,unresolved
+24,arxiv:2606.13385,Who Pays the Price? Stakeholder-Centric Prompt Injection Benchmarking for Real-world Web Agents,https://arxiv.org/abs/2606.13385,core,none,unresolved|gen|late,5450,66,unresolved
+25,arxiv:2607.01859,Safety Targeted Embedding Exploit via Refinement,https://arxiv.org/abs/2607.01859,core,none,weights|gen|late,4341,53,weights
+26,arxiv:2404.05103,Chart What I Say: Exploring Cross-Modality Prompt Alignment in AI-Assisted Chart Authoring,https://arxiv.org/abs/2404.05103,outside,none,inference|other|early,7,4,inference
+27,arxiv:2205.04590,A Verification Framework for Certifying Learning-Based Safety-Critical Aviation Systems,https://arxiv.org/abs/2205.04590,adjacent,E,external|other|early,811,13,external
+28,acl:2021.insights-1.12,The Highs and Lows of Simple Lexical Domain Adaptation Approaches for Neural Machine Translation,https://aclanthology.org/2021.insights-1.12/,outside,none,inference|gen|early,120,5,inference
+29,arxiv:2311.16900,Lane-Keeping Control of Autonomous Vehicles Through a Soft-Constrained Iterative LQR,https://arxiv.org/abs/2311.16900,adjacent,E,external|other|early,811,13,external
+30,arxiv:2406.02756,Aligning Large Language Models via Fine-grained Supervision,https://arxiv.org/abs/2406.02756,core,W,weights|gen|early,1814,24,weights
+31,arxiv:2605.30040,Token Inflation: How Dishonest Providers Can Overcharge for Large Language Model Usage,https://arxiv.org/abs/2605.30040,outside,none,unresolved|gen|late,5450,66,unresolved
+32,arxiv:2607.18171,FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications,https://arxiv.org/abs/2607.18171,outside,none,external|gen|late,3137,39,external
+33,arxiv:2401.16979,Re3val: Reinforced and Reranked Generative Retrieval,https://arxiv.org/abs/2401.16979,outside,none,mixed|other|early,31,4,mixed
+34,arxiv:2610.16280,agent-risk: Risk Assessment for Changes to AI Agents,https://arxiv.org/abs/2610.16280,core,none,external|other|late,1211,17,external
+35,arxiv:2610.08378,Lachesis: Lifetime-Aware KV Cache Placement for Agent Serving across HBM and High-Bandwidth Flash,https://arxiv.org/abs/2610.08378,outside,none,external|gen|late,3137,39,external
+36,arxiv:2402.15650,Uniformly Safe RL with Objective Suppression for Multi-Constraint Safety-Critical Applications,https://arxiv.org/abs/2402.15650,adjacent,W,unresolved|other|early,1217,17,unresolved
+37,arxiv:2509.23564,"Clean First, Align Later: Benchmarking Preference Data Cleaning for Reliable LLM Alignment",https://arxiv.org/abs/2509.23564,core,none,weights|gen|late,4341,53,weights
+38,arxiv:2512.06674,RunawayEvil: Jailbreaking the Image-to-Video Generative Models,https://arxiv.org/abs/2512.06674,core,none,external|gen|late,3137,39,external
+39,arxiv:2509.01412,Vis-CoT: A Human-in-the-Loop Framework for Interactive Visualization and Intervention in LLM Chain-of-Thought Reasoning,https://arxiv.org/abs/2509.01412,core,E,unresolved|gen|late,5450,66,unresolved
+40,arxiv:2610.15938,"The Anatomy of a Blind Spot: What an LLM Judge Must Be Shown, and How Much",https://arxiv.org/abs/2610.15938,core,E,unresolved|gen|late,5450,66,unresolved
+41,arxiv:2312.07898,Ensuring End-to-End Security with Fine-grained Access Control for Connected and Autonomous Vehicles,https://arxiv.org/abs/2312.07898,outside,none,external|other|early,811,13,external
+42,arxiv:2507.12743,Invariance Guarantees using Continuously Parametrized Control Barrier Functions,https://arxiv.org/abs/2507.12743,adjacent,E,external|other|late,1211,17,external
+43,arxiv:2511.19749,"Scaling Item-to-Standard Alignment with Large Language Models: Accuracy, Limits, and Solutions",https://arxiv.org/abs/2511.19749,outside,none,unresolved|gen|late,5450,66,unresolved
+44,arxiv:2610.05640,Can CaMeLs Talk? Securing Multi-Agent Systems Against Indirect Prompt Injection Attacks,https://arxiv.org/abs/2610.05640,core,E,external|gen|late,3137,39,external
+45,arxiv:2511.12036,Preference Learning from Physics-Based Feedback: Tuning Language Models to Design BCC/B2 Superalloys,https://arxiv.org/abs/2511.12036,outside,none,weights|gen|late,4341,53,weights
+46,arxiv:2501.17028,Approach Towards Semi-Automated Certification for Low Criticality ML-Enabled Airborne Applications,https://arxiv.org/abs/2501.17028,adjacent,none,unresolved|other|late,1855,25,unresolved
+47,arxiv:2512.11933,The Agentic Regulator: Risks for AI in Finance and a Proposed Agent-based Framework for Governance,https://arxiv.org/abs/2512.11933,core,E,unresolved|gen|late,5450,66,unresolved
+48,acl:2024.findings-acl.526,Towards Objectively Benchmarking Social Intelligence of Language Agents at the Action Level,https://aclanthology.org/2024.findings-acl.526/,outside,none,external|gen|early,518,10,external
+49,arxiv:2409.01369,Imitating Language via Scalable Inverse Reinforcement Learning,https://arxiv.org/abs/2409.01369,outside,none,weights|gen|early,1814,24,weights
+50,arxiv:2410.21514,Sabotage Evaluations for Frontier Models,https://arxiv.org/abs/2410.21514,core,none,unresolved|gen|early,1552,21,unresolved
+51,arxiv:2111.00411,Safe Adaptive Learning-based Control for Constrained Linear Quadratic Regulators with Regret Guarantees,https://arxiv.org/abs/2111.00411,adjacent,E,unresolved|other|early,1217,17,unresolved
+52,arxiv:2507.21134,"TRIDENT: Benchmarking LLM Safety in Finance, Medicine, and Law",https://arxiv.org/abs/2507.21134,core,none,unresolved|gen|late,5450,66,unresolved
+53,arxiv:2512.18623,LLM-CAS: Dynamic Neuron Perturbation for Real-Time Hallucination Correction,https://arxiv.org/abs/2512.18623,core,I,weights|gen|late,4341,53,weights
+54,arxiv:2210.02300,Spatial-Temporal-Aware Safe Multi-Agent Reinforcement Learning of Connected Autonomous Vehicles in Challenging Scenarios,https://arxiv.org/abs/2210.02300,adjacent,WE,external|other|early,811,13,external
+55,arxiv:2407.19594,Meta-Rewarding Language Models: Self-Improving Alignment with LLM-as-a-Meta-Judge,https://arxiv.org/abs/2407.19594,core,W,unresolved|gen|early,1552,21,unresolved
+56,arxiv:2409.10550,Agentic Society: Merging skeleton from real world and texture from Large Language Model,https://arxiv.org/abs/2409.10550,outside,none,unresolved|gen|early,1552,21,unresolved
+57,arxiv:2503.13660,INPROVF: Leveraging Large Language Models to Repair High-level Robot Controllers from Assumption Violations,https://arxiv.org/abs/2503.13660,adjacent,E,unresolved|gen|late,5450,66,unresolved
+58,arxiv:2606.12086,IntElicit: Eliciting and Assessing Contextualized Creativity via Dialogue Policy Optimization,https://arxiv.org/abs/2606.12086,core,W,weights|other|late,565,10,weights
+59,arxiv:2307.10312,Beyond the ML Model: Applying Safety Engineering Frameworks to Text-to-Image Development,https://arxiv.org/abs/2307.10312,core,none,external|other|early,811,13,external
+60,arxiv:2511.06396,Efficient LLM Safety Evaluation through Multi-Agent Debate,https://arxiv.org/abs/2511.06396,core,none,unresolved|gen|late,5450,66,unresolved
+61,arxiv:2410.22143,AmpleGCG-Plus: A Strong Generative Model of Adversarial Suffixes to Jailbreak LLMs with Higher Success Rates in Fewer Attempts,https://arxiv.org/abs/2410.22143,core,none,unresolved|gen|early,1552,21,unresolved
+62,acl:2026.findings-emnlp.476,Candidate Pool Design for Safer Preference-Based Post-Training of LLM Companion Chatbots,https://aclanthology.org/2026.findings-emnlp.476/,core,W,weights|gen|late,4341,53,weights
+63,acl:2026.acl-long.305,Calibrating Inference Time Alignment with Sequence-level Risk Accumulation,https://aclanthology.org/2026.acl-long.305/,core,EI,inference|gen|late,795,13,inference
+64,arxiv:2511.09105,Cost-Minimized Label-Flipping Poisoning Attack to LLM Alignment,https://arxiv.org/abs/2511.09105,core,none,weights|gen|late,4341,53,weights
+65,arxiv:2302.01680,Two-Stage Constrained Actor-Critic for Short Video Recommendation,https://arxiv.org/abs/2302.01680,outside,none,unresolved|other|early,1217,17,unresolved
+66,arxiv:2410.13400,Towards Hybrid Intelligence in Journalism: Findings and Lessons Learnt from a Collaborative Analysis of Greek Political Rhetoric by ChatGPT and Humans,https://arxiv.org/abs/2410.13400,outside,none,unresolved|gen|early,1552,21,unresolved
+67,arxiv:2410.11283,AdvBDGen: Adversarially Fortified Prompt-Specific Fuzzy Backdoor Generator Against LLM Alignment,https://arxiv.org/abs/2410.11283,core,none,weights|gen|early,1814,24,weights
+68,arxiv:2410.18312,Countering Autonomous Cyber Threats,https://arxiv.org/abs/2410.18312,core,I,unresolved|gen|early,1552,21,unresolved
+69,arxiv:2405.13685,Financial Models in Generative Art: Black-Scholes-Inspired Concept Blending in Text-to-Image Diffusion,https://arxiv.org/abs/2405.13685,outside,none,external|gen|early,518,10,external
+70,arxiv:2305.15363,Inverse Preference Learning: Preference-based RL without a Reward Function,https://arxiv.org/abs/2305.15363,core,W,weights|other|early,249,6,weights
+71,arxiv:2506.20102,Autonomous Cyber Resilience via a Co-Evolutionary Arms Race within a Fortified Digital Twin Sandbox,https://arxiv.org/abs/2506.20102,outside,none,external|other|late,1211,17,external
+72,arxiv:2603.06981,"Diffusion Controller: Framework, Algorithms and Parameterization",https://arxiv.org/abs/2603.06981,core,W,mixed|other|late,125,5,mixed
+73,arxiv:2405.17713,AI Alignment with Changing and Influenceable Reward Functions,https://arxiv.org/abs/2405.17713,core,none,unresolved|other|early,1217,17,unresolved
+74,arxiv:2306.03680,Mildly Constrained Evaluation Policy for Offline Reinforcement Learning,https://arxiv.org/abs/2306.03680,outside,none,unresolved|other|early,1217,17,unresolved
+75,arxiv:2406.04854,Uncertainty Aware Learning for Language Model Alignment,https://arxiv.org/abs/2406.04854,core,W,weights|gen|early,1814,24,weights
+76,arxiv:2605.11376,LLM-X: A Scalable Negotiation-Oriented Exchange for Communication Among Personal LLM Agents,https://arxiv.org/abs/2605.11376,core,E,external|gen|late,3137,39,external
+77,arxiv:2403.19332,Learning a Formally Verified Control Barrier Function in Stochastic Environment,https://arxiv.org/abs/2403.19332,adjacent,E,external|other|early,811,13,external
+78,arxiv:2511.10985,When Data is the Algorithm: A Systematic Study and Curation of Preference Optimization Datasets,https://arxiv.org/abs/2511.10985,core,W,weights|gen|late,4341,53,weights
+79,arxiv:2506.16655,Arch-Router: Aligning LLM Routing with Human Preferences,https://arxiv.org/abs/2506.16655,core,E,unresolved|gen|late,5450,66,unresolved
+80,arxiv:2502.05489,Mechanistic Interpretability of Emotion Inference in Large Language Models,https://arxiv.org/abs/2502.05489,core,I,unresolved|gen|late,5450,66,unresolved
+81,arxiv:2605.07769,Coding Agents Don't Know When to Act,https://arxiv.org/abs/2605.07769,core,none,external|gen|late,3137,39,external
+82,arxiv:2409.18541,Align$^2$LLaVA: Cascaded Human and Large Language Model Preference Alignment for Multi-modal Instruction Curation,https://arxiv.org/abs/2409.18541,core,W,weights|gen|early,1814,24,weights
+83,acl:2025.arabicnlp-sharedtasks.127,ADAPT--MTU HAI at QIAS2025: Dual-Expert LLM Fine-Tuning and Constrained Decoding for Arabic Islamic Inheritance Reasoning,https://aclanthology.org/2025.arabicnlp-sharedtasks.127/,unclear,none,mixed|gen|late,1195,17,mixed
+84,acl:2026.findings-emnlp.2345,Teach a Man to Fish: Self-Adaptive Reinforced Distillation for In-Context Reasoning-based Reranker,https://aclanthology.org/2026.findings-emnlp.2345/,outside,none,mixed|other|late,125,5,mixed
+85,arxiv:2405.19358,Robustifying Safety-Aligned Large Language Models through Clean Data Curation,https://arxiv.org/abs/2405.19358,core,W,weights|gen|early,1814,24,weights
+86,arxiv:2403.03663,Robust Safety-Critical Control for Systems with Sporadic Measurements and Dwell Time Constraints,https://arxiv.org/abs/2403.03663,adjacent,E,external|other|early,811,13,external
+87,arxiv:2501.10467,Securing the AI Frontier: Urgent Ethical and Regulatory Imperatives for AI-Driven Cybersecurity,https://arxiv.org/abs/2501.10467,core,none,unresolved|other|late,1855,25,unresolved
+88,arxiv:2607.19356,NEXUS: Structured Runtime Safety for Tool-Using LLM Agents,https://arxiv.org/abs/2607.19356,core,E,external|gen|late,3137,39,external
+89,arxiv:2512.02533,PopSim: Social Network Simulation for Social Media Popularity Prediction,https://arxiv.org/abs/2512.02533,outside,none,external|gen|late,3137,39,external
+90,arxiv:2608.09867,Stealing Reasoning Traces from Proprietary LLM APIs,https://arxiv.org/abs/2608.09867,outside,none,unresolved|gen|late,5450,66,unresolved
+91,arxiv:2607.07433,Beware of Agentic Botnets: Scalable Untargeted Promptware Attacks via Universal and Transferable Adversarial HalluSquatting,https://arxiv.org/abs/2607.07433,core,none,unresolved|gen|late,5450,66,unresolved
+92,arxiv:2506.13326,VIS-Shepherd: Constructing Critic for LLM-based Data Visualization Generation,https://arxiv.org/abs/2506.13326,outside,none,external|gen|late,3137,39,external
+93,arxiv:2606.09890,PreAct-Bench: Benchmarking Predictive Monitoring in LLMs,https://arxiv.org/abs/2606.09890,core,none,external|gen|late,3137,39,external
+94,arxiv:2403.16347,ChatGPT Incorrectness Detection in Software Reviews,https://arxiv.org/abs/2403.16347,core,E,unresolved|gen|early,1552,21,unresolved
+95,arxiv:2502.11007,"Device-Cloud Collaborative LLM Inference with Multi-Modal, Multi-Task, Multi-Turn Conversations",https://arxiv.org/abs/2502.11007,outside,none,unresolved|gen|late,5450,66,unresolved
+96,arxiv:2112.05753,Using Machine Learning to Predict Air Quality Index in New Delhi,https://arxiv.org/abs/2112.05753,outside,none,external|other|early,811,13,external
+97,arxiv:2609.23490,BabelArena: A Large-Scale Multilingual Benchmark for LLM Agents,https://arxiv.org/abs/2609.23490,outside,none,external|gen|late,3137,39,external
+98,arxiv:2604.08326,ProMedical: Hierarchical Fine-Grained Criteria Modeling for Medical LLM Alignment via Explicit Injection,https://arxiv.org/abs/2604.08326,core,W,weights|gen|late,4341,53,weights
+99,arxiv:2607.02118,Enhancing Fitness Intelligence through Domain-Specific LLM Post-Training,https://arxiv.org/abs/2607.02118,outside,none,weights|gen|late,4341,53,weights
+100,arxiv:2604.03764,Automated Attention Pattern Discovery at Scale in Large Language Models,https://arxiv.org/abs/2604.03764,outside,none,unresolved|gen|late,5450,66,unresolved
+101,arxiv:2609.22153,SafeTune: A Unified Faithful Library for Auditing and Repairing Safety Drift in Fine-Tuned LLMs,https://arxiv.org/abs/2609.22153,core,WI,mixed|gen|late,1195,17,mixed
+102,arxiv:2505.11866,Position Paper: Bounded Alignment: What (Not) To Expect From AGI Agents,https://arxiv.org/abs/2505.11866,core,none,unresolved|gen|late,5450,66,unresolved
+103,arxiv:2502.18548,What is the Alignment Objective of GRPO?,https://arxiv.org/abs/2502.18548,core,W,weights|other|late,565,10,weights
+104,arxiv:2409.17504,HaloScope: Harnessing Unlabeled LLM Generations for Hallucination Detection,https://arxiv.org/abs/2409.17504,core,E,unresolved|gen|early,1552,21,unresolved
+105,arxiv:2606.01526,Spatio-Temporal Reconnection for Multi-Robot Networks using Adaptive Prescribed-Time CBFs,https://arxiv.org/abs/2606.01526,adjacent,E,external|other|late,1211,17,external
+106,arxiv:2608.04907,LLM-Assisted Detection and Repair of Hardware Security Vulnerabilities in Verilog Designs,https://arxiv.org/abs/2608.04907,outside,none,external|gen|late,3137,39,external
+107,arxiv:2406.18893,AlignIT: Enhancing Prompt Alignment in Customization of Text-to-Image Models,https://arxiv.org/abs/2406.18893,core,I,inference|gen|early,120,5,inference
+108,arxiv:2510.22319,GRPO-Guard: Mitigating Implicit Over-Optimization in Flow Matching via Regulated Clipping,https://arxiv.org/abs/2510.22319,core,W,inference|other|late,51,4,inference
+109,arxiv:2606.11906,When Does Language Matter? Multilingual Instructions Reveal Step-wise Language Sensitivity in Vision-Language-Action Models,https://arxiv.org/abs/2606.11906,core,I,inference|other|late,51,4,inference
+110,arxiv:2310.01377,UltraFeedback: Boosting Language Models with Scaled AI Feedback,https://arxiv.org/abs/2310.01377,core,W,weights|gen|early,1814,24,weights
+111,arxiv:2607.22606,Auditing Institutional Heterogeneity for Generative AI in Patient Education: A Large-Scale Study of 102 US Transplant Handbooks,https://arxiv.org/abs/2607.22606,outside,none,external|gen|late,3137,39,external
+112,arxiv:2610.22019,Priming Base Models for Agentic Post-Training: An Open Midtraining Recipe,https://arxiv.org/abs/2610.22019,outside,none,mixed|gen|late,1195,17,mixed
+113,acl:2025.emnlp-main.930,Towards a Unified Paradigm of Concept Editing in Large Language Models,https://aclanthology.org/2025.emnlp-main.930/,core,WI,mixed|gen|late,1195,17,mixed
+114,arxiv:2506.07755,Deep Equivariant Multi-Agent Control Barrier Functions,https://arxiv.org/abs/2506.07755,adjacent,E,external|other|late,1211,17,external
+115,arxiv:2312.10230,Constrained Meta-Reinforcement Learning for Adaptable Safety Guarantee with Differentiable Convex Programming,https://arxiv.org/abs/2312.10230,adjacent,W,unresolved|other|early,1217,17,unresolved
+116,arxiv:2610.26013,SpanGuard: Decoupling Instruction Localization from Authorization for Lightweight IPI Defense,https://arxiv.org/abs/2610.26013,core,E,external|gen|late,3137,39,external
+117,arxiv:2402.09642,Answer is All You Need: Instruction-following Text Embedding via Answering the Question,https://arxiv.org/abs/2402.09642,core,W,weights|gen|early,1814,24,weights
+118,arxiv:2610.26452,When Guidance Becomes a Guard: Early Interception of Unsafe Inputs in Text-to-Image Generation,https://arxiv.org/abs/2610.26452,core,E,unresolved|gen|late,5450,66,unresolved
+119,arxiv:2610.22578,Model-as-a-Trojan: Self-Activating Covert DNS Exfiltration Baked Into the Weights of an LLM Agent,https://arxiv.org/abs/2610.22578,core,none,mixed|gen|late,1195,17,mixed
+120,arxiv:2206.01704,KCRL: Krasovskii-Constrained Reinforcement Learning with Guaranteed Stability in Nonlinear Dynamical Systems,https://arxiv.org/abs/2206.01704,adjacent,W,weights|other|early,249,6,weights
+121,arxiv:2601.20026,Semantic Uncertainty Quantification of Hallucinations in LLMs: A Quantum Tensor Network Based Method,https://arxiv.org/abs/2601.20026,core,E,unresolved|gen|late,5450,66,unresolved
+122,arxiv:2401.03646,Evaluating Brain-Inspired Modular Training in Automated Circuit Discovery for Mechanistic Interpretability,https://arxiv.org/abs/2401.03646,outside,none,unresolved|gen|early,1552,21,unresolved
+123,arxiv:2603.09996,There Are No Silly Questions: Evaluation of Offline LLM Capabilities from a Turkish Perspective,https://arxiv.org/abs/2603.09996,core,none,unresolved|gen|late,5450,66,unresolved
+124,arxiv:2506.00777,Improving Automatic Evaluation of Large Language Models (LLMs) in Biomedical Relation Extraction via LLMs-as-the-Judge,https://arxiv.org/abs/2506.00777,adjacent,none,external|gen|late,3137,39,external
+125,arxiv:2502.05219,Enabling External Scrutiny of AI Systems with Privacy-Enhancing Technologies,https://arxiv.org/abs/2502.05219,core,none,unresolved|gen|late,5450,66,unresolved
+126,arxiv:2511.00973,Keys in the Weights: Transformer Authentication Using Model-Bound Latent Representations,https://arxiv.org/abs/2511.00973,outside,none,mixed|other|late,125,5,mixed
+127,arxiv:2508.18649,PRISM: Robust VLM Alignment with Principled Reasoning for Integrated Safety in Multimodality,https://arxiv.org/abs/2508.18649,core,WI,weights|gen|late,4341,53,weights
+128,arxiv:2503.07806,Towards Large Language Models that Benefit for All: Benchmarking Group Fairness in Reward Models,https://arxiv.org/abs/2503.07806,core,none,weights|gen|late,4341,53,weights
+129,arxiv:2309.14236,MoDem-V2: Visuo-Motor World Models for Real-World Robot Manipulation,https://arxiv.org/abs/2309.14236,adjacent,WE,unresolved|other|early,1217,17,unresolved
+130,arxiv:2602.15037,CircuChain: Disentangling Competence and Compliance in LLM Circuit Analysis,https://arxiv.org/abs/2602.15037,core,none,unresolved|gen|late,5450,66,unresolved
+131,arxiv:2603.00131,Thought Virus: Viral Misalignment via Subliminal Prompting in Multi-Agent Systems,https://arxiv.org/abs/2603.00131,core,none,unresolved|gen|late,5450,66,unresolved
+132,arxiv:2604.22624,Compositional Online Learning for Multi-Objective System Co-Design,https://arxiv.org/abs/2604.22624,outside,none,inference|other|late,51,4,inference
+133,acl:2025.bea-1.61,EyeLLM: Using Lookback Fixations to Enhance Human-LLM Alignment for Text Completion,https://aclanthology.org/2025.bea-1.61/,core,I,unresolved|gen|late,5450,66,unresolved
+134,arxiv:2406.18495,"WildGuard: Open One-Stop Moderation Tools for Safety Risks, Jailbreaks, and Refusals of LLMs",https://arxiv.org/abs/2406.18495,core,E,unresolved|gen|early,1552,21,unresolved
+135,arxiv:2607.04758,AgenticPD: A Stage-Aware Agentic Framework for Closed-Loop Physical Design Optimization,https://arxiv.org/abs/2607.04758,outside,none,external|gen|late,3137,39,external
+136,arxiv:2403.12037,MineDreamer: Learning to Follow Instructions via Chain-of-Imagination for Simulated-World Control,https://arxiv.org/abs/2403.12037,core,I,unresolved|gen|early,1552,21,unresolved
+137,arxiv:2605.16615,Learning What Evaluators Value: A Reliable Approach to Modeling Evaluator Preferences,https://arxiv.org/abs/2605.16615,outside,none,unresolved|gen|late,5450,66,unresolved
+138,arxiv:2609.04579,Does the Selected Object Reach the Reader? Auditing Identity Handoffs in Grounded Language-Model Pipelines,https://arxiv.org/abs/2609.04579,core,none,inference|gen|late,795,13,inference
+139,acl:2024.emnlp-main.129,Integrating Structural Semantic Knowledge for Enhanced Information Extraction Pre-training,https://aclanthology.org/2024.emnlp-main.129/,outside,none,external|gen|early,518,10,external
+140,arxiv:2603.14843,ContiGuard: A Framework for Continual Toxicity Detection Against Evolving Evasive Perturbations,https://arxiv.org/abs/2603.14843,outside,none,unresolved|gen|late,5450,66,unresolved
+141,arxiv:2605.15040,Orchard: An Open-Source Agentic Modeling Framework,https://arxiv.org/abs/2605.15040,outside,none,mixed|gen|late,1195,17,mixed
+142,arxiv:2404.00600,AI Act and Large Language Models (LLMs): When critical issues and privacy impact require human and ethical oversight,https://arxiv.org/abs/2404.00600,core,none,unresolved|gen|early,1552,21,unresolved
+143,arxiv:2511.08631,Enabling Frontier Lab Collaboration to Mitigate AI Safety Risks,https://arxiv.org/abs/2511.08631,core,none,unresolved|other|late,1855,25,unresolved
+144,arxiv:2602.18460,The Doctor Will (Still) See You Now: On the Structural Limits of Agentic AI in Healthcare,https://arxiv.org/abs/2602.18460,core,none,unresolved|gen|late,5450,66,unresolved
+145,arxiv:2206.03275,The Algorithmic Imprint,https://arxiv.org/abs/2206.03275,core,none,unresolved|other|early,1217,17,unresolved
+146,arxiv:2510.03969,How Catastrophic is Your LLM? Certifying Risk in Conversation,https://arxiv.org/abs/2510.03969,core,none,weights|gen|late,4341,53,weights
+147,arxiv:2507.01368,Activation Reward Models for Few-Shot Model Alignment,https://arxiv.org/abs/2507.01368,core,I,mixed|gen|late,1195,17,mixed
+148,arxiv:2602.10467,MERIT Feedback Elicits Better Bargaining in LLM Negotiators,https://arxiv.org/abs/2602.10467,core,WI,weights|gen|late,4341,53,weights
+149,arxiv:2501.05501,Strategy Masking: A Method for Guardrails in Value-based Reinforcement Learning Agents,https://arxiv.org/abs/2501.05501,core,E,mixed|other|late,125,5,mixed
+150,arxiv:2602.14643,Arbor: A Framework for Reliable Navigation of Critical Conversation Flows,https://arxiv.org/abs/2602.14643,core,E,unresolved|gen|late,5450,66,unresolved
+151,arxiv:2610.07009,Which Image Property Carries the Jailbreak? A Controlled Dissection of Image-to-Text Jailbreaks,https://arxiv.org/abs/2610.07009,core,none,unresolved|gen|late,5450,66,unresolved
+152,arxiv:2605.22748,Superhuman Safe and Agile Racing through Multi-Agent Reinforcement Learning,https://arxiv.org/abs/2605.22748,adjacent,W,unresolved|other|late,1855,25,unresolved
+153,arxiv:2605.10530,"Personalized Deep Research: A User-Centric Framework, Dataset, and Hybrid Evaluation for Knowledge Discovery",https://arxiv.org/abs/2605.10530,core,I,unresolved|gen|late,5450,66,unresolved
+154,arxiv:2403.15826,Scaling Learning based Policy Optimization for Temporal Logic Tasks by Controller Network Dropout,https://arxiv.org/abs/2403.15826,adjacent,W,mixed|other|early,31,4,mixed
+155,arxiv:2303.02197,On the Use of Safety Critical Control for Cyber-Physical Security in the Smart Grid,https://arxiv.org/abs/2303.02197,adjacent,E,external|other|early,811,13,external
+156,acl:2026.gem-main.45,Sycophancy Negatively Affects LLM-as-a-Judge in Conflict Evaluation,https://aclanthology.org/2026.gem-main.45/,core,none,unresolved|gen|late,5450,66,unresolved
+157,arxiv:2607.02972,A Scalable Approach to Evaluating Moral Sensitivity in LLMs,https://arxiv.org/abs/2607.02972,core,none,unresolved|gen|late,5450,66,unresolved
+158,arxiv:2607.02121,Behind the Refusal: Determining Guardrail Activation via Behavioral Monitoring,https://arxiv.org/abs/2607.02121,core,none,external|gen|late,3137,39,external
+159,arxiv:2508.04278,Large Language Model's Multi-Capability Alignment in Biomedical Domain,https://arxiv.org/abs/2508.04278,core,W,weights|gen|late,4341,53,weights
+160,arxiv:2608.01629,Human-LLM Alignment in Language Attitudes Toward Non-Native Japanese,https://arxiv.org/abs/2608.01629,core,none,unresolved|gen|late,5450,66,unresolved
+161,arxiv:2512.18014,ReGal: A First Look at PPO-based Legal AI for Judgment Prediction and Summarization in India,https://arxiv.org/abs/2512.18014,outside,none,weights|other|late,565,10,weights
+162,arxiv:2610.06910,GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets,https://arxiv.org/abs/2610.06910,outside,none,unresolved|gen|late,5450,66,unresolved
+163,arxiv:2603.20162,Evaluating Evidence Grounding Under User Pressure in Instruction-Tuned Language Models,https://arxiv.org/abs/2603.20162,core,none,weights|gen|late,4341,53,weights
+164,arxiv:2512.10392,Collision-Aware Density-Driven Control of Multi-Agent Systems via Control Barrier Functions,https://arxiv.org/abs/2512.10392,adjacent,E,external|other|late,1211,17,external
+165,acl:2026.lmplayschool-1.14,Teaching or Sharpening? An Exploration of the Potential of DPO Post-Training for Dialogue Games,https://aclanthology.org/2026.lmplayschool-1.14/,core,W,weights|gen|late,4341,53,weights
+166,arxiv:2607.15480,"A Critical Analysis of Trustworthy AI Tools, Mark Frameworks, and the Implementation Chasms",https://arxiv.org/abs/2607.15480,core,none,unresolved|other|late,1855,25,unresolved
+167,arxiv:2608.07367,People Are Not Just Their Countries. Disentangling Social Determinants of LLM Value Alignment Across Europe,https://arxiv.org/abs/2608.07367,core,none,unresolved|gen|late,5450,66,unresolved
+168,arxiv:2605.02346,APIOT: Autonomous Vulnerability Management Across Bare-Metal Industrial OT Networks,https://arxiv.org/abs/2605.02346,outside,none,external|gen|late,3137,39,external
+169,arxiv:2406.12205,On the Exponential Convergence for Offline RLHF with Pairwise Comparisons,https://arxiv.org/abs/2406.12205,core,W,weights|other|early,249,6,weights
+170,arxiv:2608.11207,Dynamic Governance of Multi-LLM Agent Systems for Collaborative Conversational Outcomes,https://arxiv.org/abs/2608.11207,core,E,external|gen|late,3137,39,external
+171,arxiv:2504.15719,Implementing Rational Choice Functions with LLMs and Measuring their Alignment with User Preferences,https://arxiv.org/abs/2504.15719,core,I,unresolved|gen|late,5450,66,unresolved
+172,arxiv:2305.06683,Cost-efficient Crowdsourcing for Span-based Sequence Labeling: Worker Selection and Data Augmentation,https://arxiv.org/abs/2305.06683,outside,none,weights|other|early,249,6,weights
+173,arxiv:2609.33287,Feedback Makes Perfect: A Closed-Loop Framework for NL-to-STL Translation,https://arxiv.org/abs/2609.33287,core,E,external|gen|late,3137,39,external
+174,arxiv:2609.23700,When the Agent Becomes the Kernel: A Systematization of Security on the Path to AI-Native Operating Systems,https://arxiv.org/abs/2609.23700,core,none,external|gen|late,3137,39,external
+175,arxiv:2606.05194,Temporal Preference Concepts and their Functions in a Large Language Model,https://arxiv.org/abs/2606.05194,core,I,inference|gen|late,795,13,inference
+176,arxiv:2609.36686,Where Root Cause Analysis Fails: A Retrieval-Reranking Decomposition,https://arxiv.org/abs/2609.36686,outside,none,inference|gen|late,795,13,inference
+177,arxiv:2412.07724,Granite Guardian,https://arxiv.org/abs/2412.07724,core,E,unresolved|gen|early,1552,21,unresolved
+178,arxiv:2609.09597,"Compact Visuotactile World Models for Lifting: Prediction, Reward Alignment, and Force Constraints",https://arxiv.org/abs/2609.09597,adjacent,WE,unresolved|other|late,1855,25,unresolved
+179,arxiv:2606.24224,Exploring the relationship between human-centric AI and firm idiosyncratic risks,https://arxiv.org/abs/2606.24224,outside,none,unresolved|other|late,1855,25,unresolved
+180,arxiv:2509.24696,T-POP: Test-Time Personalization with Online Preference Feedback,https://arxiv.org/abs/2509.24696,core,I,mixed|gen|late,1195,17,mixed
+181,arxiv:2610.41292,From Transcription to Reformulation: Defining and Benchmarking Grounded Generative Speech Recognition,https://arxiv.org/abs/2610.41292,outside,none,external|gen|late,3137,39,external
+182,arxiv:2411.08733,Dynamic Rewarding with Prompt Optimization Enables Tuning-free Self-Alignment of Language Models,https://arxiv.org/abs/2411.08733,core,I,mixed|gen|early,285,7,mixed
+183,arxiv:2502.10450,"Trustworthy AI: Safety, Bias, and Privacy -- A Survey",https://arxiv.org/abs/2502.10450,core,none,unresolved|gen|late,5450,66,unresolved
+184,arxiv:2603.08399,A Recipe for Stable Offline Multi-agent Reinforcement Learning,https://arxiv.org/abs/2603.08399,outside,none,unresolved|other|late,1855,25,unresolved
+185,arxiv:2409.19111,Fusion is all you need: Face Fusion for Customized Identity-Preserving Image Synthesis,https://arxiv.org/abs/2409.19111,outside,none,inference|other|early,7,4,inference
+186,arxiv:2607.00395,Child Safety in Generative AI: An Expert-Guided and Incident-Grounded Evaluation Framework,https://arxiv.org/abs/2607.00395,core,none,external|other|late,1211,17,external
+187,arxiv:2610.31923,Not an Accident: Exploiting Safety Filter Inadequacy in Humanoid Robots,https://arxiv.org/abs/2610.31923,adjacent,none,external|other|late,1211,17,external
+188,arxiv:2601.04770,SciIF: Benchmarking Scientific Instruction Following Towards Rigorous Scientific Intelligence,https://arxiv.org/abs/2601.04770,core,none,unresolved|gen|late,5450,66,unresolved
+189,arxiv:2511.01213,Thought-For-Food: Reasoning Chain Induced Food Visual Question Answering,https://arxiv.org/abs/2511.01213,outside,none,mixed|gen|late,1195,17,mixed
+190,arxiv:2601.20299,Truthfulness Despite Weak Supervision: Evaluating and Training LLMs Using Peer Prediction,https://arxiv.org/abs/2601.20299,core,W,weights|gen|late,4341,53,weights
+191,arxiv:2305.09793,Reinforcement Learning for Safe Robot Control using Control Lyapunov Barrier Functions,https://arxiv.org/abs/2305.09793,adjacent,W,unresolved|other|early,1217,17,unresolved
+192,arxiv:2606.22000,CFAgentBench: A Reproducible Environment and Benchmark for Autonomous Construction-Finance Agents,https://arxiv.org/abs/2606.22000,core,none,external|gen|late,3137,39,external
+193,arxiv:2606.10651,Kwai Keye-VL-2.0 Technical Report,https://arxiv.org/abs/2606.10651,outside,none,inference|gen|late,795,13,inference
+194,arxiv:2409.12274,Hierarchical LLMs In-the-Loop Optimization for Real-Time Multi-Robot Target Tracking under Unknown Hazards,https://arxiv.org/abs/2409.12274,adjacent,E,unresolved|gen|early,1552,21,unresolved
+195,arxiv:2608.28363,EvoUndo: Recoverability-Constrained Self-Evolution for LLM Agent Harnesses,https://arxiv.org/abs/2608.28363,core,E,external|gen|late,3137,39,external
+196,arxiv:2508.05289,RLHF Fine-Tuning of LLMs for Alignment with Implicit User Feedback in Conversational Recommenders,https://arxiv.org/abs/2508.05289,core,W,weights|gen|late,4341,53,weights
+197,arxiv:2608.15591,Agent Gym: A Framework for Continuous Evaluation and Evolution of LLM Agents Through Human-in-the-Loop Feedback,https://arxiv.org/abs/2608.15591,core,E,external|gen|late,3137,39,external
+198,arxiv:2408.12163,Preference-Guided Reflective Sampling for Aligning Language Models,https://arxiv.org/abs/2408.12163,core,WI,inference|gen|early,120,5,inference
+199,arxiv:2404.07921,AmpleGCG: Learning a Universal and Transferable Generative Model of Adversarial Suffixes for Jailbreaking Both Open and Closed LLMs,https://arxiv.org/abs/2404.07921,core,none,unresolved|gen|early,1552,21,unresolved
+200,arxiv:2310.00363,Composition of Control Barrier Functions With Differing Relative Degrees for Safety Under Input Constraints,https://arxiv.org/abs/2310.00363,adjacent,E,external|other|early,811,13,external
+201,arxiv:2610.27895,"The Shape of the DPO Hyperparameter Landscape: What to Measure, How It Moves with Scale, and When Not to Transfer It",https://arxiv.org/abs/2610.27895,core,W,weights|gen|late,4341,53,weights
+202,arxiv:2610.01452,Uncertainty-Guided Handshake: Efficient Human-in-the-Loop Refinement for Surgical-Grade Glioma Segmentation,https://arxiv.org/abs/2610.01452,adjacent,E,unresolved|other|late,1855,25,unresolved
+203,arxiv:2510.14106,Generating Fair Consensus Statements with Social Choice on Token-Level MDPs,https://arxiv.org/abs/2510.14106,core,I,unresolved|gen|late,5450,66,unresolved
+204,arxiv:2606.27305,Sculpting NeRF Geometry: Human-Preference Fine-Tuning of a 3D-Aware Face GAN,https://arxiv.org/abs/2606.27305,core,W,weights|gen|late,4341,53,weights
+205,arxiv:2511.18182,The Workflow as Medium: A Framework for Navigating Human-AI Co-Creation,https://arxiv.org/abs/2511.18182,core,E,unresolved|other|late,1855,25,unresolved
+206,arxiv:2511.19727,Prompt Fencing: A Cryptographic Approach to Establishing Security Boundaries in Large Language Model Prompts,https://arxiv.org/abs/2511.19727,core,EI,unresolved|gen|late,5450,66,unresolved
+207,acl:2026.emnlp-main.207,Anticipating User Interpretations in Emotional Support Conversations via Inference-Time User-Side Simulation,https://aclanthology.org/2026.emnlp-main.207/,core,I,inference|gen|late,795,13,inference
+208,arxiv:2603.03824,In-Context Environments Induce Evaluation-Awareness in Language Models,https://arxiv.org/abs/2603.03824,core,none,weights|gen|late,4341,53,weights
+209,arxiv:2505.22396,Zooming from Context to Cue: Hierarchical Preference Optimization for Multi-Image MLLMs,https://arxiv.org/abs/2505.22396,outside,none,weights|gen|late,4341,53,weights
+210,arxiv:2509.14745,On the Use of Agentic Coding: An Empirical Study of Pull Requests on GitHub,https://arxiv.org/abs/2509.14745,outside,none,external|gen|late,3137,39,external
+211,arxiv:2402.01306,KTO: Model Alignment as Prospect Theoretic Optimization,https://arxiv.org/abs/2402.01306,core,W,weights|gen|early,1814,24,weights
+212,arxiv:2505.19601,Preference Optimization by Estimating the Ratio of the Data Distribution,https://arxiv.org/abs/2505.19601,core,W,weights|gen|late,4341,53,weights
+213,arxiv:2601.01887,Safety at One Shot: Patching Fine-Tuned LLMs with A Single Instance,https://arxiv.org/abs/2601.01887,core,W,weights|gen|late,4341,53,weights
+214,arxiv:2604.27861,TwinGate: Stateful Defense against Decompositional Jailbreaks in Untraceable Traffic via Asymmetric Contrastive Learning,https://arxiv.org/abs/2604.27861,core,E,unresolved|gen|late,5450,66,unresolved
+215,arxiv:2501.01765,SaLoRA: Safety-Alignment Preserved Low-Rank Adaptation,https://arxiv.org/abs/2501.01765,core,W,weights|gen|late,4341,53,weights
+216,arxiv:2601.06238,SPINAL -- Scaling-law and Preference Integration in Neural Alignment Layers,https://arxiv.org/abs/2601.06238,core,W,weights|gen|late,4341,53,weights
+217,arxiv:2610.02351,DeReAct: Decomposed Reasoning and Acting for Reliable AI Agents,https://arxiv.org/abs/2610.02351,core,E,external|gen|late,3137,39,external
+218,arxiv:2608.03670,Accountability Asymmetry and Structural Trust in Autonomous AI Systems,https://arxiv.org/abs/2608.03670,core,E,unresolved|other|late,1855,25,unresolved
+219,arxiv:2602.16353,Dual-Quadruped Collaborative Transportation in Narrow Environments via Safe Reinforcement Learning,https://arxiv.org/abs/2602.16353,adjacent,W,unresolved|other|late,1855,25,unresolved
+220,arxiv:2409.12618,Iteration of Thought: Leveraging Inner Dialogue for Autonomous Large Language Model Reasoning,https://arxiv.org/abs/2409.12618,outside,none,external|gen|early,518,10,external
+221,arxiv:2505.17112,"Cultural Value Alignment in Large Language Models: A Prompt-based Analysis of Schwartz Values in Gemini, ChatGPT, and DeepSeek",https://arxiv.org/abs/2505.17112,core,I,unresolved|gen|late,5450,66,unresolved
+222,arxiv:2602.01605,Universal Redundancies in Time Series Foundation Models,https://arxiv.org/abs/2602.01605,outside,none,weights|gen|late,4341,53,weights
+223,arxiv:2506.23979,TaP: A Taxonomy-Guided Framework for Automated and Scalable Preference Data Generation,https://arxiv.org/abs/2506.23979,core,W,weights|gen|late,4341,53,weights
+224,arxiv:2610.38508,SaiVLA-JEPA: Evaluating Future Latent Prediction in JEPA-Conditioned VLA Control,https://arxiv.org/abs/2610.38508,outside,none,external|gen|late,3137,39,external
+225,arxiv:2506.21277,HumanOmniV2: From Understanding to Omni-Modal Reasoning with Context,https://arxiv.org/abs/2506.21277,outside,none,unresolved|gen|late,5450,66,unresolved
+226,arxiv:2206.09603,Constrained Reinforcement Learning for Robotics via Scenario-Based Programming,https://arxiv.org/abs/2206.09603,adjacent,W,unresolved|other|early,1217,17,unresolved
+227,acl:2025.blackboxnlp-1.27,Fine-Grained Manipulation of Arithmetic Neurons,https://aclanthology.org/2025.blackboxnlp-1.27/,outside,none,unresolved|gen|late,5450,66,unresolved
+228,arxiv:2501.05113,Constrained Optimization of Charged Particle Tracking with Multi-Agent Reinforcement Learning,https://arxiv.org/abs/2501.05113,adjacent,E,external|other|late,1211,17,external
+229,acl:2024.emnlp-industry.72,Don't be my Doctor! Recognizing Healthcare Advice in Large Language Models,https://aclanthology.org/2024.emnlp-industry.72/,core,E,external|gen|early,518,10,external
+230,arxiv:2608.11913,HarmoniDPO: Video-guided Audio Generation via Preference-Optimized Diffusion,https://arxiv.org/abs/2608.11913,core,W,weights|other|late,565,10,weights
+231,arxiv:2401.06877,Promptly Predicting Structures: The Return of Inference,https://arxiv.org/abs/2401.06877,outside,none,external|gen|early,518,10,external
+232,arxiv:2605.04495,CAR: Query-Guided Confidence-Aware Reranking for Retrieval-Augmented Generation,https://arxiv.org/abs/2605.04495,outside,none,inference|gen|late,795,13,inference
+233,arxiv:2601.03222,The Fake Friend Dilemma: Relational Trust and the Political Economy of Conversational AI,https://arxiv.org/abs/2601.03222,core,none,unresolved|other|late,1855,25,unresolved
+234,arxiv:2407.19584,SaulLM-54B & SaulLM-141B: Scaling Up Domain Adaptation for the Legal Domain,https://arxiv.org/abs/2407.19584,core,W,unresolved|gen|early,1552,21,unresolved
+235,arxiv:2307.01139,SCITUNE: Aligning Large Language Models with Human-Curated Scientific Multimodal Instructions,https://arxiv.org/abs/2307.01139,core,W,weights|gen|early,1814,24,weights
+236,arxiv:2508.06125,SC-Captioner: Improving Image Captioning with Self-Correction by Reinforcement Learning,https://arxiv.org/abs/2508.06125,outside,none,mixed|gen|late,1195,17,mixed
+237,arxiv:2609.38413,VidHarness: Evolving Agent Harnesses for Cost-Efficient Long Video Understanding,https://arxiv.org/abs/2609.38413,outside,none,external|gen|late,3137,39,external
+238,arxiv:2501.10648,DNA 1.0 Technical Report,https://arxiv.org/abs/2501.10648,core,W,weights|gen|late,4341,53,weights
+239,arxiv:2406.12182,Aqulia-Med LLM: Pioneering Full-Process Open-Source Medical Language Models,https://arxiv.org/abs/2406.12182,core,W,weights|gen|early,1814,24,weights
+240,arxiv:2608.22070,Catellect-VL-2B: A Vision-Language Model for Edge-Based Feline Behavior Understanding,https://arxiv.org/abs/2608.22070,adjacent,W,mixed|gen|late,1195,17,mixed
+241,arxiv:2309.11057,Safety Guaranteed Robust Multi-Agent Reinforcement Learning with Hierarchical Control for Connected and Automated Vehicles,https://arxiv.org/abs/2309.11057,adjacent,WE,mixed|other|early,31,4,mixed
+242,arxiv:2607.13430,Exploring Post-Training Alignment of Small Language Models for Biomedical Data-to-Text Generation: A Case Study of Medication Leaflet,https://arxiv.org/abs/2607.13430,core,W,weights|gen|late,4341,53,weights
+243,acl:2026.findings-acl.1348,The Adaptive Interrogator: Detecting Trojan LLMs in Multi-Agent Systems via Evolved Conversational Strategies,https://aclanthology.org/2026.findings-acl.1348/,core,none,weights|gen|late,4341,53,weights
+244,arxiv:2604.11065,AI Integrity: A New Paradigm for Verifiable AI Governance,https://arxiv.org/abs/2604.11065,core,none,unresolved|other|late,1855,25,unresolved
+245,arxiv:2512.05383,Fuzzing the brain: Automated stress testing for the safety of ML-driven neurostimulation,https://arxiv.org/abs/2512.05383,adjacent,none,unresolved|other|late,1855,25,unresolved
+246,arxiv:2406.00034,Adaptive Activation Steering: A Tuning-Free LLM Truthfulness Improvement Method for Diverse Hallucinations Categories,https://arxiv.org/abs/2406.00034,core,I,inference|gen|early,120,5,inference
+247,arxiv:2610.01382,Gacha Decoding: Eliciting Diverse Generations Through Instruction Following,https://arxiv.org/abs/2610.01382,outside,none,unresolved|gen|late,5450,66,unresolved
+248,arxiv:2410.08776,FATS: A Prompt Injection Attack Utilizing Feign Security Agents with Deceptive Few-shots Learning,https://arxiv.org/abs/2410.08776,core,none,weights|gen|early,1814,24,weights
+249,arxiv:2606.01561,S-SPPO: Semantic-Calibrated Self-Play Preference Optimization,https://arxiv.org/abs/2606.01561,core,W,weights|gen|late,4341,53,weights
+250,arxiv:2512.03040,Video4Spatial: Towards Visuospatial Intelligence with Context-Guided Video Generation,https://arxiv.org/abs/2512.03040,outside,none,unresolved|gen|late,5450,66,unresolved
+251,arxiv:2407.11733,How Are LLMs Mitigating Stereotyping Harms? Learning from Search Engine Studies,https://arxiv.org/abs/2407.11733,core,none,inference|gen|early,120,5,inference
+252,arxiv:2603.00055,"M3-AD: Reflection-aware Multi-modal, Multi-category, and Multi-dimensional Benchmark and Framework for Industrial Anomaly Detection",https://arxiv.org/abs/2603.00055,outside,none,mixed|gen|late,1195,17,mixed
+253,arxiv:2602.12305,OptiML: An End-to-End Framework for Program Synthesis and CUDA Kernel Optimization,https://arxiv.org/abs/2602.12305,outside,none,external|gen|late,3137,39,external
+254,arxiv:2604.08723,Decomposing the Delta: What Do Models Actually Learn from Preference Pairs?,https://arxiv.org/abs/2604.08723,outside,none,weights|gen|late,4341,53,weights
+255,arxiv:2512.21243,LookPlanGraph: Embodied Instruction Following Method with VLM Graph Augmentation,https://arxiv.org/abs/2512.21243,core,I,unresolved|gen|late,5450,66,unresolved
+256,arxiv:2404.01054,Regularized Best-of-N Sampling with Minimum Bayes Risk Objective for Language Model Alignment,https://arxiv.org/abs/2404.01054,core,I,mixed|gen|early,285,7,mixed
+257,arxiv:2505.15851,Exploring Moral Exercises for Human Oversight of AI systems: Insights from Three Pilot Studies,https://arxiv.org/abs/2505.15851,core,none,unresolved|other|late,1855,25,unresolved
+258,arxiv:2601.00798,Aplicacion de analitica de datos para la deteccion de anomalias y fortalecimiento de la seguridad en la red WiFi del campus universitario de la Universidad Nacional del Altiplano,https://arxiv.org/abs/2601.00798,outside,none,external|other|late,1211,17,external
+259,arxiv:2601.06431,LsrIF: Enhancing Logic-Structured Instruction Following of Large Language Models,https://arxiv.org/abs/2601.06431,core,W,unresolved|gen|late,5450,66,unresolved
+260,arxiv:2504.20965,AegisLLM: Scaling Agentic Systems for Self-Reflective Defense in LLM Security,https://arxiv.org/abs/2504.20965,core,EI,weights|gen|late,4341,53,weights
+261,arxiv:2601.22356,PoSafeNet: Safe Learning with Poset-Structured Neural Nets,https://arxiv.org/abs/2601.22356,adjacent,E,external|other|late,1211,17,external
+262,arxiv:2409.19521,GenTel-Safe: A Unified Benchmark and Shielding Framework for Defending Against Prompt Injection Attacks,https://arxiv.org/abs/2409.19521,core,E,external|gen|early,518,10,external
+263,arxiv:2609.38016,Brain-SAD: A Brain-Inspired Safe Autonomous Driving Control Framework with Dynamic Fear-Oriented Constraint on Dual-Policy,https://arxiv.org/abs/2609.38016,adjacent,WE,weights|other|late,565,10,weights
+264,arxiv:2510.24383,Policy Cards: Machine-Readable Runtime Governance for Autonomous AI Agents,https://arxiv.org/abs/2510.24383,core,E,external|other|late,1211,17,external
+265,arxiv:2610.29734,Monitorability Is Trainable: Post-Training for Chain-of-Thought Monitorability,https://arxiv.org/abs/2610.29734,core,W,weights|other|late,565,10,weights
+266,arxiv:2610.02844,DNAlign: Dynamic Null-Space Safe Alignment for LLMs,https://arxiv.org/abs/2610.02844,core,I,external|gen|late,3137,39,external
+267,arxiv:2505.23816,A Course Correction in Steerability Evaluation: Revealing Miscalibration and Side Effects in LLMs,https://arxiv.org/abs/2505.23816,core,none,mixed|gen|late,1195,17,mixed
+268,arxiv:2406.03704,Excluding the Irrelevant: Focusing Reinforcement Learning through Continuous Action Masking,https://arxiv.org/abs/2406.03704,outside,none,mixed|other|early,31,4,mixed
+269,arxiv:2601.02686,Learning to Nudge: A Scalable Barrier Function Framework for Safe Robot Interaction in Dense Clutter,https://arxiv.org/abs/2601.02686,adjacent,E,external|other|late,1211,17,external
+270,arxiv:2609.07370,Beyond Fluent Generation: A CPU Reliability Benchmark for MCP-Style Tool Calling in Sub-2B Small Language Models for Edge Deployment,https://arxiv.org/abs/2609.07370,core,none,external|gen|late,3137,39,external
+271,arxiv:2504.05571,Knowledge-Instruct: Effective Continual Pre-training from Limited Data using Instructions,https://arxiv.org/abs/2504.05571,outside,none,weights|gen|late,4341,53,weights
+272,arxiv:2412.15267,Toxicity Detection towards Adaptability to Changing Perturbations,https://arxiv.org/abs/2412.15267,outside,none,weights|gen|early,1814,24,weights
+273,arxiv:2604.22032,Kernel Contracts: A Specification Language for ML Kernel Correctness Across Heterogeneous Silicon,https://arxiv.org/abs/2604.22032,adjacent,E,unresolved|other|late,1855,25,unresolved
+274,arxiv:2111.08094,LIMEcraft: Handcrafted superpixel selection and inspection for Visual eXplanations,https://arxiv.org/abs/2111.08094,core,none,unresolved|other|early,1217,17,unresolved
+275,arxiv:2605.13076,TruncProof: A Guardrail for LLM-based JSON Generation under Token-Length Constraints,https://arxiv.org/abs/2605.13076,adjacent,E,external|gen|late,3137,39,external
+276,arxiv:2601.10543,Defending Large Language Models Against Jailbreak Attacks via In-Decoding Safety-Awareness Probing,https://arxiv.org/abs/2601.10543,core,E,inference|gen|late,795,13,inference
+277,acl:2024.teachingnlp-1.3,Industry vs Academia: Running a Course on Transformers in Two Setups,https://aclanthology.org/2024.teachingnlp-1.3/,outside,none,weights|gen|early,1814,24,weights
+278,arxiv:2408.03541,EXAONE 3.0 7.8B Instruction Tuned Language Model,https://arxiv.org/abs/2408.03541,core,W,weights|gen|early,1814,24,weights
+279,arxiv:2604.18394,OpenGame: Open Agentic Coding for Games,https://arxiv.org/abs/2604.18394,outside,none,weights|gen|late,4341,53,weights
+280,arxiv:2412.10566,EVLM: Self-Reflective Multimodal Reasoning for Cross-Dimensional Visual Editing,https://arxiv.org/abs/2412.10566,core,W,unresolved|gen|early,1552,21,unresolved
+281,arxiv:2410.02828,PyRIT: A Framework for Security Risk Identification and Red Teaming in Generative AI System,https://arxiv.org/abs/2410.02828,core,none,unresolved|other|early,1217,17,unresolved
+282,arxiv:2409.12741,Fine Tuning Large Language Models for Medicine: The Role and Importance of Direct Preference Optimization,https://arxiv.org/abs/2409.12741,outside,none,weights|gen|early,1814,24,weights
+283,acl:2026.acl-long.1699,The Dominance of Text Space: Unveiling the Asymmetric Nature of Cross-Modal Alignment in Large Language Models,https://aclanthology.org/2026.acl-long.1699/,outside,none,weights|gen|late,4341,53,weights
+284,arxiv:2512.15712,Predictive Concept Decoders: Training Scalable End-to-End Interpretability Assistants,https://arxiv.org/abs/2512.15712,outside,none,weights|other|late,565,10,weights
+285,arxiv:2609.12623,SteerDuplex: Steerable Duplex Speech Dialogue Models,https://arxiv.org/abs/2609.12623,core,W,weights|other|late,565,10,weights
+286,arxiv:2312.06632,Controlling risks of AI in chemical science with agents,https://arxiv.org/abs/2312.06632,core,E,external|gen|early,518,10,external
+287,arxiv:2606.29598,Spreading the Risk of Scalable Legal Services: The Role of Insurance in Expanding Access to Justice,https://arxiv.org/abs/2606.29598,core,none,unresolved|other|late,1855,25,unresolved
+288,arxiv:2410.14675,To Trust or Not to Trust? Enhancing Large Language Models' Situated Faithfulness to External Contexts,https://arxiv.org/abs/2410.14675,core,WI,weights|gen|early,1814,24,weights
+289,arxiv:2506.00047,Risks of AI-driven product development and strategies for their mitigation,https://arxiv.org/abs/2506.00047,core,none,unresolved|other|late,1855,25,unresolved
+290,arxiv:2311.16520,Value Approximation for Two-Player General-Sum Differential Games with State Constraints,https://arxiv.org/abs/2311.16520,adjacent,W,external|other|early,811,13,external
+291,arxiv:2506.03270,Grounded Vision-Language Interpreter for Long-Horizon Bimanual Task and Motion Planning,https://arxiv.org/abs/2506.03270,adjacent,E,unresolved|gen|late,5450,66,unresolved
+292,arxiv:2510.08389,Revisiting Hallucination Detection with Effective Rank-based Uncertainty,https://arxiv.org/abs/2510.08389,core,E,unresolved|gen|late,5450,66,unresolved
+293,arxiv:2510.22609,CLIN-LLM: A Safety-Constrained Hybrid Framework for Clinical Diagnosis and Treatment Generation,https://arxiv.org/abs/2510.22609,core,E,weights|gen|late,4341,53,weights
+294,arxiv:2610.32531,"On Task, Off Track: Benchmarking LLM and Agent Robustness to Near-Target Prompt Injection",https://arxiv.org/abs/2610.32531,core,none,unresolved|gen|late,5450,66,unresolved
+295,arxiv:2605.01222,Zero-Shot Signal Temporal Logic Planning with Disjunctive Branch Selection in Dynamic Semantic Maps,https://arxiv.org/abs/2605.01222,adjacent,E,unresolved|other|late,1855,25,unresolved
+296,arxiv:2501.01212,Towards Consumer-Grade Cybersickness Prediction: Multi-Model Alignment for Real-Time Vision-Only Inference,https://arxiv.org/abs/2501.01212,outside,none,unresolved|other|late,1855,25,unresolved
+297,arxiv:2407.12165,Building AI Agents for Autonomous Clouds: Challenges and Design Principles,https://arxiv.org/abs/2407.12165,outside,none,external|gen|early,518,10,external
+298,arxiv:2610.18095,CompanionSafe: From Multi-turn Safety Evaluation to Guardrails for AI Companions,https://arxiv.org/abs/2610.18095,core,E,external|gen|late,3137,39,external
+299,arxiv:2505.16146,Steering LVLMs via Sparse Autoencoder for Hallucination Mitigation,https://arxiv.org/abs/2505.16146,core,I,weights|gen|late,4341,53,weights
+300,acl:2024.uncertainlp-1.7,Efficiently Acquiring Human Feedback with Bayesian Deep Learning,https://aclanthology.org/2024.uncertainlp-1.7/,core,W,weights|gen|early,1814,24,weights
+301,arxiv:2602.22157,Dynamic Personality Adaptation in Large Language Models via State Machines,https://arxiv.org/abs/2602.22157,core,I,mixed|gen|late,1195,17,mixed
+302,arxiv:2506.03968,From Real to Synthetic: Synthesizing Millions of Diversified and Complicated User Instructions with Attributed Grounding,https://arxiv.org/abs/2506.03968,core,W,unresolved|gen|late,5450,66,unresolved
+303,arxiv:2511.13290,Dropouts in Confidence: Moral Uncertainty in Human-LLM Alignment,https://arxiv.org/abs/2511.13290,core,I,unresolved|gen|late,5450,66,unresolved
+304,arxiv:2606.08735,Structure-Conditioned Actor-Critic Branches for Quality-Diversity Reinforcement Learning,https://arxiv.org/abs/2606.08735,outside,none,unresolved|other|late,1855,25,unresolved
+305,arxiv:2609.26101,On Behavioral Alignment of Model-Code and Human-Code Understandability via Behavioral Proxies,https://arxiv.org/abs/2609.26101,core,none,unresolved|gen|late,5450,66,unresolved
+306,arxiv:2608.08220,Metanormative Theory for RL-Based Moral Agents,https://arxiv.org/abs/2608.08220,core,none,unresolved|other|late,1855,25,unresolved
+307,arxiv:2610.14118,ClawLoop: Self-Improving Agents via Harness-Native Training Loop,https://arxiv.org/abs/2610.14118,outside,none,mixed|gen|late,1195,17,mixed
+308,arxiv:2608.15574,Catching Hallucinated Citations in Video-LLM Question Answering: A Self-Verification Pipeline and Verifier Ablation Study,https://arxiv.org/abs/2608.15574,core,E,unresolved|gen|late,5450,66,unresolved
+309,arxiv:2404.12699,SOPHON: Non-Fine-Tunable Learning to Restrain Task Transferability For Pre-trained Models,https://arxiv.org/abs/2404.12699,core,W,weights|other|early,249,6,weights
+310,arxiv:2412.04363,Challenges in Trustworthy Human Evaluation of Chatbots,https://arxiv.org/abs/2412.04363,core,none,external|gen|early,518,10,external
+311,acl:2026.findings-acl.1191,Rethinking Assessments of Prompt Injection Attacks,https://aclanthology.org/2026.findings-acl.1191/,core,none,unresolved|gen|late,5450,66,unresolved
+312,arxiv:2410.13213,LLMOPT: Learning to Define and Solve General Optimization Problems from Scratch,https://arxiv.org/abs/2410.13213,outside,none,mixed|gen|early,285,7,mixed
+313,acl:2026.emnlp-main.688,Ideation Arena: Evaluating LLM-driven Research Ideation with Battle-style Human Expert Annotation,https://aclanthology.org/2026.emnlp-main.688/,core,none,unresolved|gen|late,5450,66,unresolved
+314,arxiv:2604.24118,AgentVisor: Defending LLM Agents Against Prompt Injection via Semantic Virtualization,https://arxiv.org/abs/2604.24118,core,E,inference|gen|late,795,13,inference
+315,arxiv:2509.08000,AntiDote: Bi-level Adversarial Training for Tamper-Resistant LLMs,https://arxiv.org/abs/2509.08000,core,W,weights|gen|late,4341,53,weights
+316,arxiv:2607.05401,Catalyst Papers in Artificial Intelligence Research: A Landscape on ICLR from 2017 to 2025,https://arxiv.org/abs/2607.05401,outside,none,weights|gen|late,4341,53,weights
+317,arxiv:2506.13246,On Immutable Memory Systems for Artificial Agents: A Blockchain-Indexed Automata-Theoretic Framework Using ECDH-Keyed Merkle Chains,https://arxiv.org/abs/2506.13246,core,E,external|other|late,1211,17,external
+318,arxiv:2503.17286,Offline Model-Based Optimization: Comprehensive Review,https://arxiv.org/abs/2503.17286,outside,none,unresolved|gen|late,5450,66,unresolved
+319,arxiv:2502.11184,Can't See the Forest for the Trees: Benchmarking Multimodal Safety Awareness for Multimodal LLMs,https://arxiv.org/abs/2502.11184,core,none,weights|gen|late,4341,53,weights
+320,arxiv:2601.16799,Adaptive Beam Alignment using Noisy Twenty Questions Estimation with Trained Questioner,https://arxiv.org/abs/2601.16799,outside,none,inference|other|late,51,4,inference
+321,arxiv:2609.05531,When Agent Governance Helps,https://arxiv.org/abs/2609.05531,core,I,external|gen|late,3137,39,external
+322,arxiv:2405.17931,Online Merging Optimizers for Boosting Rewards and Mitigating Tax in Alignment,https://arxiv.org/abs/2405.17931,core,W,weights|gen|early,1814,24,weights
+323,arxiv:2606.31648,"Think in English, Answer in Korean: Efficient Adaptation of Multilingual Tool-Using Agents",https://arxiv.org/abs/2606.31648,core,W,weights|gen|late,4341,53,weights
+324,arxiv:2503.00600,Semantic Integrity Constraints: Declarative Guardrails for AI-Augmented Data Processing Systems,https://arxiv.org/abs/2503.00600,core,E,external|gen|late,3137,39,external
+325,arxiv:2606.23249,LP-NavOA: Integrated Local Navigation and Obstacle Avoidance for Humanoid Robots under Limited Perception,https://arxiv.org/abs/2606.23249,adjacent,WE,mixed|other|late,125,5,mixed
+326,arxiv:2602.10701,Don't blame me: How Intelligent Support Affects Moral Responsibility in Human Oversight,https://arxiv.org/abs/2602.10701,core,E,unresolved|other|late,1855,25,unresolved
+327,arxiv:2602.00497,"Culturally-Grounded Governance for Multilingual Language Models: Rights, Data Boundaries, and Accountable AI Design",https://arxiv.org/abs/2602.00497,core,none,unresolved|gen|late,5450,66,unresolved
+328,arxiv:2510.25003,Emergent Coordinated Behaviors in Networked LLM Agents: Modeling the Strategic Dynamics of Information Operations,https://arxiv.org/abs/2510.25003,core,none,unresolved|gen|late,5450,66,unresolved
+329,arxiv:2610.08098,Surviving the Router: Optimizing Skill Injections for Retrieval and Execution,https://arxiv.org/abs/2610.08098,core,none,unresolved|gen|late,5450,66,unresolved
+330,arxiv:2505.19440,"The Birth of Knowledge: Emergent Features across Time, Space, and Scale in Large Language Models",https://arxiv.org/abs/2505.19440,outside,none,unresolved|gen|late,5450,66,unresolved
+331,arxiv:2301.03740,A Multi-Level Framework for the AI Alignment Problem,https://arxiv.org/abs/2301.03740,core,none,unresolved|other|early,1217,17,unresolved
+332,arxiv:2510.18072,Fine-tuning Flow Matching Generative Models with Intermediate Feedback,https://arxiv.org/abs/2510.18072,core,W,weights|gen|late,4341,53,weights
+333,arxiv:2505.18830,On the Effect of Negative Gradient in Group Relative Deep Reinforcement Optimization,https://arxiv.org/abs/2505.18830,outside,none,weights|gen|late,4341,53,weights
+334,arxiv:2401.05605,Scaling Laws for Forgetting When Fine-Tuning Large Language Models,https://arxiv.org/abs/2401.05605,outside,none,mixed|gen|early,285,7,mixed
+335,arxiv:2604.17025,Harness as an Asset: Enforcing Determinism via the Convergent AI Agent Framework (CAAF),https://arxiv.org/abs/2604.17025,core,E,inference|gen|late,795,13,inference
+336,arxiv:2502.01237,The Differences Between Direct Alignment Algorithms are a Blur,https://arxiv.org/abs/2502.01237,core,W,weights|gen|late,4341,53,weights
+337,arxiv:2610.18173,TRACESTEER: Trace Driven Activation Steering for Hallucination Mitigation in Diffusion Language Models,https://arxiv.org/abs/2610.18173,core,I,inference|gen|late,795,13,inference
+338,arxiv:2604.05965,Beyond Compromise: Pareto-Lenient Consensus for Efficient Multi-Preference LLM Alignment,https://arxiv.org/abs/2604.05965,core,W,unresolved|gen|late,5450,66,unresolved
+339,arxiv:2607.23336,Constitutional governance for societies of AI agents in the built environment: a research agenda,https://arxiv.org/abs/2607.23336,core,E,unresolved|other|late,1855,25,unresolved
+340,arxiv:2507.05630,How Not to Detect Prompt Injections with an LLM,https://arxiv.org/abs/2507.05630,core,E,unresolved|gen|late,5450,66,unresolved
+341,arxiv:2609.38526,Revisiting scaling laws for reward optimization,https://arxiv.org/abs/2609.38526,core,I,weights|other|late,565,10,weights
+342,arxiv:2502.04101,Safe Quadrotor Navigation using Composite Control Barrier Functions,https://arxiv.org/abs/2502.04101,adjacent,E,external|other|late,1211,17,external
+343,acl:2025.bionlp-share.30,BDA-UC3M @ BioLaySumm: Efficient Lay Summarization with Small-Scale SoTA LLMs,https://aclanthology.org/2025.bionlp-share.30/,outside,none,weights|gen|late,4341,53,weights
+344,arxiv:2309.04646,Efficient Finetuning Large Language Models For Vietnamese Chatbot,https://arxiv.org/abs/2309.04646,core,W,weights|gen|early,1814,24,weights
+345,arxiv:2405.03939,Long Context Alignment with Short Instructions and Synthesized Positions,https://arxiv.org/abs/2405.03939,core,W,unresolved|gen|early,1552,21,unresolved
+346,arxiv:2503.15265,DeepMesh: Auto-Regressive Artist-mesh Creation with Reinforcement Learning,https://arxiv.org/abs/2503.15265,core,W,weights|other|late,565,10,weights
+347,arxiv:2508.09971,Vision-driven River Following of UAV via Safe Reinforcement Learning using Semantic Dynamics Model,https://arxiv.org/abs/2508.09971,adjacent,W,external|other|late,1211,17,external
+348,arxiv:2406.06560,Inverse Constitutional AI: Compressing Preferences into Principles,https://arxiv.org/abs/2406.06560,core,none,weights|gen|early,1814,24,weights
+349,arxiv:2502.19502,Models That Are Interpretable But Not Transparent,https://arxiv.org/abs/2502.19502,core,none,external|other|late,1211,17,external
+350,arxiv:2506.09096,Intra-Trajectory Consistency for Reward Modeling,https://arxiv.org/abs/2506.09096,core,WI,mixed|gen|late,1195,17,mixed
+351,arxiv:2309.09826,Efficient Avoidance of Vulnerabilities in Auto-completed Smart Contract Code Using Vulnerability-constrained Decoding,https://arxiv.org/abs/2309.09826,core,E,mixed|gen|early,285,7,mixed
+352,arxiv:2512.03208,Uncertainty Quantification for Large Language Model Reward Learning under Heterogeneous Human Feedback,https://arxiv.org/abs/2512.03208,core,none,weights|gen|late,4341,53,weights
+353,arxiv:2407.05694,On the Limitations of Compute Thresholds as a Governance Strategy,https://arxiv.org/abs/2407.05694,core,none,unresolved|other|early,1217,17,unresolved
+354,arxiv:2410.15319,Causality for Large Language Models,https://arxiv.org/abs/2410.15319,outside,none,mixed|gen|early,285,7,mixed
+355,arxiv:2308.08295,CMD: a framework for Context-aware Model self-Detoxification,https://arxiv.org/abs/2308.08295,core,W,unresolved|gen|early,1552,21,unresolved
+356,arxiv:2410.13216,Anchored Alignment for Self-Explanations Enhancement,https://arxiv.org/abs/2410.13216,core,W,weights|gen|early,1814,24,weights
+357,arxiv:2505.19223,LLaDA 1.5: Variance-Reduced Preference Optimization for Large Language Diffusion Models,https://arxiv.org/abs/2505.19223,core,W,weights|gen|late,4341,53,weights
+358,arxiv:2111.10689,Design and Analysis of SWIPT with Safety Constraints,https://arxiv.org/abs/2111.10689,adjacent,W,unresolved|other|early,1217,17,unresolved
+359,arxiv:2608.08491,TrustRoboReward: Preference-Ordered Isotonic Score Editing for Multi-Paradigm Robot Reward Models,https://arxiv.org/abs/2608.08491,core,none,weights|gen|late,4341,53,weights
+360,arxiv:2205.10906,"Monitoring of Perception Systems: Deterministic, Probabilistic, and Learning-based Fault Detection and Identification",https://arxiv.org/abs/2205.10906,adjacent,E,external|other|early,811,13,external

@@ -1,0 +1,29 @@
+{
+  "n": 25329,
+  "source_combinations": {
+    "acl": 1215,
+    "arxiv": 21423,
+    "acl+arxiv": 2691
+  },
+  "methods": {
+    "inference": 973,
+    "mixed": 1636,
+    "unresolved": 10074,
+    "weights": 6969,
+    "external": 5677
+  },
+  "metrics": {
+    "truthfulness / hallucination": 300,
+    "preference / win rate": 469,
+    "task / utility": 636,
+    "harm / attack success": 964,
+    "refusal / over-refusal": 279,
+    "operating cost": 890,
+    "safety / constraint violations": 409
+  },
+  "l4dc": {
+    "proceedings_titles": 569,
+    "safety_titles": 71,
+    "safety_titles_in_candidates": 42
+  }
+}
