@@ -18,6 +18,12 @@ ALIGN_NAMES = [
     "Reward learning and RLHF",
     "Preference alignment and feedback",
 ]
+GENERAL_NAMES = [
+    "Learning methods and optimization",
+    "Computer vision and generation",
+    "Robotics and reinforcement learning",
+    "Language models and applications",
+]
 CONTROL_NAMES = [
     "Language models",
     "Robotics and reinforcement learning",
@@ -96,7 +102,9 @@ def section():
                 "score_basis": row["evidence_basis"],
             }
     for measurement in measurements.values():
-        measurement["near_title"], measurement["near_url"] = sources[measurement["near_id"]]
+        measurement["near_title"], measurement["near_url"] = sources[
+            measurement["near_id"]
+        ]
     shortlist = csv_index("results/alignment_papers.csv")
     control = csv_index("results/control_map.csv")
     original = {
@@ -110,12 +118,6 @@ def section():
         for pid, r in csv_index("data/control_validation.csv").items()
     }
     common_args = dict(paper_reviews=control_reviews, measurements=measurements)
-    general_names = [
-        "Learning methods and optimization",
-        "Computer vision and generation",
-        "Robotics and reinforcement learning",
-        "Language models and applications",
-    ]
     frames = [
         pack_frame(
             "shortlist_geometry.csv",
@@ -131,7 +133,7 @@ def section():
             "general_geometry.csv",
             control,
             csv_index("results/general_topics.csv"),
-            general_names,
+            GENERAL_NAMES,
             **common_args,
         ),
         pack_frame(

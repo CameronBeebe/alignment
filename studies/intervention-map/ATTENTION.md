@@ -6,7 +6,7 @@
 
 | Hypothesis | Observation |
 |---|---|
-| Broader alignment produces at least two weight papers per external-control paper. | **Below the twofold threshold.** An estimated **1.36** weight papers per control paper (95% interval **0.98–1.90**). |
+| Broader alignment produces at least two alignment-directed weight papers per external-supervision paper. | **Below the twofold threshold.** An estimated **1.36** alignment-directed weight papers per supervision paper (95% interval **0.98–1.90**). |
 | Weight papers outnumber control or harness papers in general AI. | **Both reviewers find a weight tilt.** Rubric **3.29** (2.21–4.91). Jev **4.60** (3.08–6.88). |
 | Explicitly alignment-framed papers favor weights more strongly than general AI. | **Reviewer-dependent.** The ratio in explicit alignment divided by the general-AI ratio is **1.11** (0.53–2.37) with the rubric and **0.38** (0.21–0.68) with Jev. A value above 1 supports the hypothesis. |
 | Feedback and dynamics form recognizable topics outside the alignment shortlist. | **Partial support.** The shortlist contains **0 of 235** papers in one optimization/control cluster. **10 of 15** audited there use feedback or dynamics. Many study physical systems. |

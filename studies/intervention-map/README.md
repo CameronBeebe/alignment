@@ -4,6 +4,8 @@
 
 [Open the offline HTML report and searchable paper explorer](alignment-overview.html), [read the one-page report](REPORT.md) or [browse the alignment dataset](results/alignment_papers.csv). The study compares changes to the acting model’s parameters with external supervision and enforcement. Soft inference steering, task-specific safety engineering, and studies without a proposed intervention are identifiable separately.
 
+[Compare publication mix, topic trends, overlapping labels, reviewers, coauthors and surveys in the visual report](attention-overview.html#data-views). The paper-profile explorer supports three Jev cutoffs and shows counts and percentages within each selected sample.
+
 [Download the master dataset](results/paper_master.csv.gz) · [Column definitions, validation and reproduction](MASTER.md). The table joins ten Jev ratings, semantic distances, topic assignments, and available review and coauthor data on each paper ID.
 
 ## Use the frozen study
