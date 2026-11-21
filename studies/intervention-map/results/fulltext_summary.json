@@ -1,0 +1,724 @@
+{
+  "eligible": 60,
+  "paired": 60,
+  "pages": 1431,
+  "thin_pages": 0,
+  "ratios": {
+    "jev_abstract": {
+      "W": 2592.2654578126276,
+      "E": 1172.973747266422,
+      "observed_W": 33.0,
+      "observed_E": 16.0,
+      "ratio": 2.209994438369844,
+      "ci95": [
+        1.3265556491236814,
+        3.6817719790738126
+      ],
+      "equality": {
+        "difference": 1419.2917105462056,
+        "p_two_sided": 0.0010987064213954813
+      },
+      "twofold": {
+        "difference": 246.31796327978347,
+        "p_two_sided": 0.6923281052862456
+      }
+    },
+    "jev_paper": {
+      "W": 2979.7772744273852,
+      "E": 1915.6984706562396,
+      "observed_W": 39.0,
+      "observed_E": 27.0,
+      "ratio": 1.555452134075482,
+      "ci95": [
+        1.0902222574739422,
+        2.21920927114974
+      ],
+      "equality": {
+        "difference": 1064.0788037711457,
+        "p_two_sided": 0.011293929120566168
+      },
+      "twofold": {
+        "difference": -851.6196668850944,
+        "p_two_sided": 0.19995000666978582
+      }
+    },
+    "qwen_abstract": {
+      "W": 3984.825670500421,
+      "E": 1788.6231466092177,
+      "observed_W": 53.0,
+      "observed_E": 24.0,
+      "ratio": 2.2278732543826543,
+      "ci95": [
+        1.648046703846945,
+        3.011698167295697
+      ],
+      "equality": {
+        "difference": 2196.2025238912033,
+        "p_two_sided": 2.4440237473300632e-08
+      },
+      "twofold": {
+        "difference": 407.57937728198544,
+        "p_two_sided": 0.4572390798312902
+      }
+    },
+    "qwen_paper": {
+      "W": 4314.458603605052,
+      "E": 1517.1280318460674,
+      "observed_W": 57.0,
+      "observed_E": 21.0,
+      "ratio": 2.8438328954710204,
+      "ci95": [
+        1.9868595920818974,
+        4.070436365807237
+      ],
+      "equality": {
+        "difference": 2797.3305717589847,
+        "p_two_sided": 3.8398699824075073e-10
+      },
+      "twofold": {
+        "difference": 1280.2025399129172,
+        "p_two_sided": 0.02574613365052157
+      }
+    }
+  },
+  "changes": {
+    "jev": {
+      "full_over_abstract": 0.7038262662881761,
+      "ci95": [
+        0.49692454840396216,
+        0.9968745048080317
+      ],
+      "weights": {
+        "gained": 7,
+        "lost": 1
+      },
+      "external": {
+        "gained": 11,
+        "lost": 0
+      }
+    },
+    "qwen": {
+      "full_over_abstract": 1.2764787628186007,
+      "ci95": [
+        0.954365789383777,
+        1.7073097653458316
+      ],
+      "weights": {
+        "gained": 4,
+        "lost": 0
+      },
+      "external": {
+        "gained": 4,
+        "lost": 7
+      }
+    }
+  },
+  "questions": {
+    "Original measures": {
+      "weights": {
+        "question": "Does a substantive contribution train, update or study changing the parameters of the principal predictor or acting policy?",
+        "abstract": 33,
+        "paper": 39,
+        "gained": 7,
+        "lost": 1
+      },
+      "supervision": {
+        "question": "Does a substantive contribution govern an AI system's outputs or actions using a separate monitor, verifier, approval step or enforced constraint?",
+        "abstract": 15,
+        "paper": 26,
+        "gained": 11,
+        "lost": 0
+      },
+      "scaffolding": {
+        "question": "Does the paper develop or study an external execution system coordinating models, tools, memory, verifiers, or people as the task runs? Include historical equivalents without requiring any particular term. Exclude training alone, passing mentions and benchmark setups without a substantive execution method.",
+        "abstract": 3,
+        "paper": 5,
+        "gained": 2,
+        "lost": 0
+      },
+      "feedback": {
+        "question": "Is the subsequent action or intervention adjusted using observations of the system, performance error, or sensed state as a substantive mechanism? A one-time check and ordinary model fitting alone are insufficient.",
+        "abstract": 29,
+        "paper": 36,
+        "gained": 9,
+        "lost": 2
+      },
+      "dynamics": {
+        "question": "Does the paper substantively reason about controlled state evolution, equilibria, stability, observability, or trajectories through a dynamical system? Mere use of 'dynamic' or references in background are insufficient.",
+        "abstract": 4,
+        "paper": 7,
+        "gained": 3,
+        "lost": 0
+      },
+      "alignment_relevance": {
+        "question": "Does this paper substantively study whether an AI system's behavior meets human intentions, preferences, norms, safety requirements or authorization rules? Exclude generic predictive accuracy and mere feature, image, text or geometric alignment.",
+        "abstract": 56,
+        "paper": 54,
+        "gained": 2,
+        "lost": 4
+      },
+      "evaluation": {
+        "question": "Does the paper make a substantive contribution to measuring, benchmarking, auditing or evaluating the behavior or performance of AI systems? Experiments used only to demonstrate another method are insufficient.",
+        "abstract": 22,
+        "paper": 25,
+        "gained": 3,
+        "lost": 0
+      },
+      "theory": {
+        "question": "Does the paper contribute a formal analysis, theorem, proof, bound or explicitly mathematical characterization of a learning, decision or control problem? Writing down a training loss alone is insufficient.",
+        "abstract": 10,
+        "paper": 19,
+        "gained": 9,
+        "lost": 0
+      },
+      "data_resources": {
+        "question": "Does the paper introduce or substantively study a dataset, data collection, annotation or curation method as a research contribution? Merely consuming an existing dataset is insufficient.",
+        "abstract": 21,
+        "paper": 25,
+        "gained": 6,
+        "lost": 2
+      },
+      "governance": {
+        "question": "Does the paper substantively analyze institutional governance, policy, accountability, societal impacts or normative frameworks concerning AI systems? A passing mention of ethical implications is insufficient.",
+        "abstract": 0,
+        "paper": 0,
+        "gained": 0,
+        "lost": 0
+      },
+      "language_model_focus": {
+        "question": "Does the paper substantively study, train, evaluate, or develop a method or system around a large language model or a Transformer-based language model? Include named systems such as GPT or BERT, language-oriented foundation models, and multimodal or agent systems where such a language model plays a material role. Exclude incidental mentions, background comparisons, a generic agent without evidence of a language model, and applications of a Transformer only to non-language signals or vision. Classify the paper's research focus from the title and abstract; proprietary architectural details need not be reported.",
+        "abstract": 60,
+        "paper": 60,
+        "gained": 0,
+        "lost": 0
+      }
+    },
+    "Weight interventions": {
+      "pretraining": {
+        "question": "Does the contribution alter or study pretraining of the acting model?",
+        "abstract": 2,
+        "paper": 3,
+        "gained": 1,
+        "lost": 0
+      },
+      "supervised_finetuning": {
+        "question": "Does the contribution train the acting model with supervised fine-tuning?",
+        "abstract": 13,
+        "paper": 22,
+        "gained": 9,
+        "lost": 0
+      },
+      "preference_optimization": {
+        "question": "Does the study optimize the acting model's parameters using preference comparisons or preference-based rewards?",
+        "abstract": 19,
+        "paper": 25,
+        "gained": 6,
+        "lost": 0
+      },
+      "rl_policy_update": {
+        "question": "Does the paper apply reinforcement learning to update the acting policy?",
+        "abstract": 12,
+        "paper": 20,
+        "gained": 9,
+        "lost": 1
+      },
+      "parameter_efficient": {
+        "question": "Does a proposed or experimentally studied mechanism use adapters, LoRA or another parameter-efficient parameter update?",
+        "abstract": 3,
+        "paper": 16,
+        "gained": 14,
+        "lost": 1
+      },
+      "weight_editing": {
+        "question": "Does the contribution directly edit, merge or remove model parameters to change behavior?",
+        "abstract": 11,
+        "paper": 19,
+        "gained": 10,
+        "lost": 2
+      },
+      "training_data_intervention": {
+        "question": "Does the study deliberately curate, filter or generate training data as a mechanism for changing the acting model?",
+        "abstract": 23,
+        "paper": 33,
+        "gained": 10,
+        "lost": 0
+      },
+      "frozen_actor": {
+        "question": "Does an intervention explicitly keep the acting model\u2019s parameters fixed while changing its behavior?",
+        "abstract": 15,
+        "paper": 26,
+        "gained": 12,
+        "lost": 1
+      },
+      "auxiliary_trained": {
+        "question": "Does the work train a separate critic, reward model, monitor or controller as a substantive contribution?",
+        "abstract": 13,
+        "paper": 12,
+        "gained": 1,
+        "lost": 2
+      }
+    },
+    "External interventions": {
+      "runtime_gate": {
+        "question": "Does a substantive runtime component have authority to permit, block or modify actions before execution?",
+        "abstract": 7,
+        "paper": 8,
+        "gained": 1,
+        "lost": 0
+      },
+      "output_filter": {
+        "question": "Does an external component filter, redact, reject or revise generated outputs as a studied mechanism?",
+        "abstract": 6,
+        "paper": 12,
+        "gained": 7,
+        "lost": 1
+      },
+      "human_approval": {
+        "question": "Is a human approval or escalation step incorporated in the acting system at runtime?",
+        "abstract": 1,
+        "paper": 1,
+        "gained": 0,
+        "lost": 0
+      },
+      "tool_permissions": {
+        "question": "Does the studied system constrain which tools or external resources an actor may access?",
+        "abstract": 3,
+        "paper": 5,
+        "gained": 2,
+        "lost": 0
+      },
+      "planning": {
+        "question": "Does an external planning or scheduling component substantively organize execution?",
+        "abstract": 0,
+        "paper": 2,
+        "gained": 2,
+        "lost": 0
+      },
+      "runtime_memory": {
+        "question": "Does external memory persist and influence later steps as a studied runtime mechanism?",
+        "abstract": 0,
+        "paper": 8,
+        "gained": 8,
+        "lost": 0
+      },
+      "retrieval": {
+        "question": "Is retrieval of external information a substantive part of the studied execution system?",
+        "abstract": 4,
+        "paper": 6,
+        "gained": 2,
+        "lost": 0
+      },
+      "multiagent": {
+        "question": "Does the work study coordination among multiple model agents or actors as an execution mechanism?",
+        "abstract": 2,
+        "paper": 4,
+        "gained": 3,
+        "lost": 1
+      },
+      "runtime_verification": {
+        "question": "Does a verifier check proposed outputs or actions as part of the execution path?",
+        "abstract": 10,
+        "paper": 25,
+        "gained": 15,
+        "lost": 0
+      },
+      "rollback": {
+        "question": "Does a deployed or experimental execution system support stopping, reversing or recovering actions?",
+        "abstract": 1,
+        "paper": 3,
+        "gained": 2,
+        "lost": 0
+      },
+      "prompt_steering": {
+        "question": "Does a substantive intervention steer behavior via prompts or in-context examples alone or as an explicit experimental factor?",
+        "abstract": 15,
+        "paper": 27,
+        "gained": 14,
+        "lost": 2
+      },
+      "activation_steering": {
+        "question": "Does the work intervene on hidden activations during inference?",
+        "abstract": 4,
+        "paper": 4,
+        "gained": 1,
+        "lost": 1
+      },
+      "decoding": {
+        "question": "Does the work change decoding or output selection at inference as a substantive contribution?",
+        "abstract": 7,
+        "paper": 9,
+        "gained": 2,
+        "lost": 0
+      }
+    },
+    "Feedback and system scope": {
+      "closed_loop_runtime": {
+        "question": "Does a runtime controller use consequences of previous actions to select later interventions? Exclude training feedback alone.",
+        "abstract": 7,
+        "paper": 13,
+        "gained": 6,
+        "lost": 0
+      },
+      "training_feedback": {
+        "question": "Does feedback from humans, models or environments feed subsequent parameter updates?",
+        "abstract": 32,
+        "paper": 40,
+        "gained": 9,
+        "lost": 1
+      },
+      "formal_control": {
+        "question": "Does a substantive contribution apply formal control-theoretic concepts such as stability, observability, set invariance or controllability?",
+        "abstract": 0,
+        "paper": 0,
+        "gained": 0,
+        "lost": 0
+      },
+      "physical_system": {
+        "question": "Is a physical system or robot the object being regulated in the study?",
+        "abstract": 0,
+        "paper": 0,
+        "gained": 0,
+        "lost": 0
+      },
+      "software_environment": {
+        "question": "Does the study evaluate an actor interacting with a software environment across several steps?",
+        "abstract": 8,
+        "paper": 9,
+        "gained": 1,
+        "lost": 0
+      },
+      "human_preferences": {
+        "question": "Are human preferences, judgments or stated values an explicit target of the research?",
+        "abstract": 43,
+        "paper": 49,
+        "gained": 8,
+        "lost": 2
+      },
+      "human_override": {
+        "question": "Does the work study the ability of a person to correct, interrupt, override or shut down an acting system?",
+        "abstract": 0,
+        "paper": 0,
+        "gained": 0,
+        "lost": 0
+      },
+      "organizational_controls": {
+        "question": "Does the paper study institutional rules, audit processes or human responsibilities as an intervention?",
+        "abstract": 0,
+        "paper": 1,
+        "gained": 1,
+        "lost": 0
+      }
+    },
+    "Comparative evidence and outcomes": {
+      "implements_intervention": {
+        "question": "Do the authors implement an intervention themselves or experimentally vary it?",
+        "abstract": 54,
+        "paper": 56,
+        "gained": 2,
+        "lost": 0
+      },
+      "benchmark_only": {
+        "question": "Is the main contribution behavioral measurement, with no proposed change to an acting system?",
+        "abstract": 12,
+        "paper": 11,
+        "gained": 1,
+        "lost": 2
+      },
+      "weight_external_comparison": {
+        "question": "Does an experiment directly compare a parameter intervention and an external intervention on the same task?",
+        "abstract": 4,
+        "paper": 11,
+        "gained": 10,
+        "lost": 3
+      },
+      "hybrid_tested": {
+        "question": "Does the study experimentally test a condition combining changes to the acting model\u2019s parameters with an external intervention?",
+        "abstract": 18,
+        "paper": 23,
+        "gained": 9,
+        "lost": 4
+      },
+      "controlled_ablation": {
+        "question": "Does the study report an ablation isolating the contribution of an intervention component?",
+        "abstract": 3,
+        "paper": 41,
+        "gained": 38,
+        "lost": 0
+      },
+      "matched_budget": {
+        "question": "Are competing methods experimentally compared using explicitly matched resource budgets?",
+        "abstract": 0,
+        "paper": 3,
+        "gained": 3,
+        "lost": 0
+      },
+      "task_utility": {
+        "question": "Does the evaluation measure legitimate task completion, usefulness or capability under the intervention?",
+        "abstract": 43,
+        "paper": 51,
+        "gained": 8,
+        "lost": 0
+      },
+      "safety_outcome": {
+        "question": "Does the evaluation measure safety-relevant errors, harmful outcomes or specification violations?",
+        "abstract": 15,
+        "paper": 21,
+        "gained": 6,
+        "lost": 0
+      },
+      "tradeoff_reported": {
+        "question": "Does the paper empirically quantify a tradeoff between safety or alignment and task utility?",
+        "abstract": 8,
+        "paper": 16,
+        "gained": 8,
+        "lost": 0
+      },
+      "uncertainty_reported": {
+        "question": "Does the paper report uncertainty estimates for its primary empirical comparison?",
+        "abstract": 6,
+        "paper": 33,
+        "gained": 27,
+        "lost": 0
+      },
+      "out_of_distribution": {
+        "question": "Does the study evaluate generalization to an explicitly held-out domain, model family, or shifted deployment setting?",
+        "abstract": 3,
+        "paper": 25,
+        "gained": 22,
+        "lost": 0
+      },
+      "long_horizon": {
+        "question": "Does the evaluation measure outcomes across multiple consequential decision steps?",
+        "abstract": 6,
+        "paper": 10,
+        "gained": 5,
+        "lost": 1
+      },
+      "negative_result": {
+        "question": "Do the authors document failure, degradation or null effects for a method central to the paper?",
+        "abstract": 7,
+        "paper": 52,
+        "gained": 46,
+        "lost": 1
+      },
+      "human_evaluation": {
+        "question": "Do human participants or annotators directly evaluate system outputs or outcomes?",
+        "abstract": 13,
+        "paper": 21,
+        "gained": 13,
+        "lost": 5
+      },
+      "model_evaluation": {
+        "question": "Is a model used as an outcome judge in a substantive evaluation?",
+        "abstract": 28,
+        "paper": 52,
+        "gained": 24,
+        "lost": 0
+      },
+      "deployment_evidence": {
+        "question": "Does the paper report observations from actual production or field deployment?",
+        "abstract": 1,
+        "paper": 0,
+        "gained": 0,
+        "lost": 1
+      }
+    },
+    "Research attention and disclosures": {
+      "weights_primary": {
+        "question": "Do the authors present changes to the acting model\u2019s weights as a main contribution of this paper?",
+        "abstract": 11,
+        "paper": 7,
+        "gained": 1,
+        "lost": 5
+      },
+      "external_primary": {
+        "question": "Do the authors present external supervision or a runtime harness as a main contribution?",
+        "abstract": 8,
+        "paper": 1,
+        "gained": 0,
+        "lost": 7
+      },
+      "alignment_framing": {
+        "question": "Do the authors explicitly describe their own research contribution as AI, language-model or agent alignment?",
+        "abstract": 57,
+        "paper": 54,
+        "gained": 0,
+        "lost": 3
+      },
+      "recommends_weights": {
+        "question": "Do the authors explicitly recommend more future work on interventions in the acting model\u2019s parameters?",
+        "abstract": 0,
+        "paper": 4,
+        "gained": 4,
+        "lost": 0
+      },
+      "recommends_external": {
+        "question": "Do the authors explicitly recommend more future work on runtime scaffolding or external supervision?",
+        "abstract": 0,
+        "paper": 3,
+        "gained": 3,
+        "lost": 0
+      },
+      "training_compute": {
+        "question": "Do the authors give numerical training compute, accelerator time, or training energy for their own experiments?",
+        "abstract": 0,
+        "paper": 18,
+        "gained": 18,
+        "lost": 0
+      },
+      "inference_cost": {
+        "question": "Do the authors give numerical latency, token, compute, or monetary cost for runtime inference?",
+        "abstract": 1,
+        "paper": 10,
+        "gained": 9,
+        "lost": 0
+      },
+      "oversight_effort": {
+        "question": "Do the authors numerically report human review time or cost for the studied mechanism?",
+        "abstract": 0,
+        "paper": 1,
+        "gained": 1,
+        "lost": 0
+      },
+      "code_release": {
+        "question": "Do the authors explicitly report releasing implementation code for the contribution?",
+        "abstract": 14,
+        "paper": 33,
+        "gained": 20,
+        "lost": 1
+      },
+      "limitations": {
+        "question": "Do the authors explicitly discuss a substantive limitation of their own intervention, evaluation or argument?",
+        "abstract": 4,
+        "paper": 54,
+        "gained": 51,
+        "lost": 1
+      }
+    }
+  },
+  "accounting": {
+    "jev": {
+      "requests": 120,
+      "long_context": 12,
+      "input_tokens": 1810752,
+      "output_tokens": 147600,
+      "usd": 0.076051584
+    },
+    "qwen": {
+      "requests": 120,
+      "long_context": 0,
+      "input_tokens": 1569792,
+      "output_tokens": 2473,
+      "usd": 0.15007896999999998
+    }
+  },
+  "jev_paper_cutoffs": {
+    "0.3": {
+      "W": 3020.491560141671,
+      "E": 2952.21090633377,
+      "observed_W": 40.0,
+      "observed_E": 40.0,
+      "ratio": 1.0231286503485946,
+      "ci95": [
+        0.7947875335873543,
+        1.3170717845048896
+      ],
+      "equality": {
+        "difference": 68.28065380790129,
+        "p_two_sided": 0.8582627043568628
+      },
+      "twofold": {
+        "difference": -2883.930252525869,
+        "p_two_sided": 6.075761948539281e-05
+      }
+    },
+    "0.5": {
+      "W": 2979.7772744273852,
+      "E": 1915.6984706562396,
+      "observed_W": 39.0,
+      "observed_E": 27.0,
+      "ratio": 1.555452134075482,
+      "ci95": [
+        1.0902222574739422,
+        2.21920927114974
+      ],
+      "equality": {
+        "difference": 1064.0788037711457,
+        "p_two_sided": 0.011293929120566168
+      },
+      "twofold": {
+        "difference": -851.6196668850944,
+        "p_two_sided": 0.19995000666978582
+      }
+    },
+    "0.7": {
+      "W": 2657.8068627635776,
+      "E": 1005.6743848641185,
+      "observed_W": 35.0,
+      "observed_E": 14.0,
+      "ratio": 2.6428105386443614,
+      "ci95": [
+        1.570698699739258,
+        4.446713774149774
+      ],
+      "equality": {
+        "difference": 1652.132477899459,
+        "p_two_sided": 7.593297236194186e-05
+      },
+      "twofold": {
+        "difference": 646.4580930353405,
+        "p_two_sided": 0.25337833142596244
+      }
+    }
+  },
+  "excluding_known_withdrawal": {
+    "jev": {
+      "W": 2979.7772744273852,
+      "E": 1915.6984706562396,
+      "observed_W": 39.0,
+      "observed_E": 27.0,
+      "ratio": 1.555452134075482,
+      "ci95": [
+        1.0902222574739422,
+        2.21920927114974
+      ],
+      "equality": {
+        "difference": 1064.0788037711457,
+        "p_two_sided": 0.011293929120566168
+      },
+      "twofold": {
+        "difference": -851.6196668850944,
+        "p_two_sided": 0.19995000666978582
+      }
+    },
+    "qwen": {
+      "W": 4231.882846029294,
+      "E": 1517.1280318460674,
+      "observed_W": 56.0,
+      "observed_E": 21.0,
+      "ratio": 2.7894038981534517,
+      "ci95": [
+        1.9536401992209123,
+        3.982705776701641
+      ],
+      "equality": {
+        "difference": 2714.7548141832267,
+        "p_two_sided": 6.709687754966153e-10
+      },
+      "twofold": {
+        "difference": 1197.6267823371595,
+        "p_two_sided": 0.03484985787272428
+      }
+    }
+  },
+  "agreement": {
+    "abstract": {
+      "weights": 40,
+      "external": 46
+    },
+    "paper": {
+      "weights": 42,
+      "external": 48
+    }
+  }
+}

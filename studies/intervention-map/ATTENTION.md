@@ -1,6 +1,8 @@
 # Where does AI research put its effort?
 
-**November 2021–October 2026.** Among reviewed language-model papers, the rubric finds **3.39 weight papers per paper on supervision or a runtime harness** when authors explicitly frame the work as alignment. The estimate is **0.64** among other language-model alignment papers. Jev also finds a tilt in opposite directions (**1.85** and **0.69**). Publication counts measure research output and serve here as an indirect indicator of attention.
+**How often do explicitly alignment-worded language-model papers study model weights versus external supervision or runtime harnesses?** Across the same 60 full papers, the sampling-weighted ratio is **1.56 with Jev** (95% interval 1.09–2.22) and **2.84 with Qwen** (1.99–4.07). Jev’s ratio ranges from **1.02 to 2.64** as its decision cutoff moves from 0.30 to 0.70. The evidence supports a weight tilt at the default settings. Its size is sensitive to how a paper qualifies.
+
+The abstract rubric estimates **3.39** in this group and **0.64** among other language-model alignment papers. Full-paper results cover the explicitly worded group. Publication counts describe research attention over November 2021–October 2026.
 
 ## Hypotheses and results
 
@@ -12,7 +14,7 @@
 | Feedback and dynamics form recognizable topics outside the alignment shortlist. | **Partial support.** The shortlist contains **0 of 235** papers in one optimization/control cluster. **10 of 15** audited there use feedback or dynamics. Many study physical systems. |
 | Reallocating funding or labor toward harnesses would improve safety. | **Open.** Testing this requires a comparison of safety gains at equal cost and comparable task performance. |
 
-The study protocol specifies the twofold threshold and the comparison with parity. Topic, framing and reviewer comparisons are exploratory. Both reviewers use abstracts. Intervals measure sampling uncertainty. [Study protocol](protocol.md) · [Direct comparison data](results/frame_contrast.json)
+The study protocol specifies the twofold threshold and the comparison with parity. Topic, framing and reviewer comparisons are exploratory. These hypothesis tests use abstract-level evidence. The paired full-paper audit checks the explicit language-model subset. Intervals measure sampling uncertainty. [Study protocol](protocol.md) · [Direct comparison data](results/frame_contrast.json)
 
 ## What measures research attention?
 
@@ -24,6 +26,17 @@ The study protocol specifies the twofold threshold and the comparison with parit
 | Research time | Engineer-hours by topic are unknown. | Job listings, paper counts and grants cannot recover time allocation on their own. |
 
 [Publication estimates](results/attention.json) · [Indicator populations, units and sources](data/attention_indicators.csv)
+
+## What changes when reviewers read the whole paper?
+
+| Same 60 papers | Abstracts, W / external | Full papers, W / external | Weighted ratio, abstract → full paper |
+|---|---:|---:|---:|
+| Jev 1.14.0, 67 questions | 33 / 16 | 39 / 27 | 2.21 → **1.56** |
+| Qwen3-30B-A3B-Instruct-2507, three headline questions | 53 / 24 | 57 / 21 | 2.23 → **2.84** |
+
+All 60 inputs include text from every PDF page, spanning 1,431 pages. Twelve Jev requests used extended context. One paper was withdrawn in October 2026 and its original posted version is included to preserve the frozen sample. Omitting it gives full-paper ratios of 1.56 (Jev) and 2.79 (Qwen). Each model received the same text and headline definitions, with previous labels hidden. Different prompting and scoring rules make the older abstract rubric and Jev checks separate measurements.
+
+Jev flags 11 full papers for a direct weight-versus-external experiment, three for a resource-matched comparison of any kind, and one for both. The two flags can refer to different experiments in the same paper. These counts identify papers for evaluating returns to different approaches. [Full-paper comparison](attention-overview.html#full-paper-check) · [Paper scores and sources](results/fulltext_measures.csv) · [Questions, methods and reproduction](MASTER.md#join-the-full-paper-audit)
 
 ## Which language-model papers count?
 

@@ -549,6 +549,111 @@ def explorer_data():
     return {"roles": list(ROLES.values()), "frames": profiles}
 
 
+def fullpaper_panel():
+    data = read("fulltext_summary.json")
+    n = data["paired"]
+    rows = []
+    for key, label in [("jev", "Jev"), ("qwen", "Qwen")]:
+        for basis, source in [("abstract", "Abstract"), ("paper", "Full paper")]:
+            r = data["ratios"][f"{key}_{basis}"]
+            low, high = r["ci95"]
+            rows.append(
+                [
+                    label,
+                    source,
+                    int(r["observed_W"]),
+                    int(r["observed_E"]),
+                    f'<b>{r["ratio"]:.2f}</b> ({low:.2f}–{high:.2f})',
+                ]
+            )
+    out = (
+        '<h3 id="full-paper-check">Does reading the full paper change the result?</h3>'
+    )
+    out += note(
+        f'{n} of {data["eligible"]} explicitly alignment-worded language-model papers have paired reads. Same papers, same questions within each reviewer. External includes supervision and runtime harnesses. A hybrid enters both counts.'
+    )
+    out += table(
+        [
+            "Reviewer",
+            "Evidence",
+            "Weight papers",
+            "External papers",
+            "Weighted ratio (95% CI)",
+        ],
+        rows,
+    )
+    out += note(
+        "At a permissive Jev cutoff of 0.30 the full-paper ratio is 1.02 (0.79–1.32). At 0.70 it is 2.64 (1.57–4.45). Intervals measure sampling uncertainty conditional on the labels."
+    )
+    out += "<details><summary>Which papers change classification?</summary>"
+    out += table(
+        [
+            "Reviewer",
+            "Weight gained / lost",
+            "External gained / lost",
+            "Full / abstract ratio (95% CI)",
+        ],
+        [
+            [
+                name,
+                f'{chg["weights"]["gained"]} / {chg["weights"]["lost"]}',
+                f'{chg["external"]["gained"]} / {chg["external"]["lost"]}',
+                f'{chg["full_over_abstract"]:.2f} ({chg["ci95"][0]:.2f}–{chg["ci95"][1]:.2f})',
+            ]
+            for name, chg in ((k.title(), v) for k, v in data["changes"].items())
+        ],
+    )
+    out += note(
+        f'On full papers, Jev and Qwen agree on the weight label for {data["agreement"]["paper"]["weights"]}/{n} papers and the external label for {data["agreement"]["paper"]["external"]}/{n}.'
+    )
+    out += note(
+        'One disagreement concerns <a href="https://arxiv.org/abs/2411.08733">Dynamic Rewarding with Prompt Optimization</a>. The authors optimize instructions without updating the acting model. Qwen marks weights present and Jev scores weights at 0.08. The paper also discusses training-based comparisons.'
+    )
+    out += "</details><details><summary>Change the Jev decision cutoff</summary>"
+    out += table(
+        [
+            "Full-paper cutoff",
+            "Weight papers",
+            "External papers",
+            "Weighted ratio (95% CI)",
+        ],
+        [
+            [
+                cut,
+                int(r["observed_W"]),
+                int(r["observed_E"]),
+                f'{r["ratio"]:.2f} ({r["ci95"][0]:.2f}–{r["ci95"][1]:.2f})',
+            ]
+            for cut, r in data["jev_paper_cutoffs"].items()
+        ],
+    )
+    out += "</details><details><summary>Explore all 67 Jev questions</summary>"
+
+    out += note(
+        f"Bars count papers scoring at least 0.50 out of {n} paired papers. Gained and lost count papers crossing that cutoff. These exploratory labels have no independent accuracy estimate."
+    )
+    for group, items in data["questions"].items():
+        out += "<details><summary>" + html.escape(group) + f" ({len(items)})</summary>"
+        out += table(
+            ["Question", "Abstract", "Full paper", "Gained / lost"],
+            [
+                [
+                    html.escape(v["question"]),
+                    bar(v["abstract"] / n, str(v["abstract"])),
+                    bar(v["paper"] / n, str(v["paper"])),
+                    f'{v["gained"]} / {v["lost"]}',
+                ]
+                for v in items.values()
+            ],
+        )
+        out += "</details>"
+    out += "</details>"
+    out += note(
+        '<a href="results/fulltext_measures.csv" download>Paper scores and PDF sources (CSV)</a> · <a href="results/fulltext_requests.csv" download>Request and token ledger (CSV)</a>'
+    )
+    return out
+
+
 def language_panel():
     result = read("language_comparison.json")
     variants = [
@@ -689,6 +794,7 @@ def language_panel():
             '<a href="results/language_model_papers.csv.gz" download>Download the language-model paper catalog</a> · <a href="results/paper_master.csv.gz" download>Download all papers</a>'
         )
         + tabs("lm", "Model-scope definition", choices)
+        + fullpaper_panel()
         + note(
             "Explicit alignment means the paper uses one of the study’s alignment phrases. The comparison with other wording uses two disjoint groups. The broader alignment row combines them. The same model-scope selection is used for both mechanism reviewers."
         )

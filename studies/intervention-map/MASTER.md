@@ -92,3 +92,22 @@ python language_comparison.py
 python master_validation.py
 python build_attention.py
 ```
+
+## Join the full-paper audit
+
+[Paper measurements](results/fulltext_measures.csv) join to the master on `paper_id`. This extension follows all 60 papers that are core in the stratified audit, contain an explicit alignment phrase and meet the default language-model cutoff. Membership stays fixed across reviewers and evidence sources. Every Jev measure has an abstract column and a full-paper column. Qwen supplies independent binary decisions on the three headline mechanisms. Full-paper scores apply only to the audited IDs.
+
+Jev 1.14.0 answers 67 independent Noul questions per request, sharing the paper across questions. Qwen3-30B-A3B-Instruct-2507 receives the same three mechanism definitions with no previous labels. The full-paper input is the ordered PDF text of every page, including references and appendices. Figures contribute extractable text only. Published PDFs can include revisions after the metadata snapshot. PDF and extracted-text hashes identify the material used. The CSV includes versioned arXiv URLs when the version appears in the extracted text. The frozen sample includes arXiv:2608.01629, withdrawn on October 25, 2026. We retrieved v1 and report a leave-out sensitivity. Reading a paper in full can reveal mechanisms omitted from its abstract. It also gives a classifier more opportunities to mistake cited work or an experimental baseline for the paper’s own contribution.
+
+The weighted ratios use the original stratified design. A paper qualifies as external if either the supervision or harness decision is positive. Hybrids count on both sides. Jev uses a 0.50 cutoff. The 67 exploratory questions yield descriptive counts for the paired papers. Changes and reviewer agreement do not measure accuracy. [Exact questions](fulltext_questions.py) · [Results and paired changes](results/fulltext_summary.json) · [Request, model and usage ledger](results/fulltext_requests.csv)
+
+Rebuild the summary and HTML offline from the released measurements with `python fulltext_analysis.py` and `python build_attention.py`. To repeat collection with the dependencies in `requirements-semantic.txt` and the two provider keys set in the environment, run the following from this study directory.
+
+```sh
+python fulltext_sources.py /tmp/alignment-pdfs
+python fulltext_rate.py /tmp/alignment-pdfs /tmp/alignment-ratings
+python fulltext_analysis.py --export /tmp/alignment-pdfs /tmp/alignment-ratings
+python build_attention.py
+```
+
+TypeSafe bills the shared paper input once per request, plus the question text. Outputs are free. The collector first uses the standard context and requests the extended context on a provider length rejection. The published ledger records which requests used it. [Jev model limits and pricing](https://docs.typesafe.ai/models) · [Parallel questions cookbook](https://docs.typesafe.ai/cookbooks/parallel_questions)
