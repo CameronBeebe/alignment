@@ -1,0 +1,151 @@
+{
+  "networkx": "3.4.2",
+  "shortlist": 7735,
+  "papers_without_parsed_names": 1,
+  "edges": 8749,
+  "isolated_papers": 3822,
+  "analyses": {
+    "primary": {
+      "named": {
+        "distinct_papers": 38,
+        "weight_papers": 33,
+        "external_papers": 5,
+        "represented_groups": 35,
+        "largest_reviewed_count_in_one_group": 2,
+        "groups_with_both_mechanisms": 1,
+        "weighted_ratio": 7.19567849540542,
+        "leave_one_group_out_range": [
+          6.730545421310446,
+          9.516606668869343
+        ],
+        "leave_one_group_out_undefined": 0
+      },
+      "other": {
+        "distinct_papers": 73,
+        "weight_papers": 32,
+        "external_papers": 41,
+        "represented_groups": 69,
+        "largest_reviewed_count_in_one_group": 3,
+        "groups_with_both_mechanisms": 1,
+        "weighted_ratio": 0.7200692266276789,
+        "leave_one_group_out_range": [
+          0.6931238136513603,
+          0.7685700571784909
+        ],
+        "leave_one_group_out_undefined": 0
+      },
+      "all": {
+        "distinct_papers": 111,
+        "weight_papers": 65,
+        "external_papers": 46,
+        "represented_groups": 100,
+        "largest_reviewed_count_in_one_group": 5,
+        "groups_with_both_mechanisms": 2,
+        "weighted_ratio": 1.3643467930579143,
+        "leave_one_group_out_range": [
+          1.2992714867405335,
+          1.444340985471533
+        ],
+        "leave_one_group_out_undefined": 0
+      }
+    },
+    "alternate_seed": {
+      "named": {
+        "distinct_papers": 38,
+        "weight_papers": 33,
+        "external_papers": 5,
+        "represented_groups": 35,
+        "largest_reviewed_count_in_one_group": 2,
+        "groups_with_both_mechanisms": 1,
+        "weighted_ratio": 7.19567849540542,
+        "leave_one_group_out_range": [
+          6.730545421310446,
+          9.516606668869343
+        ],
+        "leave_one_group_out_undefined": 0
+      },
+      "other": {
+        "distinct_papers": 73,
+        "weight_papers": 32,
+        "external_papers": 41,
+        "represented_groups": 69,
+        "largest_reviewed_count_in_one_group": 3,
+        "groups_with_both_mechanisms": 1,
+        "weighted_ratio": 0.7200692266276789,
+        "leave_one_group_out_range": [
+          0.6931238136513603,
+          0.7685700571784909
+        ],
+        "leave_one_group_out_undefined": 0
+      },
+      "all": {
+        "distinct_papers": 111,
+        "weight_papers": 65,
+        "external_papers": 46,
+        "represented_groups": 100,
+        "largest_reviewed_count_in_one_group": 5,
+        "groups_with_both_mechanisms": 2,
+        "weighted_ratio": 1.3643467930579143,
+        "leave_one_group_out_range": [
+          1.2992714867405335,
+          1.444340985471533
+        ],
+        "leave_one_group_out_undefined": 0
+      }
+    },
+    "three_shared_names": {
+      "named": {
+        "distinct_papers": 38,
+        "weight_papers": 33,
+        "external_papers": 5,
+        "represented_groups": 37,
+        "largest_reviewed_count_in_one_group": 2,
+        "groups_with_both_mechanisms": 0,
+        "weighted_ratio": 7.19567849540542,
+        "leave_one_group_out_range": [
+          6.7492179859394605,
+          9.516606668869343
+        ],
+        "leave_one_group_out_undefined": 0
+      },
+      "other": {
+        "distinct_papers": 73,
+        "weight_papers": 32,
+        "external_papers": 41,
+        "represented_groups": 72,
+        "largest_reviewed_count_in_one_group": 2,
+        "groups_with_both_mechanisms": 1,
+        "weighted_ratio": 0.7200692266276789,
+        "leave_one_group_out_range": [
+          0.6931238136513603,
+          0.7400090768085085
+        ],
+        "leave_one_group_out_undefined": 0
+      },
+      "all": {
+        "distinct_papers": 111,
+        "weight_papers": 65,
+        "external_papers": 46,
+        "represented_groups": 107,
+        "largest_reviewed_count_in_one_group": 2,
+        "groups_with_both_mechanisms": 1,
+        "weighted_ratio": 1.3643467930579143,
+        "leave_one_group_out_range": [
+          1.3196235378456258,
+          1.398275291329888
+        ],
+        "leave_one_group_out_undefined": 0
+      }
+    }
+  },
+  "direct_named_overlap": {
+    "1": {
+      "linked_pairs": 1,
+      "largest_connected_set": 2
+    },
+    "2": {
+      "linked_pairs": 0,
+      "largest_connected_set": 1
+    }
+  }
+}

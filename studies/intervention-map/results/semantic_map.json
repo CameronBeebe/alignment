@@ -1,0 +1,95 @@
+{
+  "model": "intfloat/e5-small-v2",
+  "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+  "unique_papers": 7914,
+  "silhouette": {
+    "8": 0.054684828966856,
+    "12": 0.044637635350227356,
+    "16": 0.03994034230709076,
+    "20": 0.04255819693207741
+  },
+  "k": 8,
+  "alternate_seed_ARI": 0.9741276844632547,
+  "groups": [
+    {
+      "id": 0,
+      "n": 1152,
+      "central_papers": [
+        "Beyond Human Data: Aligning Multimodal Large Language Models by Iterative Self-Evolution",
+        "Let's Think in Two Steps: Mitigating Agreement Bias in MLLMs with Self-Grounded Verification",
+        "Is the Elephant Flying? Resolving Ambiguities in Text-to-Image Generative Models",
+        "Simultaneous Multi-objective Alignment Across Verifiable and Non-verifiable Rewards"
+      ]
+    },
+    {
+      "id": 1,
+      "n": 534,
+      "central_papers": [
+        "A Comprehensive Survey of Direct Preference Optimization: Datasets, Theories, Variants, and Applications",
+        "Towards Improved Preference Optimization Pipeline: from Data Generation to Budget-Controlled Regularization",
+        "A Survey of Direct Preference Optimization",
+        "Optimizing LLMs with Direct Preferences: A Data Efficiency Perspective"
+      ]
+    },
+    {
+      "id": 2,
+      "n": 1175,
+      "central_papers": [
+        "Disentangling AI Alignment: A Structured Taxonomy Beyond Safety and Ethics",
+        "A Brief Overview of AI Governance for Responsible Machine Learning Systems",
+        "Legal Alignment for Safe and Ethical AI",
+        "AI Safety, Alignment, and Ethics (AI SAE)"
+      ]
+    },
+    {
+      "id": 3,
+      "n": 818,
+      "central_papers": [
+        "A Multi-Agent LLM Defense Pipeline Against Prompt Injection Attacks",
+        "Architecting Secure AI Agents: Perspectives on System-Level Defenses Against Indirect Prompt Injection Attacks",
+        "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
+        "ARGUS: Defending LLM Agents Against Context-Aware Prompt Injection"
+      ]
+    },
+    {
+      "id": 4,
+      "n": 650,
+      "central_papers": [
+        "Defending Large Language Models Against Jailbreak Attacks via Layer-specific Editing",
+        "Revisiting Jailbreaking for Large Language Models: A Representation Engineering Perspective",
+        "Jailbreaking Leaves a Trace: Understanding and Detecting Jailbreak Attacks from Internal Representations of Large Language Models",
+        "Jailbreaking and Mitigation of Vulnerabilities in Large Language Models"
+      ]
+    },
+    {
+      "id": 5,
+      "n": 937,
+      "central_papers": [
+        "Unforgotten Safety: Preserving Safety Alignment of Large Language Models with Continual Learning",
+        "Robustifying Safety-Aligned Large Language Models through Clean Data Curation",
+        "Fine-Tuning, Quantization, and LLMs: Navigating Unintended Outcomes",
+        "Safety at One Shot: Patching Fine-Tuned LLMs with A Single Instance"
+      ]
+    },
+    {
+      "id": 6,
+      "n": 808,
+      "central_papers": [
+        "Secrets of RLHF in Large Language Models Part II: Reward Modeling",
+        "Fine-Tuning Language Models with Reward Learning on Policy",
+        "Reinforcement Learning from Human Feedback: A Statistical Perspective",
+        "Sequence to Sequence Reward Modeling: Improving RLHF by Language Feedback"
+      ]
+    },
+    {
+      "id": 7,
+      "n": 1840,
+      "central_papers": [
+        "Towards a Unified View of Preference Learning for Large Language Models: A Survey",
+        "Aligning Large Language Models through Synthetic Feedback",
+        "Aligning Large Language Models with Human: A Survey",
+        "Unveiling the Misuse Potential of Base Large Language Models via In-Context Learning"
+      ]
+    }
+  ]
+}

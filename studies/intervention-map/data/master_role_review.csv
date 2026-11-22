@@ -1,0 +1,33 @@
+paper_id,frame,evaluation,theory,data_resources,governance,evidence_note
+arxiv:2601.21459,candidate,0,0,1,0,Curates and releases reasoning-augmented role-playing data.
+arxiv:2606.09073,candidate,0,1,0,0,Derives a closed-form effective reward and limiting cases.
+arxiv:2312.13772,candidate,1,0,0,0,Controlled comparison of calibration across learning methods.
+arxiv:2604.16983,candidate,0,0,0,0,Graph-based pruning method evaluated against compression baselines.
+arxiv:2605.12869,candidate,1,0,0,0,Introduces a time-to-failure evaluation framework.
+arxiv:2508.20822,candidate,0,1,0,0,Constructs valid control barrier functions and characterizes the resulting safe sets.
+acl:2026.cl4health-1.53,candidate,1,0,0,0,Systematically compares evidence retrieval and answer generation strategies.
+arxiv:2403.15646,candidate,0,0,0,1,Assesses an institutional risk management framework for surveillance.
+arxiv:2511.08631,candidate,0,0,0,1,Examines policy and legal arrangements for safety collaboration between labs.
+arxiv:2510.20568,candidate,0,0,0,1,Compares participation and responsiveness across three national governance processes.
+arxiv:2606.25136,candidate,0,0,1,0,Generates memory-dependent question and answer supervision from demonstration trajectories.
+arxiv:2601.06412,candidate,0,0,0,1,Compares institutional and geopolitical governance strategies.
+arxiv:2510.19616,candidate,1,0,1,0,Introduces and applies a culturally annotated bias benchmark.
+arxiv:2604.16132,candidate,1,0,0,1,Audits model coding quality and analyzes ethical consequences of narrative erasure.
+arxiv:2210.12485,candidate,0,0,0,0,Develops a modular planning agent and demonstrates its capabilities on an existing benchmark.
+arxiv:2410.19134,candidate,0,0,0,0,Introduces regularization and prompting for speech emotion captions.
+arxiv:2604.00528,general_ai,1,0,1,0,Identifies systematic benchmark errors and manually corrects the affected queries.
+arxiv:2607.17671,general_ai,0,0,0,0,Evaluates the proposed retrieval model on existing perturbation data.
+arxiv:2407.10661,general_ai,0,0,1,0,Develops an automated data collection and labeling procedure using robot LEDs.
+arxiv:2112.03221,general_ai,0,0,0,0,Introduces a neural mesh stylization method.
+arxiv:2601.05570,general_ai,1,0,1,1,Builds a benchmark with 80 scenarios and examines the tension between honesty and context-specific professional norms.
+arxiv:2510.15495,general_ai,0,0,0,0,Uses recorded trajectories to train a simulator and reward model.
+arxiv:2412.19458,general_ai,0,0,1,0,Generates edited driving scenes for training and testing downstream systems.
+arxiv:2511.14320,general_ai,0,1,0,0,Derives generalization theory for equality-constrained learning.
+arxiv:2512.19221,general_ai,0,0,0,0,Develops a scene-graph predictor and compares its performance with baselines.
+arxiv:2404.06714,general_ai,0,0,0,0,Compares the proposed speech synthesis architecture on existing datasets.
+arxiv:2308.01606,general_ai,0,0,0,0,Uses graph constraints to train an encoder; no formal guarantees described.
+arxiv:2404.11998,general_ai,0,0,0,0,Introduces a prompting and curriculum-learning architecture; no dedicated resource described.
+arxiv:2412.09961,general_ai,0,0,0,1,Analyzes statutory transparency obligations for image manipulation.
+arxiv:2309.00770,general_ai,1,0,1,1,"Organizes bias evaluation, consolidates public datasets and defines fairness desiderata."
+arxiv:2507.20181,general_ai,0,0,1,0,Introduces an on-policy procedure to generate its own preference training data.
+arxiv:2401.16284,general_ai,0,0,0,0,Introduces pose representations and refinement strategies evaluated on existing datasets.

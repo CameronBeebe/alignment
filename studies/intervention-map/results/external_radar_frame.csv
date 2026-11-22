@@ -1,0 +1,235 @@
+paper_id,title,alignment_training,control_monitoring,in_master,in_shortlist
+arxiv:2610.00850,AuraForge: Scaling Security Supervision for Training Coding Agents,True,False,False,False
+arxiv:2610.01323,TRACE: Trajectory Return Attribution and Contrastive Erasure for Multi-Turn Safety,True,False,False,False
+arxiv:2610.01801,A Safe Prototype Is Not a Safety Direction: Reference Dependence and Prompt Confounds in Response-Safety Embeddings,False,True,False,False
+arxiv:2610.01828,The Asymptotics of Language Model Alignment with Memory,True,False,True,False
+arxiv:2610.02015,On Language Drift during RLVR Post-Training,True,True,False,False
+arxiv:2610.02413,Prompted to Discriminate: Generalizing Malicious-Input Probes in the Wild,False,True,True,False
+arxiv:2610.02527,CriticHack: Evaluating Visual Rewards Under Robot Policy Optimization,True,False,False,False
+arxiv:2610.02568,Mitigating Social Sycophancy via Pluralistic Preference Optimization,True,False,True,True
+arxiv:2610.02741,On the Chain-of-Thought Monitorability of Looped Language Models,False,True,False,False
+arxiv:2610.03033,When Numbers Start Talking: Numerical Signalling and Strategic Behaviour Among LLMs,False,True,False,False
+arxiv:2610.03055,hacktrace: behavior-supervised detection of reward hacking during code generation,True,True,True,False
+arxiv:2610.03124,The Fragility of Trigger-Tag Mechanisms for Misuse Detection in Open-Weight LLMs,False,True,False,False
+arxiv:2610.03185,Gains and Collapse in On-Policy Distillation:A Reinforcement Learning Perspective,True,False,True,False
+arxiv:2610.03458,A Near-Zero Monitor Readout Is Not Evidence of Behavioral Control,True,True,False,False
+arxiv:2610.03498,Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models,False,True,False,False
+arxiv:2610.03509,Efficient Reasoning Training Does Not Always Harm CoT Faithfulness and Monitorability,False,True,False,False
+arxiv:2610.03818,Control OSWorld: An AI Control Environment for GUI Computer Use Agents,False,True,True,False
+arxiv:2610.03894,Proxy Confidence: Auditing Black-Box LLM Agents with a Surrogate's Log-Probabilities,False,True,False,False
+arxiv:2610.04269,Self-Reflection Fine-Tuning: Enhancing Agent Security against Prompt Injection Attacks from Failure Experience,True,False,True,True
+arxiv:2610.04316,"From Latent Space to Jacobian Space: Measuring, Evading, and Training Against Safety-Content Accessibility",False,True,False,False
+arxiv:2610.04329,"Suppressing Pressure, Amplifying Evidence: Self-Guided Attention Steering to Mitigate Sycophancy and Stubbornness",True,False,True,True
+arxiv:2610.04467,Target-free Latent Safety Alignment,True,False,True,True
+arxiv:2610.04575,From Probe Scores to Alarm Policies: Operational Validity of Activation Monitors for Language-Model Agents,False,True,False,False
+arxiv:2610.04589,StegoMemory: Agentic Memory Acts as Covert Steganographic Channel,False,True,True,False
+arxiv:2610.04737,PyINE: A Framework for Scalable Elicitation and Oversight via Code Execution,False,True,False,False
+arxiv:2610.04793,"Pressure, Context, and Machine Self-Control: A Criminological Test of Reward Hacking in Generative AI Models",True,False,True,False
+arxiv:2610.04845,Which Preferences to Train On? End-to-End Multi-Objective Alignment with an Adversarial Preference Distribution,True,False,True,True
+arxiv:2610.04914,Monitorability Disposition in Large Reasoning Models,False,True,True,False
+arxiv:2610.05162,Memadapter: Counterfactual Adaptation Against Memory-induced Sycophancy,True,False,True,False
+arxiv:2610.05163,Blocking at the Boundary: Auditing Long-Horizon Agents against Staged Prompt Injection,False,True,False,False
+arxiv:2610.05246,What a Policy Gate Can and Cannot Know: Measured Boundaries of Cross-Platform Command Adjudication,False,True,False,False
+arxiv:2610.05308,RubricArmor: Adversarial Evolution Improves LLM-Based Rubric Generation,True,False,True,True
+arxiv:2610.05370,EnGRICH: Enhancing Generative Reward Modeling with Critiques from Humans,True,False,False,False
+arxiv:2610.05450,Groupwise Distortion Guarantees for Preference-Based Alignment,True,False,True,True
+arxiv:2610.05461,AI Safety via Debate is Compromised by Cognitive Biases,True,False,True,True
+arxiv:2610.05637,Visual Grounding Safety in Vision-Language Models,True,False,True,True
+arxiv:2610.06439,Better Call Reward: Reward Hacking as Strategic Abstention in Legal Reasoning Models,True,False,True,False
+arxiv:2610.06522,Anatomy of LLM Sycophancy: What a Flip Rate Hides,True,False,True,False
+arxiv:2610.06670,Reward Stealing Attack on Large Language Models,True,False,True,True
+arxiv:2610.07023,Beyond Refusal Patterns: Safe-Role Internalization for Robust and Generalizable LLM Safety Alignment,True,False,True,True
+arxiv:2610.07089,Towards a Unified Misuse Monitoring Benchmark,False,True,True,True
+arxiv:2610.07256,Efficient Auditing of Adversarial AI Agent Behavior from Agent Traces,False,True,True,False
+arxiv:2610.07518,Harmful SFT Leaves a Continuous Trace in LLM Checkpoint Updates,False,True,False,False
+arxiv:2610.07592,LSC-DPO: Learning-Signal-Controlled Direct Preference Optimization,True,False,True,True
+arxiv:2610.07654,Does On-Policy Distillation for Safety Pose Backdoor Risks?,True,False,True,False
+arxiv:2610.07935,SIGMA: Self-Improving Alignment Generalization from a Model Spec,True,False,True,True
+arxiv:2610.08061,ASCENT: First-Order Optimal Fine-Tuning with Recalibration for Safety--Utility Co-Enhancement,True,False,True,True
+arxiv:2610.08928,Multi-Aspect Runtime Verification for Simulation-Based V&V of LLM-Enabled Autonomous Agents,False,True,True,False
+arxiv:2610.09043,Careful Judge: Safe and Efficient Human-AI Collaborative Decision Making,False,True,True,False
+arxiv:2610.09142,Finding Side-Effect Loopholes in AppWorld and WorkArena Verifiers,True,False,True,False
+arxiv:2610.09159,SpecGuard: Proving a Task Is Broken Before the Agent Cheats,True,False,False,False
+arxiv:2610.09250,Efficient Best-of-N policy evaluation for inference-time alignment,True,False,False,False
+arxiv:2610.09384,The Persona Hierarchy Model: Understanding Contextual Generalization in Fine-Tuning LLMs,True,False,True,True
+arxiv:2610.09552,Constitution-Guided Watermarking,False,True,False,False
+arxiv:2610.09600,SafeEvo: Deciphering the Safety Alignment Mechanism and Evolution in Language Models,True,False,True,True
+arxiv:2610.09793,Formal Runtime Verification for Tool-Using LLM Agents: An Offline Same-Benchmark Study on AgentDojo and STAC,False,True,True,True
+arxiv:2610.09964,"Successive Training Stages and Large Language Model Persuasion: Effects of Misalignment, Supervised Fine-Tuning, and Preference Optimization",True,False,True,False
+arxiv:2610.10345,SLDR: Defending Against Malicious Fine-tuning via Selective Layers Recovery and Dynamic Routing,True,False,False,False
+arxiv:2610.10405,Reasoning-Token Spikes Under Prompted Untruthful Responses in Large Language Models,False,True,True,False
+arxiv:2610.10625,"Safe at One Loop, Risky at Another: Aligning Safety Across Recurrent Depths in Looped Language Models",True,False,True,True
+arxiv:2610.10657,Beyond Owls: Subliminal Learning Can Transfer Learned Capabilities and Backdoors,True,False,True,False
+arxiv:2610.10947,RH-Detect: A Unified Benchmark for Reward Hacking Detection,True,True,True,False
+arxiv:2610.11005,How Narrative Wrapping Affects LLM Refusal: A Cross-Language Benchmark and Defense,True,False,True,True
+arxiv:2610.11012,Distillation for Incrimination and Distillation for Capabilities,True,False,True,True
+arxiv:2610.11281,How to post-train on a surrogate: Envelope sampling mitigates reward hacking,True,False,True,False
+arxiv:2610.11351,Deception by Omission: Language Models Knowingly Hide Their Mistakes,False,True,True,True
+arxiv:2610.11464,Who Verifies the Verifier? Co-Evolving Inspectable Graders with Self-Improving Agents,True,False,True,False
+arxiv:2610.12125,The learner who does not learn: when optimizing a pedagogical metric degrades LLM tutoring,True,False,False,False
+arxiv:2610.12233,ReSI: Recursive Safety Improvement toward Resistant and Resilient AI,True,False,True,True
+arxiv:2610.12410,Predicting Alignment Generalization with Value Representations,True,False,True,True
+arxiv:2610.12445,Telling FIBS: Probes Effectively Detect Sabotage and Catch Unverbalized Deception,False,True,False,False
+arxiv:2610.12707,Unsupervised Multimodal Reward Modeling,True,False,False,False
+arxiv:2610.12813,VEPA: Verified Evolving Formal Policy for Lifelong LLM Agent Guardrails,False,True,True,True
+arxiv:2610.12822,Reward Hacking as a Transmissible Strategy in Multi-Agent Coding Systems,True,False,True,False
+arxiv:2610.12885,Personalized Federated Direct Preference Optimization via LoRA Adapters,True,False,True,True
+arxiv:2610.14124,The AI's Poker Face: Contrasting Persuasion and Sycophancy in Voice-Based Multi-Turn Conversations,True,False,True,False
+arxiv:2610.14203,Culture in the Code: Anthropological Concepts Decoding AI's Hidden Assumptions,True,False,True,True
+arxiv:2610.14360,When Pleasing the User Compromises Care: AI Sycophancy in Caregiver-Mediated Healthcare,True,False,True,True
+arxiv:2610.14937,Predicting how model propensities generalize out of distribution,True,False,True,False
+arxiv:2610.15218,Running Fewer Loops Removes Refusal Behaviour in Recurrent-Depth Language Models,True,False,True,False
+arxiv:2610.15365,TRACE: Temporal Risk Assessment and Concept Editing for Safer Language Generation,False,True,False,False
+arxiv:2610.15634,Big-Big-SycoBench: A Benchmark to Detect Sycophancy Through Model Responses to Valid vs. Invalid Arguments,True,False,True,False
+arxiv:2610.15732,NepPlural: A Human-Anchored Benchmark for Persona Annotation in Nepali Migration Discourse,True,False,False,False
+arxiv:2610.15924,Scalable Weak-to-Strong Verifier Hardening for Agent Environments,True,False,True,False
+arxiv:2610.15961,Unfair and Unsafe: Everyday Bias Triggers Emergent Misalignment,True,False,False,False
+arxiv:2610.16043,Beyond the greenwash: do LLMs' ecologically sound decisions hold up under pressure?,True,False,True,False
+arxiv:2610.16070,Understanding and Reducing Misalignment in Persuasion Optimization,True,False,True,False
+arxiv:2610.16145,Pollard: Governed Semantic Execution Trees for Framework-Independent AI Agent Control and Replay,False,True,False,False
+arxiv:2610.16426,AuthGateBench: Benchmarking LLMs as Authorization Gate,False,True,True,True
+arxiv:2610.16761,Separating Prompt Harmfulness from Interaction Safety via Partial Generation,False,True,True,False
+arxiv:2610.16838,"Same Operation, Different Permission: Evaluating Whether Guardrails Honor Authorization",False,True,True,False
+arxiv:2610.16911,Audit tools of the trade: Automated Auditor Elicitation Can Be Sensitive to the Context the Auditor Is Given,True,False,True,False
+arxiv:2610.16946,Social Priors: Descriptions of AI Users Shape How Language Models Trust and Cooperate,True,False,True,True
+arxiv:2610.17062,Gradient Routing Localizes and Removes Unintended Behaviors in RL,True,True,True,False
+arxiv:2610.17703,Pushback in a Haystack: Language Models Respond to Factual Errors Ambiguously and Ineffectively,True,False,True,False
+arxiv:2610.17724,Evidence-First Agentic Verification,True,False,True,False
+arxiv:2610.17989,Seeing Through the Forgery Is Not Enough: Regressive Sycophancy under Fabricated Evidence in Medical Vision-Language Models,True,False,True,True
+arxiv:2610.18105,Chain of Thought Monitoring Can Fail Even When CoT Is Necessary,False,True,False,False
+arxiv:2610.18159,Claim Framing as a Driver of LLM Sycophancy,True,False,True,True
+arxiv:2610.18326,Jev-Guard: Fast Routing and Auditing Agent Actions over Editable Policy Trees,False,True,True,False
+arxiv:2610.18408,"Prompt-Injection Probes Learn the Conversation, Not Just the Injection",False,True,False,False
+arxiv:2610.18415,Do Factuality Methods Make LLMs More Factual? Reproducibility and Fair Comparison,True,False,True,True
+arxiv:2610.18609,DPOison-VL: Clean Preference Poisoning in Vision-Language Direct Preference Optimization,True,False,True,True
+arxiv:2610.18766,"Rubrics from the Task, Verdicts from Evidence: Pointwise Rubric Rewards with Tool-Augmented Judges",True,False,False,False
+arxiv:2610.19365,DANGERLENS: Probing Dangerous Representations Hidden by Safety Alignment,True,False,True,False
+arxiv:2610.19372,Policy-Verified Self-Training: Learning Agent Compliance from Verifiable Policy Rewards,True,False,False,False
+arxiv:2610.19525,Diagnosing and Correcting Reward Hacking in Verifiable Instruction Following,True,False,True,True
+arxiv:2610.19731,What Happens to the Goal? Distinct Failures of Policy Alignment in Goal Misgeneralization,True,False,True,False
+arxiv:2610.19817,Model vs. User: Whose Values Prevail? Inference-Time Value Alignment in Multi-Turn Conversations,True,False,True,True
+arxiv:2610.19832,"Rent-Seeking Language Models: Reward Models Set the Prices, Frequent Audits Curb the Rent",True,True,True,True
+arxiv:2610.20174,RM-OPD: On-Policy Distillation for Generative Reward Models,True,False,True,False
+arxiv:2610.20179,Cross-Model In-Context Neurofeedback Reveals (Limited) Activation Control in LLMs,False,True,False,False
+arxiv:2610.20570,"Manacá-1B-Instruct-2: Reproducible Safety Alignment for a Native Brazilian-Portuguese LLM. Negative DPO Results, a Controlled Composition Scan, and a Silent Failure Mode of the LLM Judge",True,False,True,True
+arxiv:2610.20887,Do Emergent Misalignment Models Share a Circuit?,True,False,False,False
+arxiv:2610.20941,Screwtape: Adversarial Transcript Editing for Monitor Red-Teaming,False,True,False,False
+arxiv:2610.20960,StepSafe: Learning Timely Intervention with Context-Aware Safety Reasoning,False,True,True,True
+arxiv:2610.21040,Recursive Reward Improvement via Adversarial Meta-Prompt Evolution,True,False,True,False
+arxiv:2610.21138,CleanRM: Reward Modeling from Noisy Feedback with a Few Clean Feedback for RLHF,True,False,True,True
+arxiv:2610.21404,Multi-Reward Hacking: From Aggregation-Induced Drift to Trust-Anchored Defense,True,False,True,False
+arxiv:2610.21633,ContextLift: Breaking the Spurious Correlation Behind Conditional Emergent Misalignment,True,False,False,False
+arxiv:2610.21708,"Human Interventions as Labels: Localizing, Steering, and (Sometimes) Editing the Computations Behind LLM Agent Failures",False,True,False,False
+arxiv:2610.22068,When Reasoning Is Not Enough: Proactive Inquiry for Cross-Modal Safety in Multimodal Large Language Models,True,False,False,False
+arxiv:2610.22152,Specification Gaming and a Constrained Reinforcement Learning Mitigation in a Cleaning Gridworld,True,False,True,False
+arxiv:2610.22460,Functional Welfare for AI Safety,True,False,True,True
+arxiv:2610.22467,Progressive Misalignment Can Emerge from Benign Recursive Self-Distillation,True,False,False,False
+arxiv:2610.22723,LEMON: Equivariant Learning over Attention Maps for Zero-Shot Misbehavior Monitoring on New LLMs,False,True,True,False
+arxiv:2610.22841,The Reliance Hypothesis: Chain-of-Thought Faithfulness Rises as Language Resource Level Falls,False,True,False,False
+arxiv:2610.22874,"Identify, Classify, Act: Per-Instruction Controlled Compliance for LLMs over External Data",True,False,True,True
+arxiv:2610.22937,"Many Biases, One Circuit: Post-Training Tunes a Pretrained Cue-Routing Mechanism",True,False,True,False
+arxiv:2610.23085,Rethinking GRPO for Large Reasoning Model Safety Alignment,True,False,False,False
+arxiv:2610.23256,Beyond Reward Scoring: Online Multi-Agent Preference Learning for Multimodal Response Generation,True,False,True,True
+arxiv:2610.23257,Reasoning Models Can Control Their Chains of Thought When They Tell Themselves To,False,True,False,False
+arxiv:2610.23275,Verbalising Model's Computation for Chain-of-Thought Faithfulness Detection,False,True,False,False
+arxiv:2610.23362,Monitor-Validity Failures: LLM Safety Evidence Paths at Evolving Framework Boundaries,False,True,True,False
+arxiv:2610.23525,Trapped in Your Story: Evaluating Narrative-Induced Sycophancy in Large Language Models,True,False,True,False
+arxiv:2610.23550,Reason-guided Human Reward Modeling for Preference-based Reinforcement Learning,True,False,False,False
+arxiv:2610.23670,OwlSight: A Panoramic Monitor for Chain-of-Thought Reasoning,False,True,False,False
+arxiv:2610.23847,Behavioral Couplings: From Formation to Behavioral Emergence in Language Models,True,False,True,False
+arxiv:2610.24006,What Social Media Teaches Us About Accumulative AI Risks,True,False,True,False
+arxiv:2610.24052,Red-Teaming Multi-Agent Attacks for Loss-of-Control Risks,False,True,True,False
+arxiv:2610.24265,Desirability Confirmation: Relational Sycophancy in AI Intimate Roleplay,True,False,True,True
+arxiv:2610.24311,RATION: Towards Quantitative Risk-Based Access Control for AI Agents,False,True,True,False
+arxiv:2610.24556,From Stories to Features: Scaling Concept Vectors for AI Alignment & Interpretability,True,False,True,True
+arxiv:2610.24613,How Much Do Activation Monitors Benefit from Original Model Computations?,False,True,False,False
+arxiv:2610.24614,Safety Kernel: Mechanistic Alignment for Cross-Lingual Defense in LLMs,True,False,True,False
+arxiv:2610.24945,Robust Direct Preference Optimization under Preference Label-Flip Attacks,True,False,True,True
+arxiv:2610.24949,Over-Defense in Coding Agents Begins at Silent Forks,True,False,False,False
+arxiv:2610.25298,Aligning Language Models with Indigenous Community Cosmovision through Constitutional AI,True,False,True,True
+arxiv:2610.25522,When Empathy Misses the Goal: A Benchmark for Goal Displacement in LLM Advice,True,False,True,True
+arxiv:2610.25588,Divergence based Ranked Preference Alignment for LLMs,True,False,True,True
+arxiv:2610.25611,Safety Offset Learning: When Benign Fine-Tuning Misaligns LLMs,True,False,True,True
+arxiv:2610.25683,When Safety Fails Collectively: Robust Alignment Against Harmful Fine-Tuning via Joint Weight Perturbations,True,False,True,True
+arxiv:2610.25728,No Matter Who You Are: Addressivity and Sycophancy in Large Language Models,True,False,True,True
+arxiv:2610.25791,Towards Architectural-Level Safety Control: Relocating Hazardous Knowledge into Removable Experts in Mixture-of-Experts Models,True,False,True,True
+arxiv:2610.26088,LeakBench: Auditing Reward Hacking through Prediction-Time Leakage in Clinical Modeling Agents,True,False,True,False
+arxiv:2610.26496,Mitigating Reward Hacking in Preference Reward Models with Evolving Penalties,True,False,True,False
+arxiv:2610.26655,The Development of Sycophancy in Language Models: Tracing Vulnerabilities from Pretraining to Post-Training,True,False,True,True
+arxiv:2610.26664,Honeypots for AI Agent Insider Threats,False,True,True,False
+arxiv:2610.26809,Safety Mid-Training: Internalizing LLM Safety as a Foundational Capability,True,False,True,True
+arxiv:2610.26935,How Intervention History Changes AI Agent Sabotage on Subsequent Tasks,False,True,True,False
+arxiv:2610.27266,Auditing Safety Preference Supervision with Recorded Derivations,True,False,True,False
+arxiv:2610.27350,"Refuses When Asked, Complies When Acting: A Runtime Safety Check for Robot Control Loops",False,True,True,False
+arxiv:2610.27446,Decision Sufficiency of Learned Representation Interfaces for Safe Generative Control,False,True,False,False
+arxiv:2610.27518,When Health Assistants Agree Too Readily: A Benchmark of Time-Critical Self-Diagnosis,True,False,False,False
+arxiv:2610.27528,Judging the Justification: Decision Certificate Supervision for Generative Reward Models,True,False,False,False
+arxiv:2610.27620,"Local Allow, Global Deny: Why Per-Action Authorization Does Not Compose in LLM Agents",False,True,True,False
+arxiv:2610.27735,RSI Control: Can AI Models Perform Covert Sabotage in the Self-Improvement Process?,False,True,True,False
+arxiv:2610.28067,Contextual Candour: Role-Aware Graduated Disclosure for LLMs over Mixed-Sensitivity Contexts,True,False,True,False
+arxiv:2610.28195,Attractive Faces Skew Text-to-Image Reward Models and Leaderboards,True,False,True,True
+arxiv:2610.28303,Reward Misspecification Degrades Chain-of-Thought Monitorability,True,True,True,False
+arxiv:2610.28325,Is Sycophancy a Form of In-Context Updating?,True,False,True,False
+arxiv:2610.28539,"Humans Correct Their Judgments Through Debate, but Weaker AI Models Do Not",True,False,True,True
+arxiv:2610.28707,SimHack: Predicting the onset of detectable reward hacking before RL training,True,False,True,False
+arxiv:2610.29129,Mitigating Reward Hacking in Realistic Scenarios Through Representation Engineering,True,False,True,False
+arxiv:2610.29178,Correlated Failures of AI Approval Monitors,False,True,False,False
+arxiv:2610.29410,ECHO: Emergent Common-Mode Hidden Offsets Drive Vocabulary Collapse in Preference Optimization,True,False,False,False
+arxiv:2610.29734,Monitorability Is Trainable: Post-Training for Chain-of-Thought Monitorability,True,True,True,True
+arxiv:2610.29922,Unintended Side Effects of Value Training in LLMs,True,False,True,True
+arxiv:2610.30182,Detecting AI Training in Datacentre Power,False,True,True,False
+arxiv:2610.30349,Consistency Is Not Validity: Self-Rewarded Moral Argumentation Makes Language Models Decisive but Pliable,True,False,True,False
+arxiv:2610.30582,Model Organisms of Collusion: Corrective Transfer in Untrusted Monitors,False,True,True,False
+arxiv:2610.30690,From Clinical Judgment to Checkable Rules: Clinician-Led Guardrails for Mental-Health Chatbots,False,True,True,True
+arxiv:2610.30696,Disentangling Robustness and Sycophancy in Multilingual LLMs,True,False,True,False
+arxiv:2610.30727,Faithful Latent Harm Monitors Work No Better Than the Models Own Behaviour at a Matched False Alarm Rate,False,True,True,False
+arxiv:2610.30763,"Abstract Priorities, Concrete Rewards: How Stated Preferences Relate to What People Reward in AI Responses",True,False,False,False
+arxiv:2610.30765,Scaling Laws for Generative Reward Models,True,False,False,False
+arxiv:2610.31062,SCOPE: Compiling Natural-Language Policies into Neurosymbolic Predicate Programs,False,True,True,False
+arxiv:2610.31090,Poolwise: Evaluating Reward Models for Selection across Prompts,True,False,False,False
+arxiv:2610.31376,Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action,False,True,True,False
+arxiv:2610.31733,Learning to Be Monitored: Causal Bounds and Intervention-Aware Post-Training Recipes for Chain-of-Thought Monitorability,True,True,False,False
+arxiv:2610.31862,Aligning Large Language Models with Human Feedback: Mathematical Foundations and Algorithm Design,True,False,True,True
+arxiv:2610.31895,Knowing When to Stop: The Evidence-Action Gap in Coding Agents,False,True,False,False
+arxiv:2610.32055,How Much Do You Trust A Dog? Quantifying Hint-Following in Reasoning Language Models,True,False,True,True
+arxiv:2610.32113,REACT: Representational Early Analysis and Control of Chain-of-Thought Trajectories,True,False,False,False
+arxiv:2610.33011,When Agents Collude: Weak-to-Strong On-Policy Distillation for Mitigating Strategic Deception in Multi-Agent Systems,True,False,False,False
+arxiv:2610.33234,Alignment of Autonomous Cyber Defense Agents via Adaptive Policy Shaping,True,False,False,False
+arxiv:2610.33512,Eat Your Precision: Precision Objective Mitigates Reward Hacking in Rubric-based RL,True,False,True,False
+arxiv:2610.33624,RSI Arena: Towards Recursive Self-Improvement with Human Feedback,True,False,False,False
+arxiv:2610.34013,The Patient Is Always Right? Evaluating Sycophancy in Medical Diagnosis with Graded Patient Beliefs,True,False,True,True
+arxiv:2610.34064,Back to Basics: Formal Analysis Hints Improve Weak-to-Strong Monitoring,False,True,False,False
+arxiv:2610.34375,Whether or Where? Tail Calibration Signals Finite-Budget Reward Hacking in Best-of-N Selection,True,False,False,False
+arxiv:2610.34654,Thinking-in-Bets at Test Time Reduces Sycophantic Revisions in LLM Agents,True,False,True,False
+arxiv:2610.35226,Trainable Boundary-Keeping Where No Formal Answer Exists: A Controlled Knock-In Study of Reward Training in Evidence-Sufficiency Judgment,True,False,False,False
+arxiv:2610.35295,Did the Model Use That? Counterfactual Training Boosts Self-Attribution in Language Models,True,False,False,False
+arxiv:2610.35716,Audit Where Hacks Pay: Budgeted Strong-Verifier Audits Against Reward Hacking in GRPO,True,True,True,False
+arxiv:2610.36258,SpecGuard: Detecting Multi-Turn LLM Jailbreaks via Specification-Based Runtime Monitoring,False,True,True,False
+arxiv:2610.36668,A Quantitative Approach to Asch Conformity in Frontier Large Language Models,True,False,False,False
+arxiv:2610.37058,Exploring the Limits of the Delta Learning Hypothesis: Single-Pair Generator Biases in Direct Preference Optimization,True,False,True,False
+arxiv:2610.37070,Correctness Conditioning as Selection in Chain-of-Thought Faithfulness Evaluation,False,True,False,False
+arxiv:2610.37085,On the Sparsity of Direct Preference Optimization: Weight Disentanglement in the NTK Regime,True,False,True,True
+arxiv:2610.37245,Aligning Large Language Models for Safety in African Languages: A Case Study of Hausa,True,False,True,True
+arxiv:2610.37299,Structured Representation Probing for Risk Anticipation in End-to-End Autonomous Driving,False,True,False,False
+arxiv:2610.37451,Interpretable Meta-Policies for Neural Decision Making,True,False,True,False
+arxiv:2610.37481,Follow the Gradient: Tracing Safety Degradation Back to Training Data,True,False,True,True
+arxiv:2610.37484,"Teach reality, not ethics: a drop-in continued-pretraining corpus installs coupled human-biosphere-AI welfare dispositions across model families",True,False,True,True
+arxiv:2610.37679,Exposure Is Not Commitment: Double-Stratified Evaluation of Latent Monitors for Tool-Using Agents,False,True,False,False
+arxiv:2610.37788,Locating Sycophancy Across Training Stages in Open Language Models,True,False,True,True
+arxiv:2610.38001,Preserving Safety During Sequential Fine-Tuning: A Factorial and Geometric Analysis of Replay,True,False,True,True
+arxiv:2610.38732,Adversarial Self-Distillation,True,False,False,False
+arxiv:2610.38882,Aligning Autoresearch: Co-Improvement between Agents and Humans,True,False,True,False
+arxiv:2610.38917,"TrussTutor-Bench: Benchmarking large language models on solution accuracy, sycophancy, and error detection in statics",True,False,True,False
+arxiv:2610.39766,Activation Probes Are Reliable With a Handful of Positive Examples,False,True,False,False
+arxiv:2610.39802,Revisiting Over-refusal in Safety-aligned Large Language Models: A Representation and Optimization Perspective,True,False,True,True
+arxiv:2610.40516,How I Aligned Your Model: Scaling Up Multilingual Safety Training with Templates,True,False,True,True
+arxiv:2610.40588,"Pre-Crime for Agents, at the Last Second: Probing When a Recruited Agent Gives In",False,True,False,False
+arxiv:2610.40627,ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender,True,False,True,True
+arxiv:2610.40751,Safin-1.5: Safety-Native Architecture and Verifiable Reasoning for Recursive Safety Improvement,True,False,False,False
+arxiv:2610.40753,"""Shall We Approve?"" Consequence-Aware Approval for Autonomous Coding Agents",False,True,False,False
+arxiv:2610.40939,The First Few Tokens Matter: Understanding Chain-of-Thought Controllability,False,True,False,False
+arxiv:2610.41025,ReplayRCA: Measuring Post-hoc Diagnosis and Live Oversight of Agent Failures by Counterfactual Replay,False,True,False,False
+arxiv:2610.41301,Subliminal Reinforcement Learning: traits travel through a judge's scores,True,False,True,False
+arxiv:2610.41713,Simple Features Beat Most AI Control Monitors,False,True,True,False
+arxiv:2610.41793,"Whose Values, Which Contexts, and What Signals? Grounding Cultural Value Alignment with Re3Culture",True,False,True,True
+arxiv:2610.41998,SecPO: Principled Adversarial Training for Prompt Injection Security,True,False,True,True

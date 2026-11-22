@@ -1,0 +1,12 @@
+{
+  "edges": 8749,
+  "same_topic_edges": 2987,
+  "observed_share": 0.3414104469082181,
+  "year_permuted_mean": 0.14881986655689258,
+  "null_interval": [
+    0.14047319693679278,
+    0.15797233969596525
+  ],
+  "permutations": 1999,
+  "p_upper": 0.0005
+}

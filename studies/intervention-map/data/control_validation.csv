@@ -1,0 +1,91 @@
+paper_id,title,feedback_loop,dynamics
+arxiv:2606.02750,On the Persistent Effects of Lexicality in Large Language Models,0,0
+arxiv:2501.14288,A Comprehensive Framework for Semantic Similarity Analysis of Human and AI-Generated Text Using Transformer Architectures and Ensemble Techniques,0,0
+arxiv:2505.13990,DecIF: Improving Instruction-Following through Meta-Decomposition,1,0
+arxiv:2610.36767,Can LLMs Reliably Grade Olympiad Proofs? A Study of Mathematical Verification with LLMs,1,0
+arxiv:2609.12495,Information Specialization and Constrained Synthesis in Multi-Agent LLM Forecasting: A Prospective Live-Study of the 2026 FIFA World Cup,0,0
+arxiv:2605.27789,"A Fixed-Budget, Cluster-Aware Standard for LLM-as-a-Judge Evaluation: A Multi-Hop RAG Stress Test",0,0
+arxiv:2511.08977,Efficient and Effective In-context Demonstration Selection with Coreset,0,0
+arxiv:2608.25575,MLLMCLIP: Feature-Level Distillation of MLLM for Robust Vision-Language Representations,0,0
+arxiv:2410.09527,LexSumm and LexT5: Benchmarking and Modeling Legal Summarization Tasks in English,0,0
+arxiv:2311.03301,Ziya2: Data-centric Learning is All LLMs Need,0,0
+arxiv:2501.16358,The OpenLAM Challenges,0,0
+arxiv:2501.00226,Generative Emergent Communication: Large Language Model is a Collective World Model,0,0
+arxiv:2412.09925,Simulating Hard Attention Using Soft Attention,0,0
+arxiv:2309.08949,Enhancing Large Language Model Induced Task-Oriented Dialogue Systems Through Look-Forward Motivated Goals,0,0
+arxiv:2409.11411,AIvril: AI-Driven RTL Generation With Verification In-The-Loop,1,0
+arxiv:2408.02407,Terracorder: Sense Long and Prosper,1,0
+arxiv:2610.06829,CLIFT: Conformal Self-Verification for Web Agent Training and Test-Time Scaling,1,0
+arxiv:2506.07456,PhysiInter: Integrating Physical Mapping for High-Fidelity Human Interaction Generation,0,1
+arxiv:2205.12944,Learning in Mean Field Games: A Survey,0,1
+arxiv:2510.14830,RL-100: Performant Robotic Manipulation with Real-World Reinforcement Learning,1,0
+arxiv:2304.13525,Thermal Vision for Soil Assessment in a Multipurpose Environmental Chamber under Martian Conditions towards Robot Navigation,0,0
+arxiv:2604.12542,Goal-oriented safe active learning for predictive control using Bayesian recurrent neural networks,1,1
+arxiv:2403.11383,On the Benefits of GPU Sample-Based Stochastic Predictive Controllers for Legged Locomotion,1,1
+arxiv:2604.27186,Learning to Spend: Model Predictive Control for Budgeting under Non-Stationary Returns,1,1
+arxiv:2311.18741,VREM-FL: Mobility-Aware Computation-Scheduling Co-Design for Vehicular Federated Learning,0,0
+arxiv:2608.21550,GOLEM: Modular Humanoid Autonomy Towards Electric Vehicle Battery Disassembly,1,1
+arxiv:2512.23294,"Agentic AI-Enhanced Semantic Communications: Foundations, Architecture, and Applications",1,0
+arxiv:2510.11515,A Physics-Informed Reinforcement Learning Approach for Degradation-Aware Long-Term Charging Optimization in Batteries,1,1
+arxiv:2512.20275,Graph-Symbolic Policy Enforcement and Control (G-SPEC): A Neuro-Symbolic Framework for Safe Agentic AI in 5G Autonomous Networks,0,0
+arxiv:2603.23450,Information-Driven Active Perception for k-step Predictive Safety Monitoring,1,1
+arxiv:2306.09365,Fault Detection in Induction Motors using Functional Dimensionality Reduction Methods,0,0
+arxiv:2608.29521,Online Gate-Driven Flow Control in Resin Transfer Moulding Using a Neural-Network Surrogate,1,1
+arxiv:2307.15175,Causative Cyberattacks on Online Learning-based Automated Demand Response Systems,0,0
+arxiv:2509.21116,Continuous-Time System Identification and OCV Reconstruction of Li-ion Batteries via Regularized Least Squares,0,1
+arxiv:2406.01193,Programmable Multi-input Buck-Boost Converter for Photovoltaics Arrays,1,0
+arxiv:2609.15370,Volt-VAr-Watt Optimization in Four-Wire Low-Voltage Networks: Exact Nonlinear Models and Smooth Approximations - Extended Version,0,0
+arxiv:2204.00050,Leakage Localization in Water Distribution Networks: A Model-Based Approach,0,0
+arxiv:2302.11206,Critical analysis on efficiency and noise reduction methodologies of a switch mode power supply using LISN topology,0,0
+arxiv:2404.11520,Equitably allocating wildfire resilience investments for power grids: The curse of aggregation and vulnerability indices,0,0
+arxiv:2512.04472,Optimizing DER Aggregate Flexibility via Network Reconfiguration,0,0
+arxiv:2203.02111,Controllability of Multilayer Networked Sampled-data Systems,0,1
+arxiv:2207.12339,Localization of Coordinated Cyber-Physical Attacks in Power Grids Using Moving Target Defense and Deep Learning,0,0
+arxiv:2305.12503,Programmable Transimpedance Amplifier with Integrated Bandgap Reference for Glucose Concentration Measurement,0,0
+arxiv:2603.18473,Modeling Adversarial Wildfires for Power Grid Disruption,0,1
+arxiv:2607.22274,Fast Frequency Services from HVDC-Connected Offshore Wind Power Plants: A Review in the European Context,1,1
+arxiv:2608.01740,Disagree to Accelerate: Closing the Loop on Diffusion Feature Forecasts,1,0
+arxiv:2302.04759,Robust and Scalable Bayesian Online Changepoint Detection,0,0
+arxiv:2601.18650,FaLW: A Forgetting-aware Loss Reweighting for Long-tailed Unlearning,1,0
+arxiv:2603.06646,Trust Aware Federated Learning for Secure Bone Healing Stage Interpretation in e-Health,1,0
+arxiv:2312.16855,Molecular Property Prediction Based on Graph Structure Learning,0,0
+arxiv:2601.09209,Pairing-free Group-level Knowledge Distillation for Robust Gastrointestinal Lesion Classification in White-Light Endoscopy,0,0
+arxiv:2511.17894,Machine Learning-based Online Stability Lobe Diagram Estimation and Chatter Suppression Control in Milling Process,1,1
+arxiv:2303.13451,Development and validation of a natural language processing algorithm to pseudonymize documents in the context of a clinical data warehouse,0,0
+arxiv:2302.00878,The Contextual Lasso: Sparse Linear Models via Deep Neural Networks,0,0
+arxiv:2510.16806,Computational Budget Should Be Considered in Data Selection,1,0
+arxiv:2301.11742,Graph-Free Learning in Graph-Structured Data: A More Efficient and Accurate Spatiotemporal Learning Perspective,0,0
+arxiv:2307.05772,Random-Set Neural Networks (RS-NN),0,0
+arxiv:2509.23437,Better Hessians Matter: Studying the Impact of Curvature Approximations in Influence Functions,0,0
+arxiv:2408.02164,Rethinking Affect Analysis: A Protocol for Ensuring Fairness and Consistency,0,0
+arxiv:2412.13096,Incremental Online Learning of Randomized Neural Network with Forward Regularization,0,0
+arxiv:2202.10161,Tuning of passivity-based controllers for mechanical systems,1,1
+arxiv:2506.04742,Employing Deep Neural Operators for PDE control by decoupling training and optimization,0,1
+arxiv:2304.05723,Distributed Coverage Control of Constrained Constant-Speed Unicycle Multi-Agent Systems,1,1
+arxiv:2312.14783,Unboundedness of the images of set-valued mappings having closed graphs: Application to vector optimization,0,0
+arxiv:2510.11692,Analysis of the Geometric Heat Flow Equation: Computing Geodesics in Real-Time with Convergence Guarantees,0,1
+arxiv:2306.15029,Beyond dynamic programming,0,1
+arxiv:2507.21574,Distributionally Robust Shape and Topology Optimization,0,0
+arxiv:2507.04672,Bounds for the number of basic feasible solutions generated by the simplex method with the largest distance rule,0,0
+arxiv:2302.11891,Sequential Hierarchical Least-Squares Programming for Prioritized Non-Linear Optimal Control,0,1
+arxiv:2203.02363,An Operator-Theoretic Approach to Robust Event-Triggered Control of Network Systems with Frequency-Domain Uncertainties,1,1
+arxiv:2607.00611,An semidefinite programming-based $\varepsilon$-constraint method for the bi-objective single-row facility layout problem,0,0
+arxiv:2306.11845,Time-Optimal Path Planning in a Constant Wind for Uncrewed Aerial Vehicles using Dubins Set Classification,0,1
+arxiv:2311.07939,Discretized Distributed Optimization over Dynamic Digraphs,0,1
+arxiv:2404.04156,Torque-Minimizing Control Allocation for Overactuated Quadrupedal Locomotion,1,1
+arxiv:2602.11594,Composite Optimization using Local Models and Global Approximations,0,0
+arxiv:2308.10898,Few-Shot Physically-Aware Articulated Mesh Generation via Hierarchical Deformation,0,0
+arxiv:2505.10810,MoCLIP: Motion-Aware Fine-Tuning and Distillation of CLIP for Human Motion Generation,0,0
+arxiv:2610.41789,Hard Sample-Conditioned Decorrelated Attention for Robust Face Recognition,0,0
+arxiv:2511.22968,Taming the Light: Illumination-Invariant Semantic 3DGS-SLAM,1,0
+arxiv:2201.08158,HDhuman: High-quality Human Novel-view Rendering from Sparse Views,0,0
+arxiv:2601.15071,The Pictorial Cortex: Zero-Shot Cross-Subject fMRI-to-Image Reconstruction via Compositional Latent Modeling,0,0
+arxiv:2408.08087,ColorMamba: Towards High-quality NIR-to-RGB Spectral Translation with Mamba,0,0
+arxiv:2405.02730,U-DiTs: Downsample Tokens in U-Shaped Diffusion Transformers,0,0
+arxiv:2304.05402,Boosting Cross-task Transferability of Adversarial Patches with Visual Relations,0,0
+arxiv:2311.01905,From Chaos to Calibration: A Geometric Mutual Information Approach to Target-Free Camera LiDAR Extrinsic Calibration,0,0
+arxiv:2312.04551,Free3D: Consistent Novel View Synthesis without 3D Representation,0,0
+arxiv:2412.07730,STIV: Scalable Text and Image Conditioned Video Generation,0,0
+arxiv:2603.19209,Do VLMs Need Vision Transformers? Evaluating State Space Models as Vision Encoders,0,0
+arxiv:2502.07466,Less is More: Masking Elements in Image Condition Features Avoids Content Leakages in Style Transfer Diffusion Models,0,0
+arxiv:2510.25140,DINO-YOLO: Self-Supervised Pre-training for Data-Efficient Object Detection in Civil Engineering Applications,0,0

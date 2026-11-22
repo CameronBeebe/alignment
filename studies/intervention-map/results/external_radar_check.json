@@ -1,0 +1,86 @@
+{
+  "unique_papers": 234,
+  "in_master": 156,
+  "topics": {
+    "alignment_training": {
+      "all": 161,
+      "master": 122,
+      "shortlist": 67,
+      "present": {
+        "n": 122,
+        "jev": {
+          "weight": 84,
+          "external": 28
+        },
+        "qwen": {
+          "weight": 106,
+          "external": 47
+        },
+        "both_reviewers": {
+          "weight": 81,
+          "external": 25
+        }
+      },
+      "absent": {
+        "n": 39,
+        "jev": {
+          "weight": 32,
+          "external": 14
+        },
+        "qwen": {
+          "weight": 32,
+          "external": 22
+        },
+        "both_reviewers": {
+          "weight": 29,
+          "external": 13
+        }
+      }
+    },
+    "control_monitoring": {
+      "all": 83,
+      "master": 41,
+      "shortlist": 9,
+      "present": {
+        "n": 41,
+        "jev": {
+          "weight": 14,
+          "external": 30
+        },
+        "qwen": {
+          "weight": 27,
+          "external": 37
+        },
+        "both_reviewers": {
+          "weight": 13,
+          "external": 29
+        }
+      },
+      "absent": {
+        "n": 42,
+        "jev": {
+          "weight": 11,
+          "external": 18
+        },
+        "qwen": {
+          "weight": 33,
+          "external": 30
+        },
+        "both_reviewers": {
+          "weight": 9,
+          "external": 17
+        }
+      }
+    }
+  },
+  "model_usage": {
+    "jev": {
+      "requests": 234,
+      "usd": 0.024800495999999998
+    },
+    "qwen": {
+      "requests": 234,
+      "usd": 0.01300554
+    }
+  }
+}

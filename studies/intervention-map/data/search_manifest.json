@@ -1,0 +1,264 @@
+{
+  "sources": [
+    {
+      "source": "acl",
+      "sha": "848dc7b920e82bf60590a35aeda86e9fdc794d5c4325816ea2946e4b10f47264",
+      "start": "2021-11",
+      "end": "2026-10",
+      "count": 63955,
+      "url": "https://aclanthology.org/anthology+abstracts.bib.gz"
+    },
+    {
+      "source": "arxiv",
+      "sha": "fd9d52c78984cba17b04c33fb083ec873fe9dfd28bdf887104dade76c25dd4b6",
+      "start": "2021-11",
+      "end": "2026-10",
+      "count": 1266805,
+      "url": "https://www.kaggle.com/api/v1/datasets/download/Cornell-University/arxiv"
+    }
+  ],
+  "fts_rows": 205581,
+  "lexical_records": 27781,
+  "raw_records": 28029,
+  "unique": 25329,
+  "lane_papers": {
+    "steering": 1754,
+    "control_expansion": 6205,
+    "goal": 14190,
+    "feedback_training": 111,
+    "system": 3455,
+    "named": 5137,
+    "training": 3954,
+    "feedback_inference": 67,
+    "safe_learning": 1024,
+    "feedback_supervision": 98,
+    "feedback_harness": 59
+  },
+  "feedback": [
+    {
+      "family": "training",
+      "round": 1,
+      "phrase": "direct preference",
+      "index_hits": 1680,
+      "examined": 18,
+      "new_records": 1,
+      "next_seed": "https://aclanthology.org/2025.icnlsp-1.34/"
+    },
+    {
+      "family": "training",
+      "round": 1,
+      "phrase": "user intent",
+      "index_hits": 1108,
+      "examined": 18,
+      "new_records": 13,
+      "next_seed": "https://aclanthology.org/2026.findings-acl.1662/"
+    },
+    {
+      "family": "training",
+      "round": 1,
+      "phrase": "using reinforcement",
+      "index_hits": 1001,
+      "examined": 18,
+      "new_records": 18,
+      "next_seed": "https://arxiv.org/abs/2506.13057"
+    },
+    {
+      "family": "training",
+      "round": 2,
+      "phrase": "relative improvement",
+      "index_hits": 1326,
+      "examined": 18,
+      "new_records": 16,
+      "next_seed": "https://arxiv.org/abs/2602.04155"
+    },
+    {
+      "family": "training",
+      "round": 2,
+      "phrase": "inverse design",
+      "index_hits": 1028,
+      "examined": 18,
+      "new_records": 17,
+      "next_seed": "https://arxiv.org/abs/2602.18666"
+    },
+    {
+      "family": "training",
+      "round": 2,
+      "phrase": "transmission matrix",
+      "index_hits": 89,
+      "examined": 18,
+      "new_records": 17,
+      "next_seed": "https://arxiv.org/abs/2603.17827"
+    },
+    {
+      "family": "supervision",
+      "round": 1,
+      "phrase": "data flows",
+      "index_hits": 218,
+      "examined": 18,
+      "new_records": 15,
+      "next_seed": "https://arxiv.org/abs/2304.09603"
+    },
+    {
+      "family": "supervision",
+      "round": 1,
+      "phrase": "prompt injection",
+      "index_hits": 1118,
+      "examined": 18,
+      "new_records": 2,
+      "next_seed": "https://arxiv.org/abs/2610.08571"
+    },
+    {
+      "family": "supervision",
+      "round": 1,
+      "phrase": "safety techniques",
+      "index_hits": 14,
+      "examined": 14,
+      "new_records": 3,
+      "next_seed": "https://arxiv.org/abs/2609.08871"
+    },
+    {
+      "family": "supervision",
+      "round": 2,
+      "phrase": "gpu memory",
+      "index_hits": 1664,
+      "examined": 18,
+      "new_records": 17,
+      "next_seed": "https://arxiv.org/abs/2310.09443"
+    },
+    {
+      "family": "supervision",
+      "round": 2,
+      "phrase": "memory safety",
+      "index_hits": 247,
+      "examined": 18,
+      "new_records": 17,
+      "next_seed": "https://arxiv.org/abs/2410.22561"
+    },
+    {
+      "family": "supervision",
+      "round": 2,
+      "phrase": "personal data",
+      "index_hits": 728,
+      "examined": 18,
+      "new_records": 17,
+      "next_seed": "https://arxiv.org/abs/2502.18853"
+    },
+    {
+      "family": "harness",
+      "round": 1,
+      "phrase": "harness evolution",
+      "index_hits": 69,
+      "examined": 18,
+      "new_records": 13,
+      "next_seed": "https://arxiv.org/abs/2607.12227"
+    },
+    {
+      "family": "harness",
+      "round": 1,
+      "phrase": "safety harness",
+      "index_hits": 4,
+      "examined": 4,
+      "new_records": 1,
+      "next_seed": "https://arxiv.org/abs/2606.20683"
+    },
+    {
+      "family": "harness",
+      "round": 1,
+      "phrase": "localized evolution",
+      "index_hits": 8,
+      "examined": 8,
+      "new_records": 7,
+      "next_seed": "https://arxiv.org/abs/2509.25825"
+    },
+    {
+      "family": "harness",
+      "round": 2,
+      "phrase": "automatic harness",
+      "index_hits": 10,
+      "examined": 10,
+      "new_records": 5,
+      "next_seed": "https://arxiv.org/abs/2608.23041"
+    },
+    {
+      "family": "harness",
+      "round": 2,
+      "phrase": "evolved harnesses",
+      "index_hits": 12,
+      "examined": 12,
+      "new_records": 7,
+      "next_seed": "https://arxiv.org/abs/2610.40747"
+    },
+    {
+      "family": "harness",
+      "round": 2,
+      "phrase": "execution harness",
+      "index_hits": 31,
+      "examined": 18,
+      "new_records": 10,
+      "next_seed": "https://arxiv.org/abs/2610.25568"
+    },
+    {
+      "family": "inference",
+      "round": 1,
+      "phrase": "alignment objectives",
+      "index_hits": 139,
+      "examined": 18,
+      "new_records": 5,
+      "next_seed": "https://arxiv.org/abs/2606.24147"
+    },
+    {
+      "family": "inference",
+      "round": 1,
+      "phrase": "fine tuning large",
+      "index_hits": 814,
+      "examined": 18,
+      "new_records": 17,
+      "next_seed": "https://aclanthology.org/2024.finnlp-2.19/"
+    },
+    {
+      "family": "inference",
+      "round": 1,
+      "phrase": "decoding time",
+      "index_hits": 350,
+      "examined": 18,
+      "new_records": 8,
+      "next_seed": "https://arxiv.org/abs/2511.01891"
+    },
+    {
+      "family": "inference",
+      "round": 2,
+      "phrase": "personality generation",
+      "index_hits": 5,
+      "examined": 5,
+      "new_records": 3,
+      "next_seed": "https://arxiv.org/abs/2406.12216"
+    },
+    {
+      "family": "inference",
+      "round": 2,
+      "phrase": "decoding time alignment",
+      "index_hits": 8,
+      "examined": 8,
+      "new_records": 1,
+      "next_seed": "https://aclanthology.org/2026.findings-emnlp.488/"
+    },
+    {
+      "family": "inference",
+      "round": 2,
+      "phrase": "dimensional models",
+      "index_hits": 572,
+      "examined": 18,
+      "new_records": 18,
+      "next_seed": "https://arxiv.org/abs/2203.13305"
+    }
+  ],
+  "retrieval_sha256": "20fc992e4b3ba41028858e71cf997c7ea03c3a72095be21e55dd81a94c1e1426",
+  "sentinels": {
+    "2212.08073": true,
+    "2310.10501": true,
+    "2312.09390": true,
+    "2402.08983": true,
+    "2503.18666": true,
+    "2402.05070": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "weights": {
+    "precision": 0.4549873121493781,
+    "recall_in_frame": 0.8432275233631797
+  },
+  "external": {
+    "precision": 0.20213430645708927,
+    "recall_in_frame": 0.39046680561190966
+  },
+  "inference": {
+    "precision": 0.42562807710505707,
+    "recall_in_frame": 0.32639466757196356
+  }
+}

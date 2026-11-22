@@ -1,0 +1,145 @@
+<section class="atlas" id="paper-map" aria-labelledby="map-title">
+<h2 id="map-title">Explore the research clusters</h2>
+<p class="atlas-note"><a href="results/paper_master.csv.gz" download>Download the paper-level master (CSV.gz)</a> · <a href="MASTER.md">Column definitions and validation</a></p>
+<div class="atlas-controls">
+<label>Paper sample <select id="atlas-frame"><option>Alignment shortlist</option><option>General AI</option><option>AI, systems and control</option></select></label>
+<label>Model scope <select id="atlas-scope"><option value="lm">Language models</option><option value="all">All model families</option></select></label>
+<label>Year <select id="atlas-year"></select></label>
+<label>Find a paper <input type="search" id="atlas-query" placeholder="Title, ID or listed author"></label>
+</div>
+<p id="atlas-frame-note" class="atlas-note"></p>
+<div class="map-grid"><div><canvas id="atlas-canvas" aria-label="Semantic map. Use topic buttons and the paper list for keyboard access."></canvas><p id="atlas-hover" class="atlas-note">Select a point to inspect a paper.</p></div>
+<div class="legend"><div id="atlas-legend" aria-label="Topic filters"></div></div></div>
+<div id="atlas-count" role="status"></div>
+<div class="browse-grid"><div><label for="atlas-papers">Browse papers <small>· closest to topic center first</small></label><select size="5" id="atlas-papers"></select><button id="atlas-more" type="button">Show more papers</button></div><div id="atlas-paper" aria-live="polite"></div></div>
+<p class="atlas-note">Each point is one paper. Color comes from clustering the embeddings. The two-dimensional t-SNE projection approximates local similarity. Axes have no units. Each map has its own coordinates.</p>
+<noscript>Enable JavaScript for the point map. The topic counts and analysis below are available without it.</noscript>
+<h2>What does each alignment topic study?</h2>
+<p class="atlas-note"><span id="atlas-heat-sample">All 7,735 shortlist papers.</span> Each percentage is the share of a topic with a Jev score of at least 0.50. Hover for counts. A paper can qualify in several columns.</p>
+<div class="scroll"><table class="heat"><thead><tr><th>Topic</th><th>Papers</th><th>Weights</th><th>Control or harness</th><th>Feedback or dynamics</th><th>Neither weights nor external</th></tr></thead><tbody>{{HEATMAP}}</tbody></table></div>
+<p class="atlas-note">At this cutoff, Jev recovered 96% of rubric-coded weight papers and 52% of rubric-coded harness papers in the broader alignment audit (sampling-weighted).</p>
+<p class="atlas-note">Papers linked by at least two shared author names fell in the same topic <strong>{{SAME}}</strong> of the time ({{EDGES}} links). Shuffling topic labels within years gave <strong>{{NULL}}</strong> on average.</p>
+</section>
+<style>
+.atlas-scores{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 8px;margin:4px 0 7px}.atlas-scores dt,.atlas-scores dd{margin:0;border-bottom:1px solid #e1e7e2}.atlas-scores dd{font-variant-numeric:tabular-nums}.atlas{color:#1b312e}.atlas h2{margin-top:24px}.atlas-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end}.atlas label{display:block;font-size:13px;font-weight:650}.atlas label small{font-weight:400}
+.atlas select,.atlas input,.atlas button{font:inherit;color:inherit}.atlas input,.atlas select{display:block;max-width:100%;border:1px solid #a3b6ad;background:#fffefb;border-radius:4px;padding:5px}.atlas select,.atlas input{font-size:14px}.atlas-note{font-size:13px;color:#425953;margin:8px 0}
+.map-grid,.browse-grid{display:grid;gap:12px;grid-template-columns:minmax(0,1.55fr) minmax(185px,1fr)}.map-grid{border-block:1px solid #cbd4ce;padding:12px 0}
+#atlas-canvas{width:100%;height:335px;background:#f1f2ec;border-radius:5px;display:block;cursor:crosshair}#atlas-hover{min-height:2.5em;line-height:1.2}
+.legend button{display:flex;align-items:center;gap:7px;width:100%;border:0;border-radius:3px;background:transparent;margin:1px 0;padding:6px 7px;text-align:left;font-size:13px;line-height:1.3;cursor:pointer}
+.legend button[aria-pressed=true]{background:#dde9e2;font-weight:700}.legend i{width:11px;height:11px;border-radius:50%;flex:none}.legend small{margin-left:auto;font-variant-numeric:tabular-nums}
+#atlas-count{font-size:13px;margin:10px 0}.browse-grid>div{min-width:0}#atlas-papers{width:100%;margin:5px 0;padding:3px}#atlas-papers option{padding:4px}#atlas-paper{font-size:13px;border-left:2px solid #bdccc3;padding:0 10px;overflow-wrap:anywhere}#atlas-paper p{margin:4px 0}#atlas-paper button,#atlas-more{background:none;border:0;color:#075e53;text-decoration:underline;text-align:left;padding:2px 0;cursor:pointer;font-size:13px}
+.heat td{text-align:center;font-variant-numeric:tabular-nums;font-weight:600;background:rgba(30,126,111,calc(var(--fill)*.48))}.heat th:first-child{min-width:135px}.heat th{font-size:13px}.heat tbody th{background:transparent}
+@media(max-width:600px){.map-grid,.browse-grid{grid-template-columns:1fr}.legend>div{display:grid;grid-template-columns:1fr 1fr}.legend button{font-size:12px}#atlas-canvas{height:265px}.atlas-controls{gap:6px}.atlas label{font-size:12px}}
+</style>
+<script type="application/octet-stream" id="atlas-data">{{PAYLOAD}}</script>
+<script>
+(async function () {
+  'use strict';
+  const byId = id => document.getElementById('atlas-' + id);
+  const colors = ['#007669','#a64e21','#7352a1','#2573ad','#bd4169','#818016','#915b40','#40558e'];
+  const dataString = byId('data').textContent.trim();
+  const bytes = Uint8Array.from(atob(dataString), ch => ch.charCodeAt(0));
+  const frames = await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).json();
+  const canvas = byId('canvas'), ctx = canvas.getContext('2d');
+  let frame, group = -1, selected = null, team = null, limit = 80, visible = [], coords = [], bounds;
+  function node(tag, content) { const el = document.createElement(tag); el.textContent = content; return el; }
+  function numbers(n) { return n.toLocaleString('en-US'); }
+  function chooseFrame() {
+    frame = frames[Number(byId('frame').selectedIndex)];
+    group = -1; selected = null; team = null; limit = 80; byId('query').value = '';
+    byId('frame-note').textContent = frame.description;
+    byId('year').replaceChildren(new Option('All years',''), ...[...new Set(frame.papers.map(p=>p.y))].sort().map(y=>new Option(y,y)));
+    bounds = ['x','ypos'].map(k => [Math.min(...frame.papers.map(p=>p[k])),Math.max(...frame.papers.map(p=>p[k]))]);
+    refresh();
+  }
+  function inScope(p){return byId('scope').value==='all'||p.lm>=.5;}
+  function heatScope(){
+    const shortlist=frames[0].papers.filter(inScope), labels={{JEV_KEYS}};
+    const groups=frames[0].labels.map(()=>[0,0,0,0,0]);
+    const weights=labels.indexOf('weights'),supervision=labels.indexOf('supervision'),harness=labels.indexOf('scaffolding'),feedback=labels.indexOf('feedback'),dynamics=labels.indexOf('dynamics');
+    for(const p of shortlist){
+      const g=groups[p.c],w=p.jev[weights]>=.5,e=Math.max(p.jev[supervision],p.jev[harness])>=.5;
+      g[0]++;g[1]+=w;g[2]+=e;g[3]+=Math.max(p.jev[feedback],p.jev[dynamics])>=.5;g[4]+=!w&&!e;
+    }
+    const rows=document.querySelectorAll('#paper-map .heat tbody tr');
+    groups.forEach(([n,...counts],i)=>{
+      rows[i].cells[1].textContent=numbers(n);
+      counts.forEach((count,j)=>{const c=rows[i].cells[j+2];c.title=count+' of '+n;c.textContent=n?Math.round(count/n*100)+'%':'—';c.style.setProperty('--fill',n?count/n:0);});
+    });
+    byId('heat-sample').textContent=numbers(shortlist.length)+(byId('scope').value==='all'?' shortlist papers across all model families.':' language-model papers in the alignment shortlist.');
+  }
+  function refresh() {
+    const year = Number(byId('year').value), query = byId('query').value.trim().toLowerCase();
+    const pool = frame.papers.filter(p=>inScope(p) && (!year || p.y===year) && (team===null || p.team===team) && (!query || [p.t,p.id,p.a||'',p.category||''].join(' ').toLowerCase().includes(query)));
+    const counts = Array(frame.labels.length).fill(0); pool.forEach(p=>counts[p.c]++);
+    const legend = byId('legend'); legend.replaceChildren();
+    ['All topics',...frame.labels].forEach((name,i)=>{
+      const g=i-1, b=node('button',''), dot=node('i','');
+      dot.style.background=g<0?'#53625a':colors[g]; b.append(dot,node('span',name),node('small',numbers(g<0?pool.length:counts[g])));
+      b.type='button';b.setAttribute('aria-pressed',String(group===g));b.onclick=()=>{group=g;selected=null;limit=80;refresh();};legend.append(b);
+    });
+    visible=pool.filter(p=>group<0 || p.c===group).sort((a,b)=>a.dist-b.dist);
+    if (!visible.includes(selected)) selected=null;
+    byId('count').replaceChildren(node('strong',numbers(visible.length)+' papers'),document.createTextNode(group<0?' · all topics':' · '+frame.labels[group]));
+    if(team!==null){const clear=node('button','Clear coauthor group filter');clear.onclick=()=>{team=null;refresh();};byId('count').append(' · ',clear);}
+    paperList(); draw(); showPaper();
+    byId('hover').textContent='Select a point to inspect a paper.';
+  }
+  function paperList(){
+    const list=byId('papers'), shown=visible.slice(0,limit);
+    if(selected && !shown.includes(selected))shown.unshift(selected);
+    list.replaceChildren(...shown.map(p=>new Option(p.y+' · '+p.t,p.id)));list.selectedIndex=-1;
+    if(selected)list.value=selected.id;
+    byId('more').hidden=limit>=visible.length;
+  }
+  function draw(){
+    const rect=canvas.getBoundingClientRect(),w=rect.width,h=rect.height,dpr=window.devicePixelRatio||1;
+    canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
+    const scale=Math.min((w-20)/(bounds[0][1]-bounds[0][0]),(h-20)/(bounds[1][1]-bounds[1][0]));
+    const project=(p,k,dim)=>dim/2+(k===0?1:-1)*(p[k===0?'x':'ypos']-(bounds[k][0]+bounds[k][1])/2)*scale;
+    coords=visible.map(p=>[project(p,0,w),project(p,1,h),p]);
+    ctx.globalAlpha=visible.length>2000?.56:.8;
+    for(const [x,y,p] of coords){ctx.fillStyle=colors[p.c];ctx.beginPath();ctx.arc(x,y,visible.length>2000?1.8:2.6,0,Math.PI*2);ctx.fill();}
+    ctx.globalAlpha=1;
+    const mark=coords.find(c=>c[2]===selected);
+    if(mark){ctx.strokeStyle='#101e18';ctx.lineWidth=2;ctx.beginPath();ctx.arc(mark[0],mark[1],6,0,Math.PI*2);ctx.stroke();}
+  }
+  function closest(e){
+    const r=canvas.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let min=65,hit=null;
+    for(const [px,py,p] of coords){const d=(px-x)**2+(py-y)**2;if(d<min){min=d;hit=p;}}return hit;
+  }
+  function select(p){selected=p;paperList();draw();showPaper();}
+  function showPaper(){
+    const box=byId('paper');box.replaceChildren();
+    if(!selected){box.append(node('p',visible.length?'Choose a paper for its source, scores and nearest neighbors.':'No papers match these filters.'));return;}
+    const p=selected, link=node('a',p.t);link.href=p.url||('https://arxiv.org/abs/'+p.id.slice(6));link.target='_blank';link.rel='noopener';
+    box.append(link,node('p',p.y+' · '+frame.labels[p.c]));
+    if(p.id.startsWith('arxiv:')){
+      const alpha=node('a','Read on alphaXiv');
+      alpha.href='https://www.alphaxiv.org/abs/'+encodeURIComponent(p.id.slice(6));
+      alpha.target='_blank';alpha.rel='noopener';box.append(alpha);
+    }
+    if(p.a||p.category)box.append(node('p',p.a||p.category));
+    if(p.team != null){const b=node('button','Browse coauthor group '+p.team);b.onclick=()=>{team=p.team;group=-1;byId('query').value='';byId('year').value='';refresh();};box.append(b);}
+    if(p.review)box.append(node('p','Rubric review · '+p.review));
+    box.append(node('p','Language-model focus · '+p.lm.toFixed(2)),node('strong','Jev scores'));
+    const grid=node('dl','');grid.className='atlas-scores';
+    {{JEV_KEYS}}.forEach((k,i)=>{grid.append(node('dt',k.replaceAll('_',' ')),node('dd',p.jev[i].toFixed(2)));});box.append(grid);
+    const near=node('a',p.near_title);near.href=p.near_url;near.target='_blank';near.rel='noopener';
+    const nearest=node('p','Closest across the full dataset · ');nearest.append(near,document.createTextNode(' · cosine '+p.near_cos.toFixed(3)));box.append(nearest);
+    box.append(node('p','Distance gap between the two closest candidate topics · '+p.topic_margin.toFixed(3)));
+    if(p.score_basis==='title_only')box.append(node('p','Scores use the title because the abstract is missing.'));
+    box.append(node('strong','Nearest abstracts in embedding space'));
+    for(const idx of p.nn){const q=frame.papers[idx], row=node('p',''), b=node('button',q.t);
+      b.onclick=()=>{group=-1;team=null;byId('year').value='';byId('query').value='';if(!inScope(q)){byId('scope').value='all';heatScope();}selected=q;refresh();};row.append(b);box.append(row);}
+  }
+  byId('more').onclick=()=>{limit+=80;paperList();};
+  byId('papers').onchange=e=>select(visible.find(p=>p.id===e.target.value));
+  byId('frame').onchange=chooseFrame;
+  byId('scope').onchange=()=>{group=-1;team=null;limit=80;refresh();heatScope();};
+  byId('query').oninput=byId('year').onchange=()=>{limit=80;refresh();};
+  canvas.onmousemove=e=>{const p=closest(e);byId('hover').textContent=p?p.y+' · '+p.t:'Select a point to inspect a paper.';};
+  canvas.onclick=e=>{const p=closest(e);if(p)select(p);};
+  chooseFrame();heatScope();new ResizeObserver(draw).observe(canvas);
+})().catch(()=>{document.getElementById('atlas-frame-note').textContent='The interactive map requires a current browser with gzip decompression. The topic table and data links below remain available.';});
+</script>

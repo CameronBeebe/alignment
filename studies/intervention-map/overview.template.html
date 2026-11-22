@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Where does alignment research intervene?</title><style>
+:root{color-scheme:light;--ink:#17372f;--green:#00694c;--line:#cbd6ce;--paper:#fafaf6}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 "Inter",system-ui,sans-serif}main,nav{max-width:1040px;margin:auto;padding:0 clamp(18px,4vw,56px)}nav{display:flex;justify-content:space-between;gap:10px;padding-top:20px;padding-bottom:20px;border-bottom:1px solid var(--line);flex-wrap:wrap}a{color:var(--green);text-underline-offset:3px}header{padding:42px 0 24px}h1,h2{font:normal clamp(34px,5.6vw,66px)/1.04 "Iowan Old Style",Georgia,serif;letter-spacing:-.035em;margin:8px 0 20px}h2{font-size:clamp(29px,4vw,40px)}header p{font-size:clamp(18px,2.5vw,23px);max-width:800px}small,.muted{color:#4c6458}section{border-top:1px solid var(--line);padding:28px 0}table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}th,td{text-align:left;border-bottom:1px solid var(--line);padding:10px 8px;vertical-align:top}thead{background:#eaf1ea}tbody th{font-weight:500}.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end}label{display:grid;gap:3px;font-size:14px}input,select,button{font:inherit;border:1px solid #9db0a2;background:white;color:var(--ink);padding:7px 10px;border-radius:4px}button{cursor:pointer}button:disabled{opacity:.45;cursor:default}.scroll{overflow:auto}#rows td:first-child{min-width:240px}#rows small{display:block}.page{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:14px 0}footer{padding:22px 0 40px}.links{display:flex;flex-wrap:wrap;gap:15px}.legend{font-size:14px}p{max-width:82ch}
+</style></head><body><nav aria-label="Sections"><strong>Alignment research</strong><span><a href="#findings">Findings</a> &nbsp; <a href="#papers">Papers</a> &nbsp; <a href="#methods">Methods &amp; data</a></span></nav><main>
+<header><small>arXiv &amp; ACL Anthology · November 2021 – October 2026</small><h1>Where does alignment<br>research intervene?</h1><p>Papers that explicitly use alignment terminology favor model-weight updates by roughly <strong>7 to 1</strong>. Across the broader alignment literature retrieved here, the estimate drops to <strong>1.36 to 1</strong>, with equal representation inside the 95% interval.</p></header>
+<section id="findings"><h2>What changes the estimate?</h2><p>Each ratio gives the estimated number of weight-update papers per external-control paper, using a stratified review. A value of 1 means equal representation. One sensitivity check also counts inference-time steering on the control side.</p><div class="scroll"><table><thead><tr><th>Scope or period</th><th>Ratio</th><th>95% interval</th></tr></thead><tbody>{{comparisons}}</tbody></table></div>
+<p>The primary equality test gave <i>p</i> = .060. The shift between periods gave <i>p</i> = .0023 in an exploratory comparison. All early-period mechanism observations came from 2023–24. Just five reviewed external-control papers used explicit alignment vocabulary, which accounts for the wide interval in that subset.</p>
+<p><a href="https://arxiv.org/abs/2305.18290">DPO</a> updates the acting policy’s weights. <a href="https://arxiv.org/abs/2503.18813">CaMeL</a> controls which data and tools an agent can use. <a href="https://arxiv.org/abs/2608.09885">SHE</a> adapts the harness after failures. An intervention can therefore be adaptive or learned and still operate outside the acting policy.</p></section>
+<section id="papers"><h2>Explore {{count}} papers</h2><p>The discovery set combines 215 reviewed core papers with 7,520 model selections. Mechanism tags come from text rules. Reviewed decisions appear separately. The topic filter uses the leading terms from 16 clusters of candidate abstracts and titles.</p><div class="controls"><label>Title, author, ID or metric<input type="search" id="query" placeholder="e.g. control barrier"></label><label>Rule-based mechanism<select id="group"><option value="">All mechanisms</option></select></label><label>Topic terms<select id="topic"><option value="">All topics</option>{{topics}}</select></label><label>Selection<select id="status"><option value="">All papers</option><option value="reviewed">Reviewed core</option><option value="model">Model-selected</option></select></label></div>
+<div class="page"><span id="count" aria-live="polite"></span><button id="prev" type="button">Previous</button><button id="next" type="button">Next</button><button id="download" type="button">Download matches as CSV</button></div><div class="scroll"><table><thead><tr><th>Paper</th><th>Year</th><th>Rule tag</th><th>Reviewed decision</th></tr></thead><tbody id="rows"></tbody></table></div><noscript>Open the shortlist CSV linked below to browse papers with JavaScript disabled.</noscript><p class="legend">Reviewed codes: W = weight update, E = external control, I = soft inference steering. “None” means the reviewer assigned no mechanism.</p></section>
+<section id="methods"><h2>Methods &amp; data</h2><p>The search screened 1,330,760 source records and retained 25,329 distinct candidates. A single AI reviewer coded a stratified random sample of 360. The reported ratios use that sample and its selection weights. The shortlist’s estimated held-out precision was 92% and recall was 46% within the candidate set.</p><p>The intervals capture sampling uncertainty. Reviewer judgments and omissions from retrieval add uncertainty. A venue check recovered 42 of 71 safety-titled Learning for Dynamics and Control papers. Counts measure publications; they cannot establish how funding or effort should be allocated.</p><p>Open the study directory to use the files below. Recompute the estimates with <code>python analyze.py stats</code>. Rebuild this page with <code>python build_overview.py</code>. Both use the frozen files.</p><div class="links"><a href="REPORT.md">Short report</a><a href="results/alignment_papers.csv">Paper shortlist</a><a href="results/reviewed_papers.csv">360 review decisions</a><a href="README.md#use-the-frozen-study">Candidate archive instructions</a><a href="results/inference.json">All estimates</a><a href="README.md">Reproduction guide</a></div></section><footer>Study snapshot · November 2026</footer></main>
+<script type="application/json" id="data">{{papers}}</script>
+<script>
+const byId = id => document.getElementById(id);
+const papers = JSON.parse(byId('data').textContent);
+const fields = Object.keys(papers[0]);
+const groups = [...new Set(papers.map(p => p.auto_group))].sort();
+for (const group of groups) byId('group').add(new Option(group, group));
+let page = 0, matches = [];
+const size = 25;
+function render() {
+  const start = page * size;
+  const visible = matches.slice(start, start + size);
+  byId('rows').replaceChildren();
+  for (const p of visible) {
+    const row = byId('rows').insertRow();
+    const cell = row.insertCell();
+    const link = document.createElement('a');
+    link.href = p.url;
+    link.textContent = p.title;
+    const author = document.createElement('small');
+    author.textContent = p.authors;
+    cell.append(link, author);
+    for (const value of [p.year, p.auto_group, p.selection === 'reviewed' ? p.reviewed_mechanisms : 'Unreviewed']) row.insertCell().textContent = value;
+  }
+  byId('count').textContent = matches.length ? (start + 1).toLocaleString() + '–' + (start + visible.length).toLocaleString() + ' of ' + matches.length.toLocaleString() : 'No matches';
+  byId('prev').disabled = page === 0;
+  byId('next').disabled = start + size >= matches.length;
+  byId('download').disabled = !matches.length;
+}
+function filter() {
+  const terms = byId('query').value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const group = byId('group').value, topic = byId('topic').value, status = byId('status').value;
+  matches = papers.filter(p => {
+    const haystack = [p.title, p.authors, p.paper_id, p.metrics].join(' ').toLowerCase();
+    return terms.every(term => haystack.includes(term)) && (!group || p.auto_group === group) && (!topic || p.cluster === topic) && (!status || (status === 'reviewed') === (p.selection === 'reviewed'));
+  });
+  page = 0;
+  render();
+}
+byId('query').addEventListener('input', filter);
+for (const id of ['group','topic','status']) byId(id).addEventListener('change', filter);
+byId('prev').onclick = () => { page--; render(); };
+byId('next').onclick = () => { page++; render(); };
+byId('download').onclick = () => {
+  const quote = v => '"' + v.replaceAll('"', '""') + '"';
+  const lines = [fields, ...matches.map(p => fields.map(f => p[f]))];
+  const url = URL.createObjectURL(new Blob([lines.map(row => row.map(quote).join(',')).join('\r\n')], {type:'text/csv;charset=utf-8'}));
+  const a = document.createElement('a');
+  a.href = url; a.download = 'alignment-papers.csv'; a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 3000);
+};
+filter();
+</script></body></html>

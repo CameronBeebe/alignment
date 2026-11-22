@@ -1,0 +1,205 @@
+{
+  "checks": {
+    "company/Enhancing human feedback": {
+      "external_records": 30,
+      "jev_external": 7,
+      "jev_weight": 13,
+      "matched_papers": 20
+    },
+    "company/Mechanistic interpretability": {
+      "external_records": 18,
+      "jev_external": 0,
+      "jev_weight": 1,
+      "matched_papers": 2
+    },
+    "controlarena/ControlArena bibliography": {
+      "external_records": 12,
+      "jev_external": 2,
+      "jev_weight": 1,
+      "matched_papers": 4
+    },
+    "governance/alignment_pre_deployment": {
+      "external_records": 100,
+      "jev_external": 12,
+      "jev_weight": 19,
+      "matched_papers": 30
+    },
+    "governance/post_deployment_risks_and_model_traits": {
+      "external_records": 33,
+      "jev_external": 0,
+      "jev_weight": 0,
+      "matched_papers": 1
+    },
+    "guardrail/category:alignment": {
+      "external_records": 18611,
+      "jev_external": 1680,
+      "jev_weight": 2466,
+      "matched_papers": 3865
+    },
+    "guardrail/guardrails": {
+      "external_records": 4639,
+      "jev_external": 1288,
+      "jev_weight": 512,
+      "matched_papers": 1651
+    },
+    "guardrail/preference-learning": {
+      "external_records": 4435,
+      "jev_external": 528,
+      "jev_weight": 1191,
+      "matched_papers": 1405
+    },
+    "guardrail/reward-modeling": {
+      "external_records": 4364,
+      "jev_external": 485,
+      "jev_weight": 761,
+      "matched_papers": 889
+    },
+    "guardrail/sandboxing": {
+      "external_records": 571,
+      "jev_external": 230,
+      "jev_weight": 49,
+      "matched_papers": 281
+    },
+    "llm_survey/RL-based Methods": {
+      "external_records": 9,
+      "jev_external": 3,
+      "jev_weight": 6,
+      "matched_papers": 7
+    },
+    "llm_survey/SL-based Methods": {
+      "external_records": 4,
+      "jev_external": 0,
+      "jev_weight": 4,
+      "matched_papers": 4
+    },
+    "radar_october/alignment_training": {
+      "external_records": 161,
+      "jev_external": 36,
+      "jev_weight": 85,
+      "matched_papers": 122
+    },
+    "radar_october/control_monitoring": {
+      "external_records": 83,
+      "jev_external": 33,
+      "jev_weight": 14,
+      "matched_papers": 41
+    }
+  },
+  "guardrail_index": {
+    "category_counts": {
+      "agents": 27111,
+      "alignment": 21229,
+      "evaluations": 43402,
+      "governance": 7197,
+      "interpretability": 13122,
+      "robustness": 30835
+    },
+    "observed_tags": 51,
+    "records": 77215,
+    "tagged_records": 74423,
+    "updated": "2026-11-21T14:22:29.560068"
+  },
+  "provenance": {
+    "company": {
+      "sha256": "438e11dc70b73f237e61a916b49c207f18cc8a640f4fc4008344faf5f95cf122",
+      "url": "https://docs.google.com/spreadsheets/d/1Ir_NN5i6i_DsFznbrONnatntwXIfiSeOtc-7eYDMmfQ/export?format=xlsx"
+    },
+    "control": {
+      "sha256": "844956ef7c17f907423ca45a675731c6c01ff8e8267bb470293687ee3f2db230",
+      "url": "https://control-arena.aisi.org.uk/research.html"
+    },
+    "governance": {
+      "sha256": "6e17cd17648d5334243f12cff40a28c3823dee7f7993ac9b77365dfc2faf056f",
+      "url": "https://raw.githubusercontent.com/AI-Disclosures-Project/Real-World-Gaps-in-AI-Governance-Research/9f481c91cdae95bd8a656dbbab6edfd9050063c2/datasets/classified_dataset_partial_key.csv"
+    },
+    "guardrail": {
+      "sha256": "7e09fd27c96ab5726e41a2dbc9c6e202aa2caa7b099bb770a794b640395a658e",
+      "url": "https://data.theguardrail.net/index/browse-index.json"
+    },
+    "llm": {
+      "sha256": "9baa0d6abbb91a30bd5bb2af6c845a7c676137b0dce4b4af514273dd2f70319a",
+      "url": "https://raw.githubusercontent.com/Magnetic2014/llm-alignment-survey/2dab02e75ee5ba0a781ec1d9e0a409a23a88f706/README.md"
+    },
+    "radar_alignment_training": {
+      "sha256": "783d916c07fb856b4be72397e1af071c18761f638c1054185cda9289feed71bb",
+      "url": "https://aisafetyradar.org/research?topic=alignment_training"
+    },
+    "radar_control_monitoring": {
+      "sha256": "cd5b53b1823bc8db8cfea003d8eb3d591f6d10363c6e942e8413b27044355f5c",
+      "url": "https://aisafetyradar.org/research?topic=control_monitoring"
+    },
+    "stampy": {
+      "sha256": "15cbbddf46723aa2886b11dd8e4ef3f9a96fad742d47d93c08af97481bd664e6",
+      "url": "https://huggingface.co/datasets/StampyAI/alignment-research-dataset/resolve/f49f467a16f5126e984a53967203e94b82d1bd70/arxiv.jsonl"
+    }
+  },
+  "sources": {
+    "company": {
+      "arxiv_id": 12,
+      "distinct_master_ids": 29,
+      "eligible_external_records": 78,
+      "full_paper": 0,
+      "matched_external_records": 29,
+      "shortlist": 15,
+      "unique_title": 17,
+      "unmatched": 49
+    },
+    "controlarena": {
+      "arxiv_id": 4,
+      "distinct_master_ids": 4,
+      "eligible_external_records": 12,
+      "full_paper": 0,
+      "matched_external_records": 4,
+      "shortlist": 1,
+      "unmatched": 8
+    },
+    "governance": {
+      "distinct_master_ids": 77,
+      "eligible_external_records": 5337,
+      "full_paper": 0,
+      "matched_external_records": 77,
+      "shortlist": 24,
+      "unique_title": 77,
+      "unmatched": 5260
+    },
+    "guardrail": {
+      "arxiv_id": 8068,
+      "conflicting_id": 3,
+      "distinct_master_ids": 8076,
+      "eligible_external_records": 68933,
+      "full_paper": 12,
+      "matched_external_records": 8076,
+      "shortlist": 2603,
+      "unique_title": 8,
+      "unmatched": 60854
+    },
+    "llm_survey": {
+      "arxiv_id": 44,
+      "distinct_master_ids": 48,
+      "eligible_external_records": 209,
+      "full_paper": 0,
+      "matched_external_records": 48,
+      "shortlist": 30,
+      "unique_title": 4,
+      "unmatched": 161
+    },
+    "radar_october": {
+      "arxiv_id": 156,
+      "distinct_master_ids": 156,
+      "eligible_external_records": 234,
+      "full_paper": 0,
+      "matched_external_records": 156,
+      "shortlist": 74,
+      "unmatched": 78
+    },
+    "stampy": {
+      "arxiv_id": 48,
+      "distinct_master_ids": 48,
+      "eligible_external_records": 311,
+      "full_paper": 0,
+      "matched_external_records": 48,
+      "shortlist": 16,
+      "unmatched": 263
+    }
+  }
+}

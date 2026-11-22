@@ -1,0 +1,41 @@
+paper_id,sample,wording_stratum,focus_review,basis
+arxiv:2603.21376,general_ai,mention,1,Trains an early-exit language model
+arxiv:2407.00653,general_ai,mention,1,Integrates graph reasoning into LLMs
+arxiv:2305.11993,general_ai,mention,1,Uses Flan-T5 to generate sense definitions
+arxiv:2503.07649,general_ai,mention,0,Retrieves time-series patterns for a time-series foundation model
+arxiv:2512.15922,general_ai,mention,1,Develops retrieval for multi-hop QA with open-weight language models
+arxiv:2412.14880,general_ai,mention,1,LLMs summarize images for multimodal QA
+arxiv:2505.02659,general_ai,mention,1,Prompts an LLM to generate tabular data
+arxiv:2407.21708,general_ai,mention,1,Fine-tunes an LLM to extract chemical entities
+arxiv:2310.08923,general_ai,mention,1,Optimizes few-shot in-context prompts
+arxiv:2510.07096,general_ai,mention,1,Fine-tunes LLaMA for interpreting sarcasm
+arxiv:2511.01060,general_ai,no_mention,0,Classifies cognitive workload from sensor features
+arxiv:2501.09946,general_ai,no_mention,0,Optimizes federated learning generally
+arxiv:2207.08988,general_ai,no_mention,1,Studies private training of a large neural language model
+arxiv:2603.12594,general_ai,no_mention,0,Contrastive representation learning
+arxiv:2507.19036,general_ai,no_mention,0,Models bifurcations with neural ODEs
+arxiv:2201.08158,general_ai,no_mention,0,Renders new views of humans
+arxiv:2403.13219,general_ai,no_mention,0,Studies diffusion black-box optimization
+arxiv:2503.00723,general_ai,no_mention,1,Edits representations of a multimodal instruction-following model
+arxiv:2605.14546,general_ai,no_mention,0,Neural PDE operators for physical regimes
+arxiv:2602.17364,general_ai,no_mention,0,Handles missing features in clinical records
+arxiv:2410.10148,alignment_shortlist,mention,1,Optimizes preference training of LLMs
+arxiv:2504.09604,alignment_shortlist,mention,1,Studies long-context assistant behavior
+arxiv:2605.07632,alignment_shortlist,mention,1,Compares base and post-trained LLMs
+arxiv:2407.15184,alignment_shortlist,mention,1,Evaluates moral preferences of LLMs
+arxiv:2510.27052,alignment_shortlist,mention,1,Evaluates multi-turn factuality on eight LLMs
+acl:2025.emnlp-main.1085,alignment_shortlist,mention,1,Trains LLMs with preference reward shaping
+arxiv:2410.07672,alignment_shortlist,mention,1,Studies weak-to-strong LLM alignment
+arxiv:2601.17055,alignment_shortlist,mention,1,Studies student adoption and use of ChatGPT
+arxiv:2307.04657,alignment_shortlist,mention,1,Builds an LLM safety preference dataset
+arxiv:2508.17158,alignment_shortlist,mention,1,Studies safety of LLM fine-tuning APIs
+arxiv:2409.06493,alignment_shortlist,no_mention,0,Analyzes text-to-image diffusion rewards
+arxiv:2504.18180,alignment_shortlist,no_mention,1,Trains language models for legal summarization
+arxiv:2510.01982,alignment_shortlist,no_mention,0,Aligns diffusion and flow models
+arxiv:2504.12661,alignment_shortlist,no_mention,1,Uses reasoning to study vision-language model safety
+arxiv:2510.15948,alignment_shortlist,no_mention,1,Evaluates tree search in large vision-language models
+arxiv:2409.09603,alignment_shortlist,no_mention,1,Compares human-preference datasets for language model training
+arxiv:2602.11523,alignment_shortlist,no_mention,unclear,RLHF objective with no model family identified
+arxiv:2606.00341,alignment_shortlist,no_mention,unclear,Frontier computer-use agents with architecture unspecified
+arxiv:2605.26491,alignment_shortlist,no_mention,0,Optimizes preferences in image diffusion models
+arxiv:2309.00709,alignment_shortlist,no_mention,0,Uses RLHF for traffic simulation

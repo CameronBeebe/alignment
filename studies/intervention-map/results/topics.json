@@ -1,0 +1,379 @@
+{
+  "chosen_k": 16,
+  "silhouette": {
+    "8": 0.16331887245178223,
+    "12": 0.1634707748889923,
+    "16": 0.17836235463619232
+  },
+  "variance_fraction": 0.07552430778741837,
+  "clusters": [
+    {
+      "cluster": 0,
+      "size": 1406,
+      "terms": [
+        "instruction",
+        "instruction following",
+        "following",
+        "instructions",
+        "tuning",
+        "data",
+        "instruction tuning",
+        "capabilities",
+        "reasoning",
+        "fine",
+        "benchmark",
+        "quality"
+      ],
+      "examples": [
+        "arxiv:2407.21417",
+        "arxiv:2502.04498",
+        "arxiv:2306.04751"
+      ]
+    },
+    {
+      "cluster": 1,
+      "size": 753,
+      "terms": [
+        "interpretability",
+        "mechanistic",
+        "mechanistic interpretability",
+        "features",
+        "sparse",
+        "circuit",
+        "neural",
+        "representations",
+        "autoencoders",
+        "internal",
+        "sparse autoencoders",
+        "feature"
+      ],
+      "examples": [
+        "arxiv:2608.18419",
+        "arxiv:2510.14936",
+        "acl:2025.blackboxnlp-1.30"
+      ]
+    },
+    {
+      "cluster": 2,
+      "size": 912,
+      "terms": [
+        "injection",
+        "prompt injection",
+        "prompt",
+        "attacks",
+        "attack",
+        "security",
+        "injection attacks",
+        "agents",
+        "agent",
+        "defense",
+        "defenses",
+        "indirect"
+      ],
+      "examples": [
+        "arxiv:2510.05244",
+        "arxiv:2506.01055",
+        "arxiv:2602.22450"
+      ]
+    },
+    {
+      "cluster": 3,
+      "size": 1124,
+      "terms": [
+        "control",
+        "barrier",
+        "control barrier",
+        "safety",
+        "barrier functions",
+        "functions",
+        "safe",
+        "cbf",
+        "safety critical",
+        "controller",
+        "cbfs",
+        "systems"
+      ],
+      "examples": [
+        "arxiv:2309.05533",
+        "arxiv:2409.08300",
+        "arxiv:2211.04944"
+      ]
+    },
+    {
+      "cluster": 4,
+      "size": 1613,
+      "terms": [
+        "jailbreak",
+        "attacks",
+        "attack",
+        "safety",
+        "harmful",
+        "adversarial",
+        "jailbreak attacks",
+        "jailbreaking",
+        "prompts",
+        "success",
+        "defense",
+        "attack success"
+      ],
+      "examples": [
+        "acl:2026.findings-eacl.124",
+        "arxiv:2509.14297",
+        "arxiv:2506.21972"
+      ]
+    },
+    {
+      "cluster": 5,
+      "size": 1911,
+      "terms": [
+        "ai",
+        "governance",
+        "systems",
+        "ai systems",
+        "intelligence",
+        "ai governance",
+        "artificial",
+        "artificial intelligence",
+        "human",
+        "risk",
+        "safety",
+        "risks"
+      ],
+      "examples": [
+        "arxiv:2401.14908",
+        "arxiv:2508.13984",
+        "arxiv:2505.18371"
+      ]
+    },
+    {
+      "cluster": 6,
+      "size": 1346,
+      "terms": [
+        "steering",
+        "safety",
+        "fine",
+        "tuning",
+        "fine tuning",
+        "activation",
+        "alignment",
+        "refusal",
+        "harmful",
+        "safety alignment",
+        "behavior",
+        "activation steering"
+      ],
+      "examples": [
+        "arxiv:2609.34771",
+        "arxiv:2508.20766",
+        "arxiv:2605.01913"
+      ]
+    },
+    {
+      "cluster": 7,
+      "size": 1547,
+      "terms": [
+        "image",
+        "visual",
+        "multimodal",
+        "text",
+        "generation",
+        "diffusion",
+        "vision",
+        "images",
+        "text image",
+        "video",
+        "alignment",
+        "image generation"
+      ],
+      "examples": [
+        "arxiv:2602.12205",
+        "arxiv:2307.08041",
+        "arxiv:2406.16477"
+      ]
+    },
+    {
+      "cluster": 8,
+      "size": 2566,
+      "terms": [
+        "agent",
+        "agents",
+        "agentic",
+        "multi",
+        "multi agent",
+        "execution",
+        "tool",
+        "harness",
+        "ai",
+        "systems",
+        "autonomous",
+        "tools"
+      ],
+      "examples": [
+        "arxiv:2610.17039",
+        "arxiv:2604.03515",
+        "arxiv:2610.41717"
+      ]
+    },
+    {
+      "cluster": 9,
+      "size": 1967,
+      "terms": [
+        "reward",
+        "reinforcement",
+        "rlhf",
+        "feedback",
+        "human",
+        "human feedback",
+        "preference",
+        "preferences",
+        "policy",
+        "alignment",
+        "rewards",
+        "rl"
+      ],
+      "examples": [
+        "arxiv:2504.04950",
+        "arxiv:2412.10529",
+        "arxiv:2408.15339"
+      ]
+    },
+    {
+      "cluster": 10,
+      "size": 1649,
+      "terms": [
+        "preference",
+        "preference optimization",
+        "optimization",
+        "dpo",
+        "direct preference",
+        "direct",
+        "alignment",
+        "optimization dpo",
+        "data",
+        "fine",
+        "preferences",
+        "human"
+      ],
+      "examples": [
+        "arxiv:2505.13878",
+        "arxiv:2505.08507",
+        "arxiv:2402.05369"
+      ]
+    },
+    {
+      "cluster": 11,
+      "size": 2018,
+      "terms": [
+        "human",
+        "alignment",
+        "ai",
+        "values",
+        "user",
+        "value",
+        "social",
+        "preferences",
+        "users",
+        "behavior",
+        "responses",
+        "sycophancy"
+      ],
+      "examples": [
+        "arxiv:2606.12754",
+        "arxiv:2606.16127",
+        "arxiv:2607.27232"
+      ]
+    },
+    {
+      "cluster": 12,
+      "size": 1305,
+      "terms": [
+        "robot",
+        "action",
+        "robots",
+        "planning",
+        "real",
+        "world",
+        "manipulation",
+        "robotic",
+        "vision",
+        "navigation",
+        "human",
+        "control"
+      ],
+      "examples": [
+        "arxiv:2509.13965",
+        "arxiv:2511.03882",
+        "arxiv:2610.17802"
+      ]
+    },
+    {
+      "cluster": 13,
+      "size": 1230,
+      "terms": [
+        "reinforcement",
+        "rl",
+        "safe",
+        "policy",
+        "safety",
+        "constrained",
+        "constraints",
+        "safe reinforcement",
+        "constraint",
+        "algorithm",
+        "control",
+        "policies"
+      ],
+      "examples": [
+        "arxiv:2312.11314",
+        "arxiv:2511.04147",
+        "arxiv:2204.09424"
+      ]
+    },
+    {
+      "cluster": 14,
+      "size": 584,
+      "terms": [
+        "languages",
+        "multilingual",
+        "english",
+        "lingual",
+        "resource",
+        "cross lingual",
+        "low resource",
+        "translation",
+        "resource languages",
+        "cross",
+        "low",
+        "safety"
+      ],
+      "examples": [
+        "acl:2026.emnlp-tutorials.6",
+        "acl:2025.emnlp-demos.43",
+        "arxiv:2507.14304"
+      ]
+    },
+    {
+      "cluster": 15,
+      "size": 3398,
+      "terms": [
+        "generation",
+        "data",
+        "reasoning",
+        "retrieval",
+        "knowledge",
+        "accuracy",
+        "structured",
+        "decoding",
+        "code",
+        "detection",
+        "information",
+        "domain"
+      ],
+      "examples": [
+        "arxiv:2505.09261",
+        "arxiv:2604.16425",
+        "arxiv:2602.06103"
+      ]
+    }
+  ]
+}
