@@ -35,6 +35,12 @@ All 234 Radar IDs were present in the frozen source catalog. The master contains
 
 For a mechanism check, both providers received the same frozen abstract with no Radar tags, previous scores or information about whether the paper entered the master. Jev received 67 questions, Qwen the three headline questions. We count external when either supervision or runtime harnesses qualifies. Among 42 missing control-tagged papers, Jev marked 18 as external, Qwen marked 30 and both marked 17. Among 39 missing training-tagged papers, each reviewer marked 32 as weight-focused and both marked 29. These 468 calls cost approximately $0.038 in total. This measures model agreement under a common definition. Human adjudication remains necessary to estimate accuracy. [All 234 IDs and source tags](results/external_radar_frame.csv) · [Paired scores](results/external_radar_ratings.csv.gz) · [Results by retrieval status](results/external_radar_check.json)
 
+## What do the missed full papers contain?
+
+Ten papers were drawn from the 42 missing Radar control-tagged papers by fixed hash order before reading the full texts. Both reviewers classified five of the ten as studying an external intervention after reading all pages. Jev classified seven as external and Qwen six. On the same ten, Jev classified two as studying acting-model weight changes and Qwen nine. The per-paper outputs expose this disagreement. The ten-paper diagnostic does not enter the primary prevalence estimates. [Full-paper scores](results/fulltext_coverage_cases.csv) · [Draw definition](fulltext_alphaxiv.py) · [Results](results/fulltext_coverage_summary.json)
+
+Two source checks illustrate what the models count. In the random draw, *ReplayRCA* evaluates a supervisor that can replace an action before execution (pp. 2, 4–5). Both reviewers counted it as external on full text. Jev’s abstract supervision and harness scores had both fallen below 0.50. Separately, the targeted *AgentTether* paper describes an intervention around an unmodified agent (pp. 1, 4). Both reviewers classified it as external, but Qwen also counted a weight intervention. Jev’s weight score was 0.06. Qwen’s weight label is difficult to reconcile with the authors’ description of the proposed mechanism. These are paper-specific checks, not estimates of classifier accuracy. [ReplayRCA](https://arxiv.org/abs/2610.41025) · [AgentTether](https://arxiv.org/abs/2607.06273)
+
 ## What can alphaXiv add?
 
 A site-restricted web search of public alphaXiv paper pages returned four distinct in-window arXiv IDs among its first five results. Two were missing even from the master. This was a targeted runtime-oversight query and measures discovery value only. The October Radar comparison also missed both among its two selected topics (one was published in July).
@@ -63,7 +69,7 @@ python external_comparison.py /tmp/comparator-inputs --output /tmp/comparator-re
 python external_blind_check.py /path/to/catalog.sqlite /tmp/radar-ratings
 ```
 
-The full-paper collectors also accept `--cohort language-comparators`. This selects all **112** other core language-model alignment papers and **60** language-model papers in the general-AI audit. These 172 IDs are disjoint from the 60 explicitly worded papers already read. Preserve them as separate groups. The same two evidence types and model calls in the 60-paper pilot would cost about **$0.65** for 172 additional papers at the pilot’s mean cost. PDF lengths and provider prices affect actual usage. Coverage checks on papers outside the original frame answer a separate question.
+The full-paper collectors also accept `--cohort language-comparators`. This selects all **112** other core language-model alignment papers and **60** language-model papers in the general-AI audit. These 172 IDs are disjoint from the 60 explicitly worded papers already read. Each model rated both the abstract and the full paper for all 172. Jev used 4,884,820 input tokens across 344 requests (estimated $0.205). OpenRouter reported $0.399 for 344 Qwen requests. The 12 separate out-of-frame checks added about $0.056, bringing this round to approximately **$0.66**. [Request ledger](results/fulltext_comparator_requests.csv) · [Coverage checks](results/fulltext_coverage_summary.json)
 
 ```sh
 python fulltext_rate.py /tmp/papers /tmp/ratings --cohort language-comparators --dry-run

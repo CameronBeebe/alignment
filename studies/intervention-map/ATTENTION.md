@@ -1,8 +1,8 @@
 # Where does AI research put its effort?
 
-**How often do explicitly alignment-worded language-model papers study model weights versus external supervision or runtime harnesses?** Across the same 60 full papers, the sampling-weighted ratio is **1.56 with Jev** (95% interval 1.09–2.22) and **2.84 with Qwen** (1.99–4.07). Jev’s ratio ranges from **1.02 to 2.64** as its decision cutoff moves from 0.30 to 0.70. The evidence supports a weight tilt at the default settings. Its size is sensitive to how a paper qualifies. Against an independent October 2026 index, our master captures **76% of alignment-training papers and 49% of control-and-monitoring papers**.
+**Among language-model papers in the alignment audit, papers that explicitly use alignment terminology have a higher ratio of weight interventions to runtime controls or harnesses.** Jev estimates a **2.11×** difference between wording groups (95% sampling interval 1.35–3.30). Qwen estimates **1.62×** (1.08–2.45).
 
-The abstract rubric estimates **3.39** in this group and **0.64** among other language-model alignment papers. Full-paper results cover the explicitly worded group. Publication counts describe research attention over November 2021–October 2026.
+**Is that unusual for language-model research?** The general-AI sample also favors weights. Neither reviewer resolves a difference between explicitly worded alignment and the general baseline. The comparison covers **232 full papers** published from November 2021 through October 2026. It measures publication volume. [Compare the full-paper results](#full-paper-comparison)
 
 ## Hypotheses and results
 
@@ -14,7 +14,7 @@ The abstract rubric estimates **3.39** in this group and **0.64** among other la
 | Feedback and dynamics form recognizable topics outside the alignment shortlist. | **Partial support.** The shortlist contains **0 of 235** papers in one optimization/control cluster. **10 of 15** audited there use feedback or dynamics. Many study physical systems. |
 | Reallocating funding or labor toward harnesses would improve safety. | **Open.** Testing this requires a comparison of safety gains at equal cost and comparable task performance. |
 
-The study protocol specifies the twofold threshold and the comparison with parity. Topic, framing and reviewer comparisons are exploratory. These hypothesis tests use abstract-level evidence. The paired full-paper audit checks the explicit language-model subset. Intervals measure sampling uncertainty. [Study protocol](protocol.md) · [Direct comparison data](results/frame_contrast.json)
+The study protocol specifies the twofold threshold and the comparison with parity. Topic, framing and reviewer comparisons are exploratory. This table uses abstract-level evidence across model types. The full-paper comparison above covers the language-model subset of each audit. Intervals measure sampling uncertainty. [Study protocol](protocol.md) · [Direct comparison data](results/frame_contrast.json)
 
 ## What measures research attention?
 
@@ -29,11 +29,24 @@ The study protocol specifies the twofold threshold and the comparison with parit
 
 ## How does the search compare with independent databases?
 
-Seven external collections match 8,249 distinct IDs in the master. In an independent October comparison, our master includes 122 of 161 Radar training-tagged papers and 41 of 83 control-tagged papers. Of the 42 missing control papers, Jev and Qwen both identify an external intervention in 17 abstracts. Search coverage limits claims about the field as a whole. [Sources and matching rules](EXTERNAL.md) · [All independent-frame ratings](results/external_radar_ratings.csv.gz)
+Seven external collections match 8,249 distinct IDs in the master. In an independent October comparison, our master includes 122 of 161 Radar training-tagged papers and 41 of 83 control-tagged papers. Of the 42 missing control papers, Jev and Qwen both identify an external intervention in 17 abstracts. Both reviewers found external interventions in five of a fixed ten-paper draw from those 42 omissions after reading the full texts. The missing papers limit field-wide claims. [Sources and matching rules](EXTERNAL.md) · [All independent-frame ratings](results/external_radar_ratings.csv.gz)
+
+## How often do full papers study model weights versus external interventions?
+
+| Language-model papers | Papers read | Jev ratio (95% interval) | Qwen ratio (95% interval) |
+|---|---:|---:|---:|
+| Explicit alignment wording | 60 | 1.56 (1.09–2.22) | 2.84 (1.99–4.07) |
+| Other wording within alignment | 112 | 0.74 (0.57–0.95) | 1.75 (1.46–2.10) |
+| All alignment, both groups combined | 172 | 0.97 (0.80–1.18) | 2.03 (1.74–2.38) |
+| General-AI baseline, language models only | 60 | 2.11 (1.31–3.41) | 2.75 (1.90–3.97) |
+
+The numerator counts papers studying changes to the acting model’s weights. The denominator counts papers studying external supervision or runtime harnesses. Hybrids enter both counts. Ratios account for sampling probabilities. On the same 112 other-worded papers, Jev identifies 50 weight papers and Qwen 102. Their external counts are closer, at 65 and 58. Which intervention is more common in this part of the field depends on the reviewer.
+
+The ratio for explicitly worded alignment divided by the general baseline is **0.74 (0.41–1.33)** with Jev and **1.04 (0.62–1.73)** with Qwen. Both intervals include 1. Removing the two known withdrawn papers gives explicit-group ratios of 1.56 and 2.79 and other-wording ratios of 0.75 and 1.77. The intervals capture sampling uncertainty conditional on fixed model labels. The October external check also found that the catalog retrieves a greater share of training-tagged papers than control-tagged papers. [Full results and threshold sensitivity](results/fulltext_comparison.json) · [External coverage](EXTERNAL.md)
 
 ## What changes when reviewers read the whole paper?
 
-| Same 60 papers | Abstracts, W / external | Full papers, W / external | Weighted ratio, abstract → full paper |
+| Explicit alignment wording, same 60 papers | Abstracts, W / external | Full papers, W / external | Weighted ratio, abstract → full paper |
 |---|---:|---:|---:|
 | Jev 1.14.0, 67 questions | 33 / 16 | 39 / 27 | 2.21 → **1.56** |
 | Qwen3-30B-A3B-Instruct-2507, three headline questions | 53 / 24 | 57 / 21 | 2.23 → **2.84** |

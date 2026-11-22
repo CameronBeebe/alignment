@@ -93,6 +93,19 @@ python master_validation.py
 python build_attention.py
 ```
 
+## Compare the language-model cohorts
+
+The original frozen audits identify 172 core language-model alignment papers and 60 language-model papers in a separately drawn general-AI sample. The explicitly alignment-worded 60 are a subset of the 172 core papers. The two CSVs cover disjoint paper IDs and use the same column definitions. Join each to the master on `paper_id`. The 172 new documents span 3,948 pages. The collector extracted the text layer of every page. Thirteen pages across two papers supplied fewer than 40 characters, including an appendix divider. Figures were available only through extractable text. The source URL and PDF/text hashes identify the edition read. The combined results include a sensitivity check omitting the two known withdrawals, arXiv:2608.01629 and arXiv:2509.01412. The comparison uses the full stratified design for variance estimation, including sample units outside the selected domain. The explicit versus other-wording contrast accounts for within-design covariance. The general-AI comparison uses its independent sampling design. [Additional 172 papers](results/fulltext_comparator_measures.csv) · [Their request and token ledger](results/fulltext_comparator_requests.csv) · [Design-weighted comparisons and all 67 Jev features](results/fulltext_comparison.json)
+
+A separate diagnostic follows ten of the 42 October Radar control-tagged papers absent from the master. We sorted IDs by the SHA-256 of a fixed string and the ID and took the first ten, without consulting reviewer scores. Two alphaXiv search results (ARIA and AgentTether) are targeted case studies. Each receives the same paper-level questions. Existing identical abstract calls are reused. Keep this external diagnostic separate when calculating publication ratios. [Selection and collection](fulltext_alphaxiv.py) · [Papers and scores](results/fulltext_coverage_cases.csv)
+
+To rebuild the group estimates from the released measurements, run `python fulltext_comparison.py` and `python build_attention.py`. To repeat the 172-paper collection, use the comparator commands in [the external comparison](EXTERNAL.md#reproduce-the-comparison). Versioned alphaXiv PDFs are an alternate retrieval source for arXiv IDs. To reproduce the outside-frame check using its verified source editions, run the following from the study directory.
+
+```sh
+python fulltext_alphaxiv.py /tmp/coverage-pdfs --origin arxiv
+python fulltext_coverage.py /path/to/catalog.sqlite /tmp/coverage-pdfs /tmp/coverage-scores
+```
+
 ## Join the full-paper audit
 
 [Paper measurements](results/fulltext_measures.csv) join to the master on `paper_id`. This extension follows all 60 papers that are core in the stratified audit, contain an explicit alignment phrase and meet the default language-model cutoff. Membership stays fixed across reviewers and evidence sources. Every Jev measure has an abstract column and a full-paper column. Qwen supplies independent binary decisions on the three headline mechanisms. Full-paper scores apply only to the audited IDs.

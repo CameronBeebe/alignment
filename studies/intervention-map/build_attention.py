@@ -1,5 +1,6 @@
 """Build an offline visual summary with the detailed analysis available on demand."""
 
+import argparse
 from pathlib import Path
 
 import markdown
@@ -18,7 +19,7 @@ def render(source):
     )
 
 
-def main():
+def main(standalone=None):
     source = (ROOT / "ATTENTION.md").read_text()
     lead, *sections = source.split("\n## ")
     hypotheses, detail = sections[0], sections[1:]
@@ -43,11 +44,13 @@ figure{margin:22px 0;padding:20px 24px;border:1px solid var(--rule);background:#
     html = (
         f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
         f"<title>Where does AI research put its effort?</title><style>{styles}</style></head><body><main>"
-        f'<header>{render(lead)}</header>{figure_section()}{cluster_section()}{render("## " + measures)}<section class="hypotheses">{render("## " + hypotheses)}</section>'
+        f'<header>{render(lead)}</header>{figure_section()}{cluster_section(inline=standalone is not None)}{render("## " + measures)}<section class="hypotheses">{render("## " + hypotheses)}</section>'
         f'<h2>Evidence and methods</h2>{"".join(cards)}</main></body></html>'
     )
-    (ROOT / "attention-overview.html").write_text(html + "\n")
+    (standalone or ROOT / "attention-overview.html").write_text(html + "\n")
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--standalone", type=Path, metavar="HTML", help="Write a single-file copy with all maps embedded.")
+    main(parser.parse_args().standalone)

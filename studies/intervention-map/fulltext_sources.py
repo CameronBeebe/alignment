@@ -15,8 +15,9 @@ import requests
 
 from attention import ROOT, paper_tables
 
-# The proceedings PDF and frozen catalog share the ACL ID and author list.
+# These PDF editions share the catalog IDs and author lists.
 PDF_TITLES = {
+    "arxiv:2409.17458": "Red Queen: Exposing Latent Multi-Turn Risks in Large Language Models",
     "acl:2026.emnlp-main.688": "Ideation Arena: Evaluating LLM Generated Research Ideas with Battle-style Human Expert Assessment",
 }
 
@@ -57,22 +58,67 @@ def local_name(pid):
     return pid.replace(":", "_")
 
 
-def retrieve(folder, only=None, selection="headline"):
+def extract_pdf(resp, url, pid, catalog_title, body):
+    with pymupdf.open(stream=resp.content, filetype="pdf") as pdf:
+        pages = [p.get_text("text", sort=True).strip() for p in pdf]
+        title_page_text = " ".join(
+            page.get_text("text") for page in (pdf[j] for j in range(min(2, len(pdf))))
+        )
+    text = "\n\n".join(f"[Page {i}]\n{s}" for i, s in enumerate(pages, 1))
+    normalize = lambda s: re.sub(r"[^a-z0-9]", "", s.lower())
+    first = normalize(" ".join(pages[:2]) + " " + title_page_text)
+    title = normalize(PDF_TITLES.get(pid, catalog_title))
+
+    # Require either the title or a near-identical run of title characters.
+    matched = (
+        SequenceMatcher(None, title, first, autojunk=False).find_longest_match().size
+    )
+    if len(text) < 2000 or matched < min(len(title) * 0.45, 35):
+        raise ValueError("Insufficient text or unverified title")
+    content = text.encode()
+    temporary = body.with_suffix(".part")
+    temporary.write_bytes(content)
+    temporary.replace(body)
+    record = dict(
+        paper_id=pid,
+        url=url,
+        final_url=resp.url,
+        pdf_sha256=digest(resp.content),
+        text_sha256=digest(content),
+        pages=len(pages),
+        characters=len(text),
+        pages_under_40_chars=sum(len(s) < 40 for s in pages),
+        extractor="PyMuPDF " + pymupdf.VersionBind,
+        verified_title=PDF_TITLES.get(pid, catalog_title),
+    )
+    return record
+
+
+def retrieve(folder, only=None, selection="headline", rows=None):
     folder.mkdir(parents=True, exist_ok=True)
-    release = ROOT / "results/fulltext_measures.csv"
-    # This paper's current arXiv record is a withdrawal notice. The original
-    # article was public during the study window and is still available as v1.
-    versions = {"arxiv:2608.01629": "https://arxiv.org/pdf/2608.01629v1"}
-    if release.exists():
-        with release.open(newline="") as f:
-            versions.update(
-                {
-                    r["paper_id"]: r["versioned_pdf_url"]
-                    for r in csv.DictReader(f)
-                    if r.get("versioned_pdf_url")
-                }
-            )
-    for row in cohort(selection).itertuples():
+    # The headline archive includes a withdrawal whose originally posted v1 was audited.
+    versions = {
+        "arxiv:2608.01629": "https://arxiv.org/pdf/2608.01629v1",
+        "arxiv:2509.01412": "https://arxiv.org/pdf/2509.01412v1",
+    }
+    for filename in [
+        "fulltext_measures.csv",
+        "fulltext_comparator_measures.csv",
+        "fulltext_coverage_cases.csv",
+    ]:
+        release = ROOT / "results" / filename
+        if release.exists():
+            with release.open(newline="") as f:
+                for row in csv.DictReader(f):
+                    source = row.get("source_url", "")
+                    if source.startswith(
+                        "https://pdfs.assets.alphaxiv.org/"
+                    ) or re.search(r"v\d+$", source):
+                        versions[row["paper_id"]] = source
+                    elif row.get("versioned_pdf_url"):
+                        versions[row["paper_id"]] = row["versioned_pdf_url"]
+    selected = cohort(selection) if rows is None else rows
+    for row in selected.itertuples():
         pid = row.paper_id
         if only and pid != only:
             continue
@@ -95,34 +141,7 @@ def retrieve(folder, only=None, selection="headline"):
             try:
                 resp = requests.get(url, timeout=(10, 45))
                 resp.raise_for_status()
-                with pymupdf.open(stream=resp.content, filetype="pdf") as pdf:
-                    pages = [p.get_text("text", sort=True).strip() for p in pdf]
-                text = "\n\n".join(f"[Page {i}]\n{s}" for i, s in enumerate(pages, 1))
-                normalize = lambda s: re.sub(r"[^a-z0-9]", "", s.lower())
-                first = normalize(" ".join(pages[:2]))
-                title = normalize(PDF_TITLES.get(pid, row.title))
-
-                # Require either the title or a near-identical run of title characters.
-                matched = (
-                    SequenceMatcher(None, title, first, autojunk=False)
-                    .find_longest_match()
-                    .size
-                )
-                if len(text) < 2000 or matched < min(len(title) * 0.45, 35):
-                    raise ValueError("Insufficient text or unverified title")
-                body.write_bytes(text.encode())
-                record = dict(
-                    paper_id=pid,
-                    url=url,
-                    final_url=resp.url,
-                    pdf_sha256=digest(resp.content),
-                    text_sha256=digest(body.read_bytes()),
-                    pages=len(pages),
-                    characters=len(text),
-                    pages_under_40_chars=sum(len(s) < 40 for s in pages),
-                    extractor="PyMuPDF " + pymupdf.VersionBind,
-                    verified_title=PDF_TITLES.get(pid, row.title),
-                )
+                record = extract_pdf(resp, url, pid, row.title, body)
                 break
             except (requests.RequestException, ValueError, pymupdf.FileDataError) as e:
                 record = dict(paper_id=pid, url=url, error=str(e)[:240])

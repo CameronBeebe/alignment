@@ -86,7 +86,7 @@ def pack_frame(
     return {"labels": labels, "papers": papers}
 
 
-def section():
+def section(*, inline=True):
     manifest = load("master_manifest.json")
     keys = list(manifest["questions"])
     measurements = {}
@@ -167,8 +167,21 @@ def section():
     section = (ROOT / "cluster-view.template.html").read_text()
     payload = json.dumps(frames, separators=(",", ":"), ensure_ascii=False).encode()
     packed = base64.b64encode(gzip.compress(payload, compresslevel=9, mtime=0)).decode()
+    tag = '<script type="application/octet-stream" id="atlas-data">{{PAYLOAD}}</script>'
+    if inline:
+        scripts = tag.replace("{{PAYLOAD}}", packed)
+    else:
+        assets = ROOT / "results" / "map"
+        assets.mkdir(exist_ok=True)
+        scripts = tag.replace("{{PAYLOAD}}", "")
+        chunk_size = 320000
+        for i, start in enumerate(range(0, len(packed), chunk_size)):
+            chunk = packed[start : start + chunk_size]
+            asset = assets / f"papers-{i + 1}.js"
+            asset.write_text('document.getElementById("atlas-data").append("' + chunk + '");\n')
+            scripts += f'\n<script src="{asset.relative_to(ROOT).as_posix()}"></script>'
     return (
-        section.replace("{{PAYLOAD}}", packed)
+        section.replace(tag, scripts)
         .replace("{{JEV_KEYS}}", json.dumps(keys))
         .replace("{{HEATMAP}}", "".join(table))
         .replace("{{EDGES}}", f'{agreement["edges"]:,}')

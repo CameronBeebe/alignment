@@ -1,0 +1,34 @@
+{
+  "alphaxiv_case": {
+    "n": 2,
+    "pages": 35,
+    "jev_abstract_external": 2,
+    "jev_abstract_weights": 1,
+    "qwen_abstract_external": 2,
+    "qwen_abstract_weights": 2,
+    "abstract_both_external": 2,
+    "jev_paper_external": 2,
+    "jev_paper_weights": 1,
+    "qwen_paper_external": 2,
+    "qwen_paper_weights": 2,
+    "paper_both_external": 2
+  },
+  "radar_hash_draw": {
+    "n": 10,
+    "pages": 290,
+    "jev_abstract_external": 6,
+    "jev_abstract_weights": 2,
+    "qwen_abstract_external": 7,
+    "qwen_abstract_weights": 8,
+    "abstract_both_external": 6,
+    "jev_paper_external": 7,
+    "jev_paper_weights": 2,
+    "qwen_paper_external": 6,
+    "qwen_paper_weights": 9,
+    "paper_both_external": 5
+  },
+  "new_cost_usd": {
+    "jev": 0.017938074000000002,
+    "qwen": 0.03777033
+  }
+}

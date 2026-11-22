@@ -625,6 +625,133 @@ def external_panel():
     )
 
 
+def fullpaper_comparison_panel():
+    data = read("fulltext_comparison.json")
+    labels = {
+        "explicit": "Explicit alignment wording",
+        "other": "Other alignment wording",
+        "combined": "All core alignment",
+        "general": "General AI",
+    }
+    rows, points = [], []
+    for key, label in labels.items():
+        group = data["domains"][key]
+        cells = [label, f'{group["paired"]} / {group["selected"]}']
+        for rev, name in [("jev", "Jev"), ("qwen", "Qwen")]:
+            est = group["ratings"][rev + "_paper"]
+            low, high = est["ci95"]
+            cells.append(f'<b>{est["ratio"]:.2f}</b> ({low:.2f}–{high:.2f})')
+            points.append((label + " · " + name, est["ratio"], est["ci95"]))
+        rows.append(cells)
+    out = '<h3 id="full-paper-comparison">How does the full-paper result compare across groups?</h3>'
+    out += table(
+        [
+            "Language-model sample",
+            "Full papers / eligible",
+            "Jev ratio (95% CI)",
+            "Qwen ratio (95% CI)",
+        ],
+        rows,
+    )
+    out += note(
+        "Ratios divide the sampling-weighted count of papers studying acting-model weight changes by those studying external supervision or runtime harnesses. A paper can count in both. All core alignment combines the two wording groups. Intervals describe sampling uncertainty conditional on the ratings."
+    )
+    start = min(-1, math.floor(math.log2(min(p[2][0] for p in points))))
+    end = max(1, math.ceil(math.log2(max(p[2][1] for p in points))))
+    out += (
+        "<details open><summary>Weight-to-external ratios and 95% sampling intervals</summary>"
+        + forest(
+            points,
+            [2**j for j in range(start, end + 1)],
+            "1 is equal publication volume.",
+        )
+        + "</details>"
+    )
+    contrasts = [
+        ["Explicit / other wording", "explicit_over_other"],
+        ["Explicit / general AI", "explicit_over_general"],
+    ]
+    contrast_rows = []
+    for label, key in contrasts:
+        row = [label]
+        for rev in ["jev", "qwen"]:
+            c = data["contrasts"][rev + "_" + key]
+            row.append(
+                f'{c["ratio_of_ratios"]:.2f} ({c["ci95"][0]:.2f}–{c["ci95"][1]:.2f})'
+            )
+        contrast_rows.append(row)
+    out += (
+        "<details><summary>Compare the ratios directly</summary>"
+        + table(["Full-paper contrast", "Jev (95% CI)", "Qwen (95% CI)"], contrast_rows)
+        + note(
+            "A value above 1 indicates a larger weight-to-external ratio in the explicitly worded group."
+        )
+        + "</details>"
+    )
+    counts = []
+    for key, label in labels.items():
+        rr = data["domains"][key]["ratings"]
+        counts.append(
+            [label]
+            + [
+                f'{int(rr[r]["observed_W"])} / {int(rr[r]["observed_E"])}'
+                for r in ["jev_abstract", "jev_paper", "qwen_abstract", "qwen_paper"]
+            ]
+        )
+    out += (
+        "<details><summary>See raw counts and abstract-to-paper changes</summary>"
+        + table(
+            [
+                "Weight / external",
+                "Jev abstract",
+                "Jev paper",
+                "Qwen abstract",
+                "Qwen paper",
+            ],
+            counts,
+        )
+        + "</details>"
+    )
+    out += "<details><summary>See full-paper mechanism and evidence measures</summary>"
+    features = [
+        ("weights_primary", "Acting-model weight changes as a main contribution"),
+        ("external_primary", "External supervision or harness as a main contribution"),
+        ("auxiliary_trained", "Separate critic, monitor or controller trained"),
+        ("closed_loop_runtime", "Runtime feedback loop"),
+        ("formal_control", "Formal control theory"),
+        ("weight_external_comparison", "Direct weight vs external experiment"),
+        ("matched_budget", "Resource-matched comparison"),
+        ("deployment_evidence", "Production or field evidence"),
+    ]
+    out += table(
+        ["Jev measure", *labels.values()],
+        [
+            [
+                label,
+                *[
+                    f'{data["domains"][key]["jev_full_paper_features"][q]["weighted_share"]:.0%}'
+                    for key in labels
+                ],
+            ]
+            for q, label in features
+        ],
+    )
+    out += (
+        note(
+            "Sampling-weighted shares of full papers meeting Jev’s 0.50 cutoff. Exploratory measures lack independent accuracy estimates."
+        )
+        + "</details>"
+    )
+    gap = read("fulltext_coverage_summary.json")["radar_hash_draw"]
+    out += note(
+        f'In a fixed hash draw of {gap["n"]} missed control-tagged papers, both reviewers identified an external intervention in {gap["abstract_both_external"]} abstracts and {gap["paper_both_external"]} full papers. These papers stay outside the four ratio estimates.'
+    )
+    out += note(
+        '<a href="results/fulltext_comparator_measures.csv">172-paper measurements</a> · <a href="results/fulltext_measures.csv">60-paper measurements</a> · <a href="results/fulltext_coverage_cases.csv">Coverage check</a> · <a href="results/fulltext_comparison.json">All comparisons</a>'
+    )
+    return out
+
+
 def fullpaper_panel():
     data = read("fulltext_summary.json")
     n = data["paired"]
@@ -869,7 +996,10 @@ def language_panel():
         + note(
             '<a href="results/language_model_papers.csv.gz" download>Download the language-model paper catalog</a> · <a href="results/paper_master.csv.gz" download>Download all papers</a>'
         )
+        + fullpaper_comparison_panel()
+        + "<details><summary>Abstract estimates and alternative language-model definitions</summary>"
         + tabs("lm", "Model-scope definition", choices)
+        + "</details>"
         + fullpaper_panel()
         + external_panel()
         + note(
